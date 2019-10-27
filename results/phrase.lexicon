@@ -1,0 +1,4240 @@
+0,aba model,5
+1,abatement project,5
+2,abatement workers,7
+3,abrasion pads,5
+4,academic year,11
+5,acceptable indoor,10
+6,acceptable indoor air,9
+7,accidental ingestion,10
+8,accidental iron,7
+9,accidental pediatric,6
+10,accommodations due,8
+11,accompanying objections,6
+12,account number,5
+13,account uncontested,7
+14,account uncontested claims,7
+15,accounting compliance,9
+16,accounting compliance fund,5
+17,accounting operations,6
+18,accounting services,6
+19,accounting system,6
+20,accreditation plan,11
+21,accurately reflect,10
+22,accurately reflects,5
+23,achieve compliance,12
+24,acid content,5
+25,acid score,9
+26,acknowledge receipt,5
+27,act amendments,6
+28,act authorizes,7
+29,act defines,9
+30,act prohibits,5
+31,act provide,6
+32,act release,20
+33,act requires,28
+34,act section,10
+35,act sections,8
+36,act states,8
+37,acting assistant,16
+38,acting assistant administrator,5
+39,acting deputy,5
+40,acting regional,10
+41,action alternative,8
+42,action final,55
+43,action final rule,8
+44,action issuance,5
+45,action issuing,7
+46,action level,9
+47,action notice,136
+48,action proposed,31
+49,action proposed rule,8
+50,action requested,8
+51,action significantly,7
+52,action significantly affecting,7
+53,action spectrum,7
+54,actions fall,6
+55,activities covered,5
+56,activities involve,5
+57,activities involving,12
+58,actual amount,6
+59,actual cost,5
+60,actual flow,6
+61,ad hoc,9
+62,ad hoc committee,5
+63,adding paragraph,11
+64,additional burden,6
+65,additional comment,7
+66,additional controls,9
+67,additional copy,5
+68,additional cost,8
+69,additional data,11
+70,additional guidance,5
+71,additional information,52
+72,additional requirements,9
+73,additional studies,5
+74,additional time,12
+75,additional work,7
+76,additional work practices,5
+77,additions agency,5
+78,additions agency committee,5
+79,address listed,7
+80,addresses comments,22
+81,addresses copies,10
+82,addresses federal,6
+83,addresses federal communications,6
+84,addresses interested,5
+85,addresses persons,8
+86,addresses persons wishing,6
+87,addresses send,14
+88,addresses send comments,8
+89,addresses submit,11
+90,addresses submit written,7
+91,addresses written,28
+92,addresses written comments,19
+93,adequate information,6
+94,adequate protection,8
+95,adequate time,5
+96,adequate training,5
+97,adequate ventilation,6
+98,adjacent areas,5
+99,administration amends,7
+100,administration docket,8
+101,administration order,7
+102,administration proposes,5
+103,administrative action,6
+104,administrative costs,16
+105,administrative fee,13
+106,administrative law,5
+107,administrative practice,22
+108,administrative procedure,14
+109,administrative procedure act,11
+110,administrative procedures,8
+111,administrative proceedings,12
+112,administrative record,8
+113,administrative requirements,7
+114,administrative services,8
+115,administrative services act,5
+116,administrator determines,15
+117,administrator finds,5
+118,adopted pursuant,6
+119,advance notice,16
+120,adverse credit,5
+121,adverse effect,6
+122,adverse effects,28
+123,adverse environmental,5
+124,adverse health,20
+125,adverse health effects,13
+126,adverse impact,14
+127,adverse impacts,8
+128,adversely affect,26
+129,adversely affected,19
+130,adversely impact,7
+131,advisory board,8
+132,advisory committee,63
+133,advisory committee act,26
+134,advisory committee received,5
+135,advisory committees,5
+136,advisory council,8
+137,advisory panel,11
+138,advisory panel meeting,7
+139,advisory panels,7
+140,affairs exception,7
+141,affect air,8
+142,affect air traffic,7
+143,affected buildings,5
+144,affected employee,5
+145,affected employees,12
+146,affected employers,5
+147,affected facilities,5
+148,affected industries,5
+149,affected industry,5
+150,affected source,22
+151,affected sources,18
+152,affirmative preliminary,7
+153,affirmative preliminary determination,6
+154,ag petition,7
+155,agencies employing,6
+156,agencies employing persons,6
+157,agency agrees,6
+158,agency army,5
+159,agency believed,5
+160,agency believes,31
+161,agency bureau,16
+162,agency certifies,7
+163,agency coast,6
+164,agency committee,15
+165,agency concluded,7
+166,agency concludes,14
+167,agency considers,6
+168,agency decided,5
+169,agency department,30
+170,agency environmental,25
+171,agency environmental protection,25
+172,agency federal,40
+173,agency federal aviation,20
+174,agency federal communications,9
+175,agency finds,11
+176,agency fish,9
+177,agency food,32
+178,agency forest,5
+179,agency head,5
+180,agency heads,5
+181,agency health,5
+182,agency import,12
+183,agency information,5
+184,agency intends,6
+185,agency internal,5
+186,agency internal revenue,5
+187,agency national,33
+188,agency national institute,10
+189,agency national marine,16
+190,agency noted,5
+191,agency notes,11
+192,agency office,38
+193,agency proposed,12
+194,agency received,5
+195,agency requested,7
+196,agency requests,6
+197,agency securities,10
+198,agency stated,7
+199,agency tentatively,10
+200,agency tentatively concluded,5
+201,agencys decision,7
+202,agencys experience,5
+203,agencys finding,5
+204,agencys position,5
+205,agencys responsibility,5
+206,agenda items,6
+207,agreements january,5
+208,agricultural act,8
+209,agricultural commodities,5
+210,agricultural marketing,5
+211,air act,28
+212,air act section,6
+213,air carrier,5
+214,air carriers,7
+215,air conditioning,13
+216,air contaminant,7
+217,air contaminants,22
+218,air distribution,6
+219,air flow,11
+220,air force,18
+221,air force federal,5
+222,air handling,8
+223,air intake,5
+224,air intakes,5
+225,air monitoring,10
+226,air movement,6
+227,air plenums,5
+228,air pollutant,5
+229,air pollutants,25
+230,air pollution,24
+231,air pressure,9
+232,air purifying,8
+233,air quality,64
+234,air quality compliance,7
+235,air quality problems,12
+236,air quality standard,7
+237,air quality standards,5
+238,air respirator,6
+239,air respirator operated,5
+240,air samples,10
+241,air spray,9
+242,air spray guns,7
+243,air toxics,9
+244,air traffic,13
+245,air traffic procedures,7
+246,air transport,8
+247,air transportation,6
+248,air ventilation,15
+249,air ventilation rate,7
+250,air volume,5
+251,air volumes,6
+252,airborne asbestos,45
+253,airborne asbestos fiber,8
+254,airborne asbestos fibers,11
+255,airborne concentrations,23
+256,airborne fiber,11
+257,airborne fiber concentration,7
+258,airborne fibers,9
+259,aircraft certification,5
+260,airspace areas,7
+261,airspace areas extending,6
+262,airspace designations,8
+263,airspace docket,8
+264,airspace extending,9
+265,airspace extending upward,8
+266,airworthiness directive,6
+267,allocation formula,6
+268,alphabetical order,8
+269,alternate method,7
+270,alternate osd,11
+271,alternate osd federal,11
+272,alternative approaches,11
+273,alternative control,8
+274,alternative method,9
+275,alternative methods,7
+276,alternative originator,8
+277,ambient air,10
+278,ambient air quality,6
+279,amend part,9
+280,amended section,15
+281,amended water,15
+282,american association,8
+283,american industrial,8
+284,american industrial hygiene,8
+285,american journal,10
+286,american national,6
+287,american petroleum,5
+288,american society,7
+289,american stock,8
+290,amino acid,10
+291,amino acid content,5
+292,amino acid score,9
+293,amino acids,8
+294,amorphous materials,6
+295,amount determined,7
+296,amount equal,15
+297,amount reported,5
+298,amounts received,5
+299,analytical methods,10
+300,analytical procedure,13
+301,analytical results,5
+302,analytical techniques,8
+303,analytical testing,11
+304,animal drug,6
+305,animal rabies,5
+306,annual burden,12
+307,annual compliance,10
+308,annual compliance costs,6
+309,annual cost,14
+310,annual costs,13
+311,annual effect,16
+312,annual estimated,5
+313,annual generation,5
+314,annual incremental,7
+315,annual incremental compliance,6
+316,annual rate,6
+317,annual report,12
+318,annual reporting,10
+319,annual responses,6
+320,anticipated impact,5
+321,antidumping duties,6
+322,antidumping duty,17
+323,antidumping duty order,6
+324,apparatus filed,5
+325,apparel categories,7
+326,appendix viii,8
+327,applicable federal,7
+328,applicable provisions,7
+329,applicable requirements,10
+330,applicable standards,6
+331,applicable state,5
+332,applicant contact,6
+333,applicant organization,5
+334,applicant proposes,7
+335,applicants agree,6
+336,applicants legal,7
+337,applicants legal analysis,7
+338,applicants representations,7
+339,applicants request,6
+340,applicants seek,8
+341,application applicants,5
+342,application applicants seek,5
+343,application deadline,5
+344,application equipment,5
+345,application forms,5
+346,application package,5
+347,application process,6
+348,application program,6
+349,application submitted,5
+350,applied nutrition,15
+351,appropriated funds,5
+352,appropriations act,6
+353,approved october,5
+354,approved quality,7
+355,approved quality control,7
+356,area closures,6
+357,area means,7
+358,area monitoring,6
+359,area office,5
+360,area source,9
+361,area sources,8
+362,areas affected,5
+363,areas extending,6
+364,areas extending upward,6
+365,army corps,9
+366,army depot,5
+367,army federal,5
+368,army federal register,5
+369,asbestos abatement,28
+370,asbestos abatement workers,6
+371,asbestos analysis,10
+372,asbestos cancer,5
+373,asbestos concentrations,8
+374,asbestos construction,15
+375,asbestos construction standard,6
+376,asbestos contamination,10
+377,asbestos content,14
+378,asbestos contractor,5
+379,asbestos control,8
+380,asbestos counting,6
+381,asbestos dust,15
+382,asbestos exposure,45
+383,asbestos exposures,13
+384,asbestos fiber,40
+385,asbestos fiber concentrations,5
+386,asbestos fiber release,5
+387,asbestos fibers,59
+388,asbestos hazards,13
+389,asbestos includes,9
+390,asbestos information,7
+391,asbestos job,11
+392,asbestos jobs,19
+393,asbestos levels,11
+394,asbestos maintenance,5
+395,asbestos material,6
+396,asbestos materials,8
+397,asbestos minerals,27
+398,asbestos minerals belong,6
+399,asbestos operations,6
+400,asbestos products,13
+401,asbestos registry,5
+402,asbestos related,5
+403,asbestos removal,29
+404,asbestos removal operations,5
+405,asbestos requires,7
+406,asbestos research,6
+407,asbestos research council,6
+408,asbestos samples,7
+409,asbestos species,6
+410,asbestos standard,39
+411,asbestos standards,19
+412,asbestos tile,5
+413,asbestos work,49
+414,aspect ratio,11
+415,assessment pursuant,7
+416,assessment system,6
+417,assessment systems,6
+418,assist small,5
+419,assistance award,6
+420,assistance number,7
+421,assistance program,14
+422,assistance programs,8
+423,assistant administrator,22
+424,assistant attorney,6
+425,assistant attorney general,5
+426,assistant chief,9
+427,assistant chief counsel,8
+428,assistant general,7
+429,assistant general counsel,6
+430,assistant secretary,73
+431,assistant secretary means,5
+432,associate administrator,6
+433,associate attorney,5
+434,associate director,7
+435,associate secretary,14
+436,association pursuant,5
+437,assure compliance,8
+438,atmospheric administration,15
+439,atomic energy,10
+440,atomic energy act,8
+441,attached skeletal,13
+442,attached skeletal muscle,12
+443,attention desk,7
+444,attention desk officer,7
+445,attention rules,5
+446,attention rules docket,5
+447,attorney general,17
+448,attorney generals,5
+449,attorneys fees,5
+450,attorneys general,6
+451,attorneys manual,6
+452,authority citation,98
+453,authority delegated,24
+454,authority executive,8
+455,authority executive order,8
+456,authority granted,6
+457,authority section,5
+458,authority vested,5
+459,authorization act,6
+460,authorized committee,8
+461,authorized representative,7
+462,authorizing small,6
+463,authorizing small entities,6
+464,automatic temperature,5
+465,automotive brake,10
+466,automotive repair,8
+467,average annual,8
+468,average burden,12
+469,average burden hours,7
+470,average cost,8
+471,average daily,10
+472,average daily net,5
+473,average daily trading,5
+474,average emission,5
+475,average exposures,6
+476,average hap,6
+477,average price,5
+478,averaging approach,8
+479,aviation administration,28
+480,aviation administration amends,7
+481,aviation administration order,7
+482,aviation administration proposes,5
+483,aviation regulations,18
+484,aviation security,5
+485,awareness training,9
+486,back focal,6
+487,background document,6
+488,background information,5
+489,bag systems,11
+490,ban smoking,7
+491,bank holding,19
+492,bank holding companies,6
+493,bank holding company,16
+494,bar association,6
+495,base closure,5
+496,based solely,9
+497,baseline exposure,5
+498,basic center,5
+499,basic characteristics,7
+500,becke line,13
+501,becke line analysis,10
+502,beginning january,7
+503,beginning july,5
+504,beneficial interest,9
+505,benefit information,5
+506,billing code,556
+507,biologic substances,5
+508,biological opinion,10
+509,blanket authorization,7
+510,blanket certificate,6
+511,blanket certificate issued,5
+512,blind recount,6
+513,bluff diversion,6
+514,bluff diversion dam,5
+515,board meeting,5
+516,boards approval,11
+517,boards regulation,14
+518,body weight,5
+519,bona fide,17
+520,bona fide distribution,5
+521,bond equal,6
+522,bone content,5
+523,bone particle,17
+524,bone particle size,11
+525,bone particles,9
+526,bone solids,33
+527,bone solids content,24
+528,boneless poultry,21
+529,boneless poultry product,6
+530,boneless poultry products,17
+531,booth coatings,5
+532,borrowing cost,5
+533,borrowing rate,6
+534,brake drum,5
+535,breathing zone,20
+536,bring copy,6
+537,broad range,9
+538,broad spectrum,5
+539,budget reconciliation,14
+540,budget reconciliation act,14
+541,budgetary impact,5
+542,budgetary impacts,8
+543,building components,5
+544,building maintenance,9
+545,building material,11
+546,building materials,15
+547,building occupants,14
+548,building owner,22
+549,building owners,20
+550,building renovation,7
+551,building syndrome,7
+552,building system,13
+553,building systems,19
+554,buildings constructed,6
+555,bulk samples,9
+556,bulletin board,6
+557,bulletin boards,8
+558,burden estimate,5
+559,burden hours,15
+560,business administration,10
+561,business day,16
+562,business days,18
+563,business development,6
+564,business hours,24
+565,business ombudsman,5
+566,business stationary,5
+567,business stationary source,5
+568,byproduct material,5
+569,bystander employees,5
+570,calcium content,9
+571,calculated fmv,5
+572,calendar days,17
+573,calendar year,13
+574,california department,6
+575,campaign committee,5
+576,campaign expense,7
+577,campaign expenses,23
+578,campaign obligations,5
+579,canada agency,7
+580,canada agency office,7
+581,cancer deaths,7
+582,cancer institute,6
+583,cancer risk,18
+584,candidate wishes,5
+585,candidates authorized,6
+586,candidates authorized committee,5
+587,candidates date,6
+588,capacity release,7
+589,capital assets,5
+590,carbon dioxide,16
+591,carbon monoxide,10
+592,cardiovascular effects,6
+593,care financing,8
+594,care financing administration,5
+595,carefully considered,11
+596,case briefs,7
+597,case history,8
+598,case reports,11
+599,cases involving,7
+600,cash deposit,8
+601,categorical exclusion,5
+602,categorically excluded,11
+603,category include,5
+604,category includes,5
+605,causal link,5
+606,ceiling tiles,7
+607,central reference,6
+608,central stop,6
+609,central stop dispersion,6
+610,central valley,8
+611,certificate issued,5
+612,certification statement,9
+613,certified industrial,8
+614,certified industrial hygienist,7
+615,certified public,6
+616,cessation program,5
+617,cfr chapter,9
+618,cfr part,308
+619,cfr parts,67
+620,change received,9
+621,change rooms,5
+622,chemical analysis,5
+623,chemical company,8
+624,chemical formulation,6
+625,chemical properties,8
+626,chemically treated,12
+627,chest roentgenogram,5
+628,chief counsel,11
+629,chief financial,6
+630,childbearing age,5
+631,chinook salmon,15
+632,chlorophenolic formulations,8
+633,chlorophenolic wastes,6
+634,chrysotile mg,6
+635,cigarette smoke,7
+636,circuit court,6
+637,circumstances exist,8
+638,citizen petitions,9
+639,civil action,6
+640,civil aviation,7
+641,civil aviation security,5
+642,civil enforcement,8
+643,civil justice,11
+644,civil law,12
+645,civil law enforcement,12
+646,civil penalty,8
+647,civilian personnel,5
+648,class expenses,10
+649,class ii,38
+650,class ii asbestos,10
+651,class ii work,14
+652,class iii,35
+653,class iii asbestos,13
+654,class iii jobs,5
+655,class iii work,9
+656,class iv,29
+657,class iv asbestos,7
+658,class iv work,17
+659,class shares,6
+660,class system,5
+661,clean air,36
+662,clean air act,28
+663,clean room,8
+664,clean water,5
+665,cleaning operations,11
+666,cleaning solvent,5
+667,clearance officer,7
+668,clearing house,5
+669,cleavage fragments,12
+670,cleavage fragments mineral,6
+671,close proximity,5
+672,closed meeting,9
+673,closed session,6
+674,closely related,8
+675,closely resemble,5
+676,closing date,15
+677,closure area,6
+678,clutch repair,14
+679,coast guard,9
+680,coating operations,10
+681,coil condensate,5
+682,coil condensate drip,5
+683,collect data,5
+684,collection procedure,6
+685,collection request,7
+686,collection requirement,6
+687,collection requirements,29
+688,collection requirements contained,9
+689,collection requirements submitted,6
+690,collection systems,5
+691,columbia circuit,5
+692,combined effect,5
+693,comment added,6
+694,comment argued,9
+695,comment contended,8
+696,comment date,11
+697,comment date july,7
+698,comment maintained,8
+699,comment noted,9
+700,comment period,54
+701,comment procedure,5
+702,comment recommended,6
+703,comment stated,14
+704,comment submitted,5
+705,commenter believed,6
+706,commenter expressed,7
+707,commenter felt,6
+708,commenter questioned,5
+709,commenter stated,8
+710,commenter suggested,14
+711,commenter supported,5
+712,commenters addressed,7
+713,commenters disagreed,6
+714,commenters expressed,5
+715,commenters questioned,6
+716,commenters requested,5
+717,commenters stated,10
+718,commenters suggested,6
+719,commenters supported,10
+720,commenters wishing,5
+721,comments argued,5
+722,comments interested,14
+723,comments interested persons,13
+724,comments invited,5
+725,comments invited interested,5
+726,comments received,69
+727,comments stated,6
+728,comments submitted,20
+729,comments suggested,6
+730,comments supported,7
+731,commerce commission,7
+732,commerce national,6
+733,commerce pursuant,5
+734,commercial buildings,13
+735,commercial conditions,5
+736,commercial manufacturers,6
+737,commercial motor,5
+738,commercial products,5
+739,commercial rental,5
+740,commercial rental rate,5
+741,comminuted poultry,5
+742,comminuted product,6
+743,comminuted product resulting,6
+744,commission action,10
+745,commission believes,10
+746,commission determines,6
+747,commission docket,6
+748,commission issued,6
+749,commission notes,6
+750,commission proposes,6
+751,commission pursuant,8
+752,commission release,6
+753,commission staff,5
+754,commission welcomes,11
+755,commission welcomes comments,10
+756,commissions copy,7
+757,commissions decision,5
+758,commissions decisions,5
+759,commissions implementing,6
+760,commissions implementing regulations,6
+761,commissions order,12
+762,commissions public,31
+763,commissions public document,6
+764,commissions public reference,23
+765,commissions regulations,17
+766,commissions rules,32
+767,committee act,26
+768,committee agreed,14
+769,committee believed,6
+770,committee considered,7
+771,committee demonstrates,6
+772,committee discussed,5
+773,committee management,20
+774,committee meeting,11
+775,committee members,10
+776,committee received,6
+777,committee recommended,7
+778,common control,8
+779,common practice,7
+780,common stock,5
+781,commonly found,6
+782,communications act,7
+783,communications commission,15
+784,communications relating,10
+785,community development,8
+786,community planning,8
+787,community service,5
+788,companies listed,7
+789,company act,28
+790,company act release,8
+791,company docket,5
+792,competent person,43
+793,competent person supervision,5
+794,competent persons,14
+795,competing applications,6
+796,complaints related,6
+797,complete application,11
+798,complete information,5
+799,complete statement,5
+800,complete text,5
+801,completed promissory,5
+802,compliance certification,5
+803,compliance cost,7
+804,compliance costs,30
+805,compliance date,9
+806,compliance dates,6
+807,compliance fund,5
+808,compliance method,6
+809,compliance methods,8
+810,compliance plan,5
+811,compliance procedures,7
+812,compliance program,13
+813,compliance provisions,12
+814,compliance requirements,7
+815,compliance status,9
+816,compliant coatings,6
+817,compliant finishing,8
+818,compliant materials,8
+819,component security,6
+820,comprehensive environmental,7
+821,compressed air,5
+822,computer security,5
+823,computer security act,5
+824,computer system,6
+825,computer systems,18
+826,computerized information,5
+827,concentration range,5
+828,condensate drip,5
+829,conditions set,8
+830,conducted pursuant,9
+831,confidence interval,7
+832,confidential business,5
+833,conformity rule,5
+834,congress intended,5
+835,consent order,5
+836,conservation measures,5
+837,considered major,5
+838,considered prior,7
+839,considered qualified,6
+840,considered qualified campaign,6
+841,constitute endorsements,6
+842,constitution avenue,14
+843,constitutional rights,5
+844,construction activities,21
+845,construction activity,6
+846,construction employers,6
+847,construction industry,15
+848,construction standard,25
+849,construction work,17
+850,consumer education,5
+851,consumer product,6
+852,consumer product safety,6
+853,consumer products,6
+854,contact acm,5
+855,contact adhesives,11
+856,contact beverly,6
+857,contact carol,5
+858,contact charles,6
+859,contact david,6
+860,contact donna,5
+861,contact james,7
+862,contact jennifer,6
+863,contact john,17
+864,contact judith,5
+865,contact michael,6
+866,contact person,21
+867,contact robert,7
+868,contact william,5
+869,contaminated air,9
+870,contaminated clothing,9
+871,contaminated protective,5
+872,contaminated soil,5
+873,contemporaneous disclosure,8
+874,contemporaneous disclosure requirement,8
+875,continued existence,6
+876,continued operation,5
+877,continuous compliance,12
+878,contract work,5
+879,contractors association,5
+880,contracts awarded,5
+881,contrast microscope,12
+882,contrast microscopy,12
+883,contributions received,6
+884,control act,9
+885,control asbestos,9
+886,control center,6
+887,control centers,7
+888,control device,18
+889,control devices,18
+890,control emissions,5
+891,control measures,15
+892,control method,14
+893,control methods,19
+894,control number,26
+895,control plan,5
+896,control program,19
+897,control requirements,7
+898,control strategies,9
+899,control system,23
+900,control systems,16
+901,control techniques,7
+902,control technologies,6
+903,control technology,12
+904,controlled airspace,5
+905,controlled substances,5
+906,controlling individual,5
+907,controls required,11
+908,conventional air,8
+909,conventional air spray,8
+910,conventional food,11
+911,conventional food form,8
+912,conversion feature,5
+913,cooling coil,5
+914,cooling coil condensate,5
+915,cooperative agreement,10
+916,cooperative agreements,9
+917,cop questionnaire,5
+918,copies thereof,11
+919,coronary heart,9
+920,coronary heart disease,9
+921,corrective action,15
+922,corrective actions,10
+923,corrective measures,8
+924,correlation textile,7
+925,cosmetic act,27
+926,cost analysis,6
+927,cost data,8
+928,cost effective,7
+929,cost estimate,6
+930,cost estimates,9
+931,cost impact,5
+932,cost impacts,5
+933,cost rate,5
+934,cost report,7
+935,cost reporting,9
+936,cost reporting periods,7
+937,cost reports,5
+938,cost savings,8
+939,costs incurred,16
+940,costs reported,5
+941,council meeting,6
+942,council recommended,5
+943,counting asbestos,6
+944,counting asbestos fibers,6
+945,court decisions,5
+946,court found,11
+947,court held,5
+948,court noted,5
+949,court order,6
+950,court remanded,5
+951,court stated,6
+952,courts decision,5
+953,courts remand,5
+954,cover slip,9
+955,credible evidence,7
+956,criminal charges,5
+957,criminal enforcement,6
+958,criteria contained,6
+959,criteria set,11
+960,critical barriers,22
+961,critical circumstances,7
+962,critical circumstances exist,5
+963,crossed polars,6
+964,crystal square,6
+965,crystalline materials,6
+966,cubic centimeter,15
+967,cubic feet,8
+968,cubic yards,5
+969,cumulative impacts,6
+970,current bilateral,6
+971,current borrowing,5
+972,current contractors,7
+973,current exposure,6
+974,current exposures,5
+975,current good,5
+976,current good manufacturing,5
+977,current industry,5
+978,current market,5
+979,current policy,5
+980,current regulation,5
+981,current regulations,9
+982,current regulatory,9
+983,current rule,5
+984,current rules,5
+985,current shareholders,6
+986,current standard,7
+987,current version,6
+988,custodial activities,8
+989,custodial work,16
+990,custodial workers,8
+991,customer limit,8
+992,customer limit order,8
+993,customer limit orders,8
+994,customer order,5
+995,customer orders,7
+996,customer service,5
+997,customers limit,6
+998,customers limit order,5
+999,customs port,7
+1000,customs service,10
+1001,cv curve,6
+1002,daily intake,7
+1003,daily monitoring,5
+1004,daily net,6
+1005,daily net assets,5
+1006,daily trading,5
+1007,daily trading volume,5
+1008,data base,11
+1009,data collected,14
+1010,data collection,12
+1011,data demonstrating,6
+1012,data obtained,6
+1013,data presented,5
+1014,data provided,8
+1015,data representing,5
+1016,data set,6
+1017,data sheet,6
+1018,data show,15
+1019,data showed,5
+1020,data showing,10
+1021,data sources,9
+1022,data submitted,32
+1023,data support,5
+1024,data supporting,5
+1025,date august,17
+1026,date february,6
+1027,date filed,6
+1028,date january,12
+1029,date july,18
+1030,date june,13
+1031,date september,8
+1032,dated april,6
+1033,dated august,50
+1034,dated december,57
+1035,dated february,13
+1036,dated january,92
+1037,dated july,19
+1038,dated june,78
+1039,dated march,12
+1040,dated november,11
+1041,dated october,11
+1042,dated september,14
+1043,dates comments,52
+1044,dates effective,9
+1045,dates february,5
+1046,dates written,20
+1047,dates written comments,16
+1048,david kirby,5
+1049,days prior,30
+1050,de minimis,16
+1051,de novo,5
+1052,deadline date,7
+1053,dear commissioner,7
+1054,deboned poultry,18
+1055,deboned product,5
+1056,decisions made,8
+1057,decontamination area,5
+1058,decontamination procedures,6
+1059,deemed objectionable,7
+1060,defense authorization,6
+1061,defense authorization act,5
+1062,deferred sales,5
+1063,defines significant,6
+1064,defines significant regulatory,5
+1065,defray qualified,6
+1066,defray qualified campaign,6
+1067,delivery point,6
+1068,delivery points,5
+1069,demand deposit,5
+1070,demand side,5
+1071,demonstrate compliance,17
+1072,demonstrating compliance,9
+1073,demonstration program,8
+1074,demonstration project,7
+1075,demonstration projects,6
+1076,department attorneys,7
+1077,department believes,11
+1078,department determined,5
+1079,department initiated,8
+1080,department published,6
+1081,department received,5
+1082,departments decision,5
+1083,deposit securities,9
+1084,deputy assistant,21
+1085,deputy assistant administrator,7
+1086,deputy assistant secretary,10
+1087,deputy commissioner,6
+1088,deputy executive,7
+1089,deputy secretary,6
+1090,des bourses,6
+1091,designated areas,5
+1092,designated official,5
+1093,designated person,8
+1094,designated representative,7
+1095,designated smoking,19
+1096,designated smoking area,5
+1097,designated smoking areas,11
+1098,designated treasury,7
+1099,designated treasury form,6
+1100,desk officer,17
+1101,detailed analysis,5
+1102,detailed description,6
+1103,detailed discussion,7
+1104,detailed information,11
+1105,detailed records,5
+1106,detection limit,16
+1107,determination made,5
+1108,determine compliance,7
+1109,develop recommendations,6
+1110,development act,8
+1111,development office,8
+1112,development plans,6
+1113,device filed,5
+1114,dietary intake,7
+1115,dietary supplement,12
+1116,dietary supplement act,7
+1117,dietary supplements,26
+1118,differential counting,10
+1119,dilution ventilation,5
+1120,direct costs,6
+1121,direct effects,6
+1122,direct loan,19
+1123,direct loan program,19
+1124,direct loans,7
+1125,direct stafford,13
+1126,direct stafford loan,8
+1127,direct student,6
+1128,direct student loan,6
+1129,direct supervision,5
+1130,direct unsubsidized,17
+1131,direct unsubsidized stafford,17
+1132,directly affect,7
+1133,directly related,5
+1134,director means,5
+1135,directs agencies,7
+1136,disclose information,5
+1137,disclosure requirement,9
+1138,disease control,15
+1139,disease hazard,5
+1140,disease prevention,7
+1141,dispersion colors,6
+1142,dispersion microscopy,6
+1143,dispersion staining,12
+1144,display panel,8
+1145,disposable protective,6
+1146,distribution system,8
+1147,distributive impacts,6
+1148,district court,17
+1149,district courts,6
+1150,diversion dam,8
+1151,doc position,7
+1152,docket clerks,6
+1153,docket number,34
+1154,docket number found,10
+1155,docket room,10
+1156,dockets management,24
+1157,dockets management branch,24
+1158,document control,12
+1159,document control number,8
+1160,document entitled,5
+1161,document establishes,5
+1162,document room,6
+1163,documentation required,7
+1164,documentation supporting,6
+1165,doe nepa,5
+1166,doe proposes,5
+1167,dollar amount,5
+1168,domestic assistance,27
+1169,domestic assistance number,7
+1170,domestic assistance program,7
+1171,dosage form,9
+1172,dosage unit,17
+1173,dosage units,6
+1174,dot regulatory,11
+1175,dot regulatory policies,11
+1176,dow chemical,5
+1177,draft eis,9
+1178,draft environmental,10
+1179,draft environmental impact,9
+1180,drafting information,7
+1181,drinking water,6
+1182,driving record,5
+1183,drop cloths,7
+1184,drug abuse,6
+1185,drug administration,31
+1186,drug administration docket,5
+1187,drug application,5
+1188,drug enforcement,7
+1189,drug enforcement administration,6
+1190,drug evaluation,5
+1191,drug product,15
+1192,drug products,22
+1193,drug regulations,6
+1194,dry buffing,7
+1195,dry sweeping,5
+1196,ds act,6
+1197,dsm activities,5
+1198,dsm plan,5
+1199,due date,13
+1200,due diligence,5
+1201,due process,5
+1202,duly authorized,7
+1203,dumping margins,5
+1204,duration operations,5
+1205,dust left,5
+1206,duty determination,5
+1207,duty order,6
+1208,eaja fees,5
+1209,economic analysis,9
+1210,economic feasibility,8
+1211,economic impact,81
+1212,economic impacts,21
+1213,economic implications,6
+1214,education act,21
+1215,education program,6
+1216,education programs,8
+1217,education reform,6
+1218,education reform efforts,6
+1219,effective date,161
+1220,effective date august,11
+1221,effective date february,6
+1222,effective date january,12
+1223,effective date july,9
+1224,effective date june,10
+1225,effective date september,7
+1226,effective dates,14
+1227,effective january,17
+1228,effective july,6
+1229,effective june,7
+1230,effective law,5
+1231,effective october,12
+1232,effective september,15
+1233,efficiency filters,5
+1234,election campaign,8
+1235,election candidates,5
+1236,electric power,7
+1237,electrical resistance,6
+1238,electrically conductive,6
+1239,electron microscope,5
+1240,electron microscopy,15
+1241,electronic bulletin,7
+1242,electronic cost,7
+1243,electronic cost reporting,6
+1244,electronic data,5
+1245,electronic submission,8
+1246,electronic transmission,5
+1247,eligibility requirements,5
+1248,eligible applicants,12
+1249,emergency action,5
+1250,emergency management,7
+1251,emergency management agency,7
+1252,emergency room,7
+1253,emission control,6
+1254,emission limit,11
+1255,emission limitation,12
+1256,emission limitation achieved,5
+1257,emission limits,23
+1258,emission points,8
+1259,emission reduction,7
+1260,emission reductions,9
+1261,emission source,5
+1262,emission standard,5
+1263,emission standards,13
+1264,employee complaints,12
+1265,employee exposure,39
+1266,employee exposures,13
+1267,employee information,11
+1268,employee medical,5
+1269,employee training,7
+1270,employees breathing,5
+1271,employees breathing zone,5
+1272,employees cleaning,5
+1273,employees contact,5
+1274,employees contact acm,5
+1275,employees duties,5
+1276,employees engaged,5
+1277,employees exposed,12
+1278,employees performing,30
+1279,employees performing class,14
+1280,employees performing work,5
+1281,employees working,29
+1282,employer ceases,5
+1283,employer demonstrates,9
+1284,employer responsible,5
+1285,employing persons,6
+1286,employment standards,15
+1287,employment standards advisory,6
+1288,enclosure requirement,7
+1289,encourage public,5
+1290,encourages applicants,5
+1291,endangered species,21
+1292,endangered species act,15
+1293,energy act,8
+1294,energy conservation,10
+1295,energy efficiency,6
+1296,energy management,6
+1297,energy policy,6
+1298,energy policy act,5
+1299,energy regulatory,37
+1300,energy regulatory commission,16
+1301,energy sources,5
+1302,energy systems,5
+1303,enforce federal,6
+1304,enforcement action,10
+1305,enforcement actions,5
+1306,enforcement administration,6
+1307,enforcement agents,5
+1308,enforcement investigations,7
+1309,enforcement proceeding,5
+1310,engineering controls,40
+1311,ensure compliance,19
+1312,ensuring compliance,6
+1313,entire amount,5
+1314,entire meeting,5
+1315,entry permit,7
+1316,entry permits,6
+1317,environmental analysis,8
+1318,environmental assessment,35
+1319,environmental compliance,6
+1320,environmental concerns,6
+1321,environmental conditions,6
+1322,environmental consequences,8
+1323,environmental education,9
+1324,environmental effects,20
+1325,environmental exposure,7
+1326,environmental health,6
+1327,environmental impact,71
+1328,environmental impact statement,52
+1329,environmental impact statements,7
+1330,environmental impacts,26
+1331,environmental issues,16
+1332,environmental management,5
+1333,environmental policy,42
+1334,environmental policy act,34
+1335,environmental protection,76
+1336,environmental protection agency,51
+1337,environmental protection agencys,5
+1338,environmental quality,22
+1339,environmental quality regulations,8
+1340,environmental research,7
+1341,environmental restoration,14
+1342,environmental review,12
+1343,environmental tobacco,19
+1344,environmental tobacco smoke,15
+1345,epa believes,20
+1346,epa concluded,7
+1347,epa headquarters,8
+1348,epa headquarters accounting,6
+1349,epa issued,13
+1350,epa model,6
+1351,epa model accreditation,6
+1352,epa proposed,6
+1353,epa published,7
+1354,epa region,8
+1355,epa regional,9
+1356,epa requesting,7
+1357,epas asbestos,5
+1358,epidemiological studies,10
+1359,equal access,5
+1360,equipment required,5
+1361,equipment room,8
+1362,equitable principles,10
+1363,equivalent method,9
+1364,esa section,5
+1365,essential amino,9
+1366,essential amino acid,5
+1367,essential amino acids,6
+1368,essential nutrient,6
+1369,essentially intact,7
+1370,establish class,5
+1371,establish requirements,5
+1372,established body,8
+1373,established pursuant,6
+1374,establishes class,5
+1375,establishing exemptions,7
+1376,estimated airborne,6
+1377,estimated amount,9
+1378,estimated annual,13
+1379,estimated annual burden,6
+1380,estimated average,9
+1381,estimated compliance,5
+1382,estimated compliance costs,5
+1383,estimated cost,13
+1384,estimated costs,7
+1385,estimated number,15
+1386,estimated run,5
+1387,estimated total,7
+1388,ets exposure,25
+1389,evaluating airborne,7
+1390,evaluating airborne asbestos,6
+1391,evaluating solid,7
+1392,evaluation criteria,6
+1393,evaluation standards,5
+1394,evidence identified,9
+1395,evidence relied,7
+1396,evidence submitted,7
+1397,evidence suggests,5
+1398,evidence supporting,9
+1399,examining physician,8
+1400,examining physician determines,5
+1401,excess risk,5
+1402,excessive levels,5
+1403,exchange act,36
+1404,exchange act release,11
+1405,exchange commission,31
+1406,exchange commission release,6
+1407,exchange privileges,5
+1408,excursion limit,31
+1409,excursion limit prescribed,6
+1410,executive director,9
+1411,executive office,13
+1412,executive officer,6
+1413,executive order,116
+1414,executive orders,6
+1415,exemption application,5
+1416,exemption published,6
+1417,exemptive order,5
+1418,exemptive relief,6
+1419,exhaust ventilation,18
+1420,exhausted directly,6
+1421,existing asbestos,5
+1422,existing conflicts,5
+1423,existing data,9
+1424,existing facilities,8
+1425,existing regulations,14
+1426,existing regulatory,7
+1427,existing requirements,6
+1428,existing sources,21
+1429,expected conditions,5
+1430,expected family,9
+1431,expected family contribution,6
+1432,expenditure report,5
+1433,expenses incurred,19
+1434,expenses related,5
+1435,expenses relating,6
+1436,expert consultation,5
+1437,expiration date,9
+1438,expiratory volume,5
+1439,exporters sales,5
+1440,exporters sales price,5
+1441,expose employees,8
+1442,exposed employees,7
+1443,exposed workers,5
+1444,exposure asbestos,6
+1445,exposure assessment,37
+1446,exposure assessment pursuant,7
+1447,exposure assessments,12
+1448,exposure data,13
+1449,exposure level,16
+1450,exposure levels,40
+1451,exposure limit,32
+1452,exposure limits,15
+1453,exposure monitoring,17
+1454,exposure monitoring required,5
+1455,exposure occurs,5
+1456,exposure outweighs,6
+1457,exposure potential,9
+1458,exposure profile,5
+1459,exposure records,5
+1460,exposure reduction,5
+1461,exposure reductions,5
+1462,exposures exceed,5
+1463,exposures resulting,5
+1464,expressed concern,23
+1465,expressed support,8
+1466,extended period,7
+1467,extending upward,8
+1468,extremely small,6
+1469,faa certifies,5
+1470,faa order,8
+1471,faa proposes,5
+1472,facepiece supplied,5
+1473,facepiece supplied air,5
+1474,facilitate public,5
+1475,facilities located,5
+1476,facility operating,7
+1477,facility operating license,6
+1478,facility owners,6
+1479,facsimile equipment,8
+1480,factors considered,6
+1481,factual basis,5
+1482,fair market,20
+1483,fair packaging,5
+1484,fair practice,9
+1485,fairly intended,7
+1486,family contribution,6
+1487,family member,6
+1488,family violence,7
+1489,family violence prevention,7
+1490,fat content,8
+1491,fda agrees,10
+1492,fda announced,8
+1493,fda believes,9
+1494,fda concludes,6
+1495,fda considered,7
+1496,fda considers,5
+1497,fda finds,13
+1498,fda intends,7
+1499,fda notes,7
+1500,fda proposed,6
+1501,fda published,11
+1502,fda received,9
+1503,fda recognizes,10
+1504,fda requests,7
+1505,fda requests comments,6
+1506,fda stated,5
+1507,fda tentatively,13
+1508,fda tentatively concludes,12
+1509,fdas authority,7
+1510,fe docket,9
+1511,feasible engineering,5
+1512,federal action,7
+1513,federal action significantly,7
+1514,federal actions,7
+1515,federal advisory,40
+1516,federal advisory committee,38
+1517,federal agencies,21
+1518,federal agency,5
+1519,federal assistance,11
+1520,federal attorneys,5
+1521,federal aviation,35
+1522,federal aviation administration,28
+1523,federal aviation regulations,18
+1524,federal communications,18
+1525,federal communications commission,15
+1526,federal court,5
+1527,federal courts,5
+1528,federal criminal,8
+1529,federal departments,8
+1530,federal direct,20
+1531,federal direct stafford,13
+1532,federal direct student,5
+1533,federal direct unsubsidized,17
+1534,federal domestic,35
+1535,federal domestic assistance,27
+1536,federal emergency,7
+1537,federal emergency management,7
+1538,federal employee,7
+1539,federal energy,37
+1540,federal energy regulatory,37
+1541,federal facility,6
+1542,federal funds,21
+1543,federal government,36
+1544,federal governments,5
+1545,federal income,7
+1546,federal income tax,5
+1547,federal information,25
+1548,federal information processing,14
+1549,federal information relay,6
+1550,federal information resources,7
+1551,federal insurance,6
+1552,federal land,5
+1553,federal law,14
+1554,federal maritime,9
+1555,federal maritime commissions,6
+1556,federal meat,10
+1557,federal meat inspection,8
+1558,federal poultry,6
+1559,federal poultry products,6
+1560,federal power,6
+1561,federal power act,5
+1562,federal programs,9
+1563,federal property,7
+1564,federal prosecutors,5
+1565,federal register,314
+1566,federal register liaison,32
+1567,federal register notice,18
+1568,federal register notices,5
+1569,federal regulations,31
+1570,federal reserve,33
+1571,federal reserve bank,21
+1572,federal reserve banks,6
+1573,federal reserve system,10
+1574,federal restriction,5
+1575,federal rules,7
+1576,federal share,6
+1577,federal stafford,5
+1578,federal standard,5
+1579,federalism implications,14
+1580,fedwire funds,5
+1581,fedwire funds transfer,5
+1582,fee charged,5
+1583,fee prescribed,6
+1584,fees accompanying,6
+1585,fees accompanying objections,6
+1586,fees incurred,6
+1587,feet msl,6
+1588,ferc contact,6
+1589,ferc gas,16
+1590,ferc gas tariff,12
+1591,ffel program,9
+1592,fiber concentration,10
+1593,fiber concentrations,6
+1594,fiber count,6
+1595,fiber counting,6
+1596,fiber counts,5
+1597,fiber length,7
+1598,fiber level,5
+1599,fiber levels,29
+1600,fiber optic,9
+1601,fiber release,11
+1602,fiber textile,6
+1603,fiber textile products,5
+1604,fide distribution,5
+1605,field area,9
+1606,field office,15
+1607,field operations,11
+1608,field operations division,8
+1609,file comments,5
+1610,file form,5
+1611,file suit,6
+1612,file written,9
+1613,file written objections,7
+1614,filed pursuant,8
+1615,files maintenance,5
+1616,filing comments,5
+1617,filing date,11
+1618,filter capable,5
+1619,filter means,6
+1620,filter membrane,6
+1621,final action,6
+1622,final asbestos,7
+1623,final audit,5
+1624,final decision,9
+1625,final determination,37
+1626,final determinations,6
+1627,final eis,8
+1628,final environmental,10
+1629,final environmental impact,7
+1630,final judgment,7
+1631,final provisions,5
+1632,final regulation,13
+1633,final regulations,23
+1634,final regulatory,6
+1635,final regulatory impact,5
+1636,final repayment,5
+1637,final report,13
+1638,final revised,6
+1639,final revision,7
+1640,final rule,115
+1641,final rule federal,7
+1642,final rule published,7
+1643,final rulemaking,7
+1644,final rules,16
+1645,final standard,12
+1646,final standards,12
+1647,final subscription,6
+1648,finance docket,6
+1649,financial aid,5
+1650,financial assistance,33
+1651,financial assistance award,6
+1652,financial control,6
+1653,financial hardship,5
+1654,financial impact,6
+1655,financial institution,5
+1656,financial responsibility,7
+1657,financial support,5
+1658,financing administration,5
+1659,fine mist,5
+1660,finely comminuted,17
+1661,finely comminuted poultry,5
+1662,finely comminuted product,6
+1663,finished poultry,6
+1664,finished poultry products,6
+1665,finished product,13
+1666,finishing material,20
+1667,finishing materials,22
+1668,finishing operations,19
+1669,fip resources,6
+1670,fips pub,7
+1671,fiscal year,39
+1672,fiscal years,8
+1673,fish passage,5
+1674,fisheries management,5
+1675,fisheries service,17
+1676,fishery conservation,5
+1677,fishery management,17
+1678,fishery management council,7
+1679,fishery management plan,11
+1680,fishing mortality,5
+1681,fit test,13
+1682,fit testing,10
+1683,flexibility act,56
+1684,flexibility act requires,7
+1685,flexibility analysis,32
+1686,flight rules,7
+1687,flood insurance,10
+1688,flood insurance act,6
+1689,flood insurance program,5
+1690,floor maintenance,5
+1691,floor tile,18
+1692,flooring material,15
+1693,flooring materials,5
+1694,flooring removal,5
+1695,florida citrus,5
+1696,flow rate,15
+1697,fluoride contribution,5
+1698,folic acid,6
+1699,food additive,10
+1700,food form,8
+1701,food labeling,9
+1702,food product,13
+1703,food products,19
+1704,food safety,21
+1705,force federal,5
+1706,force federal register,5
+1707,foreign affairs,7
+1708,foreign affairs exception,7
+1709,foreign air,9
+1710,foreign air carriers,5
+1711,foreign government,5
+1712,foreign market,13
+1713,forest service,11
+1714,form number,10
+1715,formula set,8
+1716,formulation assessment,7
+1717,fossil energy,12
+1718,fragments mineral,6
+1719,fragments mineral particles,6
+1720,framework adjustment,5
+1721,french issuer,5
+1722,french securities,8
+1723,french security,7
+1724,friable asbestos,5
+1725,friction materials,10
+1726,friday june,6
+1727,fsis adopted,5
+1728,fsis agrees,7
+1729,fsis believes,30
+1730,fsis continues,6
+1731,fsis docket,7
+1732,fsis docket clerks,6
+1733,fsis hearing,17
+1734,fsis hearing clerks,15
+1735,fsis recognizes,7
+1736,fsis wishes,6
+1737,fsiss tentative,9
+1738,fsiss tentative position,7
+1739,fuels programs,9
+1740,fuels programs docket,9
+1741,full compliance,13
+1742,full facepiece,10
+1743,full facepiece supplied,5
+1744,full payment,5
+1745,full range,10
+1746,fully informed,6
+1747,fully set,7
+1748,function tests,5
+1749,funding decisions,5
+1750,funds awarded,5
+1751,funds received,7
+1752,funds transfer,5
+1753,furniture industry,7
+1754,furniture manufacturers,7
+1755,furniture manufacturing,12
+1756,gain access,11
+1757,gas act,10
+1758,gas company,9
+1759,gas marketing,5
+1760,gas phase,7
+1761,gas pipe,6
+1762,gas pipeline,7
+1763,gas pipeline company,5
+1764,gas research,5
+1765,gas research institute,5
+1766,gas sales,6
+1767,gas supply,7
+1768,gas tariff,12
+1769,gas tariff january,10
+1770,gas transmission,15
+1771,gave notice,5
+1772,general accounting,5
+1773,general building,10
+1774,general counsel,11
+1775,general dilution,5
+1776,general dilution ventilation,5
+1777,general election,13
+1778,general election candidates,5
+1779,general industry,48
+1780,general industry standard,14
+1781,general information,12
+1782,general management,5
+1783,general policy,7
+1784,general population,5
+1785,general preamble,6
+1786,general principles,6
+1787,general prohibition,6
+1788,general provisions,18
+1789,general public,15
+1790,general requirement,6
+1791,general requirements,9
+1792,general rule,11
+1793,general services,9
+1794,general services administration,6
+1795,general terms,6
+1796,general ventilation,7
+1797,generally recognized,6
+1798,geographic area,10
+1799,glass slide,6
+1800,glass slides,6
+1801,glass vials,6
+1802,glove bag,24
+1803,glove bag systems,11
+1804,glove bags,19
+1805,glove boxes,5
+1806,gluing operations,8
+1807,gm employee,5
+1808,gobbell hays,5
+1809,good faith,13
+1810,good manufacturing,18
+1811,good manufacturing practice,5
+1812,good manufacturing practices,7
+1813,good sound,6
+1814,good sound absorbing,6
+1815,governing waiver,8
+1816,government agencies,7
+1817,government attorney,9
+1818,government attorneys,9
+1819,government printing,17
+1820,government printing office,7
+1821,government series,8
+1822,grade level,6
+1823,grant application,5
+1824,grant applications,8
+1825,grant award,5
+1826,grant awards,9
+1827,grant funds,5
+1828,grant program,10
+1829,granting blanket,5
+1830,granting blanket authorization,5
+1831,grants program,6
+1832,great deal,14
+1833,great lakes,5
+1834,greater risk,5
+1835,greatest potential,7
+1836,gri surcharge,5
+1837,ground level,6
+1838,ground water,7
+1839,guidance document,5
+1840,hand delivered,8
+1841,hand grinder,6
+1842,handling requirements,8
+1843,hap content,16
+1844,hap emission,8
+1845,hap emissions,24
+1846,hap limit,7
+1847,hap limits,5
+1848,harbor porpoise,8
+1849,harbor porpoise bycatch,5
+1850,hard copy,8
+1851,harmonized tariff,20
+1852,harmonized tariff schedule,19
+1853,hawaii longline,8
+1854,hawaii longline limited,7
+1855,hazard communication,8
+1856,hazardous air,15
+1857,hazardous air pollutants,14
+1858,hazardous chemicals,8
+1859,hazardous constituents,6
+1860,hazardous materials,7
+1861,hazardous substance,5
+1862,hazardous substances,11
+1863,hazardous waste,19
+1864,hazardous waste listing,6
+1865,hazardous wastes,8
+1866,headquarters accounting,6
+1867,headquarters accounting operations,6
+1868,health act,15
+1869,health administration,9
+1870,health agencies,7
+1871,health care,36
+1872,health care financing,8
+1873,health claims,6
+1874,health concern,5
+1875,health concerns,5
+1876,health effects,54
+1877,health hazard,8
+1878,health hazards,7
+1879,health inspection,9
+1880,health inspection service,6
+1881,health interview,5
+1882,health organization,5
+1883,health organizations,6
+1884,health professionals,6
+1885,health professions,9
+1886,health programs,5
+1887,health promotion,6
+1888,health resources,6
+1889,health risk,13
+1890,health service,28
+1891,health service act,10
+1892,health services,9
+1893,health standards,12
+1894,health system,5
+1895,health system reporting,5
+1896,healthy people,7
+1897,hearing clerk,7
+1898,hearing clerks,15
+1899,hearing impaired,9
+1900,hearing requests,14
+1901,hearing requests filed,6
+1902,heart disease,17
+1903,heat treatment,5
+1904,held indefinitely,5
+1905,held prior,6
+1906,hepa filter,11
+1907,hepa filtered,11
+1908,hepa filters,5
+1909,hepa filtration,6
+1910,hepa vacuum,19
+1911,hepa vacuumed,5
+1912,hepa vacuums,7
+1913,herbicide exposure,7
+1914,herbicide exposure outweighs,6
+1915,high degree,10
+1916,high dispersion,6
+1917,high dose,5
+1918,high efficiency,10
+1919,high efficiency filters,5
+1920,high electrical,6
+1921,high electrical resistance,6
+1922,high level,7
+1923,high levels,12
+1924,high pressure,9
+1925,high quality,9
+1926,high risk,13
+1927,high speed,5
+1928,high tensile,10
+1929,high tensile strength,9
+1930,higher education,13
+1931,higher level,6
+1932,higher levels,8
+1933,hiv demonstration,5
+1934,hoc committee,5
+1935,holding companies,6
+1936,holding company,18
+1937,holding company act,13
+1938,home market,10
+1939,home market sales,7
+1940,homeless youth,7
+1941,homogeneous area,6
+1942,hot issue,7
+1943,hot issues,6
+1944,hot water,5
+1945,hours total,5
+1946,housekeeping activities,7
+1947,housing act,5
+1948,housing agencies,6
+1949,housing commissioner,5
+1950,hts number,5
+1951,hts numbers,7
+1952,hud field,6
+1953,human consumption,5
+1954,human environment,9
+1955,human health,12
+1956,human services,33
+1957,human services food,9
+1958,humanities act,8
+1959,hvac maintenance,9
+1960,hvac system,26
+1961,hvac systems,21
+1962,hydrochloric acid,7
+1963,hygiene association,7
+1964,hygiene facilities,9
+1965,iaq compliance,8
+1966,iaq compliance program,5
+1967,iaq problems,6
+1968,iaq standard,5
+1969,identification number,11
+1970,identify asbestos,6
+1971,identifying existing,5
+1972,identifying specifically,11
+1973,ii asbestos,15
+1974,ii asbestos work,11
+1975,ii work,15
+1976,iii asbestos,22
+1977,iii asbestos jobs,5
+1978,iii asbestos work,16
+1979,iii jobs,5
+1980,iii work,19
+1981,immune system,6
+1982,impact analysis,22
+1983,impact indoor,5
+1984,impact indoor air,5
+1985,impact statement,57
+1986,impact statements,8
+1987,impacts presented,5
+1988,impacts resulting,6
+1989,impermeable bags,7
+1990,impermeable dropcloths,8
+1991,implement section,6
+1992,implementation plan,27
+1993,implementation plans,6
+1994,implementing regulations,13
+1995,import administration,5
+1996,import natural,6
+1997,import natural gas,6
+1998,import programs,5
+1999,imports exported,5
+2000,impose additional,5
+2001,inches water,5
+2002,include information,10
+2003,include skin,5
+2004,include small,5
+2005,included statements,10
+2006,includes information,5
+2007,including information,10
+2008,including provisions,6
+2009,including suggestions,10
+2010,income tax,10
+2011,increased risk,18
+2012,incremental compliance,11
+2013,incremental compliance costs,10
+2014,incremental costs,8
+2015,incremental population,5
+2016,incremental population risk,5
+2017,independence avenue,6
+2018,independent review,6
+2019,index medium,6
+2020,indian health,5
+2021,indian tribes,6
+2022,indirect air,7
+2023,indirect cost,6
+2024,indirect cost rate,5
+2025,indirect costs,6
+2026,indirectly acquire,9
+2027,individual fibers,8
+2028,indoor air,66
+2029,indoor air contaminants,9
+2030,indoor air pollutants,7
+2031,indoor air quality,45
+2032,industrial facilities,12
+2033,industrial hygiene,15
+2034,industrial hygiene association,7
+2035,industrial hygienist,17
+2036,industrial hygienists,7
+2037,industrial medicine,5
+2038,industry groups,5
+2039,industry profile,6
+2040,industry sectors,6
+2041,industry standard,14
+2042,informal hearing,6
+2043,informal public,5
+2044,information act,5
+2045,information authority,8
+2046,information authority executive,8
+2047,information background,21
+2048,information center,7
+2049,information collected,7
+2050,information collection,57
+2051,information collection request,7
+2052,information collection requirement,6
+2053,information collection requirements,29
+2054,information comments,6
+2055,information comments invited,5
+2056,information contact,308
+2057,information contact beverly,6
+2058,information contact charles,6
+2059,information contact david,5
+2060,information contact donna,5
+2061,information contact james,7
+2062,information contact jennifer,6
+2063,information contact john,12
+2064,information contact judith,5
+2065,information contact robert,5
+2066,information contact william,5
+2067,information contained,24
+2068,information deemed,5
+2069,information fda,5
+2070,information history,5
+2071,information indicating,7
+2072,information needed,6
+2073,information obtained,10
+2074,information pertaining,5
+2075,information presented,7
+2076,information processing,16
+2077,information processing standard,8
+2078,information processing standards,8
+2079,information provided,31
+2080,information received,6
+2081,information related,11
+2082,information relating,8
+2083,information relay,6
+2084,information relay service,6
+2085,information requested,7
+2086,information required,26
+2087,information requirements,11
+2088,information resources,9
+2089,information resources management,8
+2090,information section,12
+2091,information service,9
+2092,information submitted,27
+2093,information system,6
+2094,ingredients statement,10
+2095,initial compliance,6
+2096,initial costs,5
+2097,initial determination,6
+2098,initial development,5
+2099,initial exposure,18
+2100,initial exposure assessment,13
+2101,initial monitoring,9
+2102,initial notification,7
+2103,initial regulatory,7
+2104,initial regulatory flexibility,6
+2105,initial subscription,6
+2106,input parameters,5
+2107,inspection regulations,19
+2108,inspection service,10
+2109,installed asbestos,12
+2110,installed asbestos products,5
+2111,institute engineering,5
+2112,institute engineering controls,5
+2113,institute proceedings,8
+2114,instrument approach,7
+2115,instrument flight,7
+2116,instrument flight rules,7
+2117,insurance act,7
+2118,insurance companies,7
+2119,insurance company,13
+2120,insurance policies,5
+2121,insurance program,6
+2122,intake structure,5
+2123,integral part,5
+2124,intended effect,5
+2125,interactive graphics,5
+2126,interest rate,16
+2127,interest rates,12
+2128,interested individuals,6
+2129,interested parties,70
+2130,interested person,16
+2131,interested persons,102
+2132,interested state,10
+2133,intergovernmental review,11
+2134,interim action,5
+2135,interim final,9
+2136,interim final rule,7
+2137,interim rule,14
+2138,interior bureau,6
+2139,internal revenue,30
+2140,internal revenue code,12
+2141,internal revenue service,15
+2142,international standard,5
+2143,international trade,34
+2144,international trade commission,10
+2145,international transcription,6
+2146,interstate commerce,12
+2147,interstate commerce commission,6
+2148,interstate natural,6
+2149,interstate natural gas,6
+2150,interstate pipeline,7
+2151,introductory language,5
+2152,introductory paragraph,6
+2153,introductory text,22
+2154,investment adviser,10
+2155,investment advisory,6
+2156,investment companies,11
+2157,investment company,21
+2158,investment company act,14
+2159,investment management,5
+2160,investment partnerships,6
+2161,invited interested,6
+2162,invites comments,6
+2163,involving asbestos,10
+2164,iron ingestion,5
+2165,iron poisoning,21
+2166,iron poisonings,11
+2167,iron salts,5
+2168,iron supplementation,5
+2169,iron supplements,8
+2170,irreconcilable conflict,6
+2171,issuance date,5
+2172,issue date,12
+2173,issue final,5
+2174,issued pursuant,22
+2175,issues arising,14
+2176,issues raised,26
+2177,issues related,17
+2178,issues relating,8
+2179,itc notification,6
+2180,item iv,9
+2181,items listed,5
+2182,iv asbestos,11
+2183,iv department,5
+2184,iv work,19
+2185,jefferson davis,17
+2186,jobs involving,5
+2187,judicial review,9
+2188,kansas city,7
+2189,keswick dam,5
+2190,kg child,5
+2191,kohler illumination,6
+2192,kt argues,5
+2193,kts cost,5
+2194,label statements,5
+2195,label warning,11
+2196,label warning statements,8
+2197,labeled tolerance,6
+2198,labeled tolerance petition,6
+2199,labeling provisions,7
+2200,labeling regulations,12
+2201,labeling requirements,16
+2202,labor costs,5
+2203,labor market,7
+2204,land management,15
+2205,landholding agency,5
+2206,landing gear,5
+2207,large amounts,8
+2208,large number,29
+2209,large numbers,5
+2210,large part,7
+2211,large quantities,5
+2212,large volume,6
+2213,larger bundles,6
+2214,law enforcement,24
+2215,law enforcement agents,5
+2216,law enforcement investigations,6
+2217,laws relating,7
+2218,legal analysis,7
+2219,legal authority,12
+2220,legislative history,7
+2221,lesser amounts,6
+2222,lethal dose,5
+2223,letter dated,21
+2224,liability act,6
+2225,licensing board,6
+2226,life cycle,5
+2227,life insurance,8
+2228,life insurance company,5
+2229,lifetime risk,6
+2230,light microscopy,16
+2231,light source,10
+2232,light travels,6
+2233,limit emissions,7
+2234,limit hap,6
+2235,limit hap emissions,5
+2236,limit order,8
+2237,limit order protection,5
+2238,limit orders,11
+2239,limit prescribed,7
+2240,limitation achieved,5
+2241,limited circumstances,5
+2242,limited entry,11
+2243,limited entry permit,7
+2244,limited entry permits,6
+2245,limited number,8
+2246,limits established,6
+2247,line analysis,10
+2248,linear feet,11
+2249,liquidation section,6
+2250,list commodities,5
+2251,listed control,5
+2252,listing determination,7
+2253,livestock carcasses,9
+2254,living program,5
+2255,load factors,5
+2256,loan amounts,5
+2257,loan proceeds,7
+2258,loan program,23
+2259,loan programs,14
+2260,local agencies,9
+2261,local community,6
+2262,local exhaust,14
+2263,local exhaust ventilation,11
+2264,local government,26
+2265,local government series,8
+2266,local governments,14
+2267,local law,5
+2268,local laws,12
+2269,local public,9
+2270,local public document,7
+2271,local source,5
+2272,long latency,5
+2273,long range,7
+2274,long term,8
+2275,longer period,10
+2276,longline fishing,6
+2277,longline limited,7
+2278,longline limited entry,7
+2279,loose dust,5
+2280,los angeles,5
+2281,low abrasion,5
+2282,low abrasion pads,5
+2283,low concentration,6
+2284,low exposure,12
+2285,low level,15
+2286,low levels,6
+2287,lower exposures,5
+2288,lower levels,8
+2289,lowest unrestricted,5
+2290,lunch areas,5
+2291,lung association,5
+2292,lung cancer,30
+2293,lung disease,8
+2294,lung disease hazard,5
+2295,lung function,6
+2296,mact floor,12
+2297,mact standard,5
+2298,made aware,5
+2299,made based,5
+2300,made comments,6
+2301,made effective,6
+2302,made part,6
+2303,made pursuant,10
+2304,magnuson fishery,5
+2305,magnuson fishery conservation,5
+2306,mail stop,5
+2307,mailing address,6
+2308,mailing list,11
+2309,main directions,6
+2310,mainstream smoke,6
+2311,maintain adequate,5
+2312,maintain records,13
+2313,maintenance activities,18
+2314,maintenance operations,5
+2315,maintenance personnel,8
+2316,maintenance plan,5
+2317,maintenance procedures,7
+2318,maintenance program,6
+2319,maintenance work,11
+2320,maintenance workers,11
+2321,major factors,7
+2322,major factors considered,6
+2323,major federal,10
+2324,major federal action,7
+2325,major issues,5
+2326,major rule,6
+2327,major source,20
+2328,major sources,21
+2329,major stationary,5
+2330,make clear,13
+2331,make grants,7
+2332,make oral,6
+2333,make protestants,17
+2334,make protestants parties,17
+2335,make recommendations,5
+2336,makes clear,5
+2337,making written,11
+2338,making written submissions,11
+2339,mammal protection,5
+2340,management act,9
+2341,management activities,11
+2342,management agency,7
+2343,management alternatives,5
+2344,management area,5
+2345,management branch,25
+2346,management council,7
+2347,management division,5
+2348,management information,6
+2349,management investment,14
+2350,management investment companies,6
+2351,management issues,6
+2352,management measures,10
+2353,management plan,20
+2354,management system,11
+2355,management unit,6
+2356,management unit species,5
+2357,mandatory appendix,8
+2358,mandatory nutrition,5
+2359,mandatory work,5
+2360,mandatory work practices,5
+2361,manner consistent,5
+2362,manner inconsistent,6
+2363,manner sought,7
+2364,manufacturers association,7
+2365,manufacturing operations,7
+2366,manufacturing practice,5
+2367,manufacturing practices,7
+2368,margin percentage,5
+2369,marine coatings,8
+2370,marine fisheries,25
+2371,marine fisheries service,17
+2372,marine mammal,7
+2373,marine mammal protection,5
+2374,maritime commissions,6
+2375,maritime commissions implementing,6
+2376,market charge,6
+2377,market fund,6
+2378,market imperfections,5
+2379,market maker,11
+2380,market makers,8
+2381,market making,5
+2382,market price,8
+2383,market prices,5
+2384,market sales,7
+2385,market system,7
+2386,marketing affiliate,12
+2387,marketing affiliates,16
+2388,marketing information,11
+2389,marketing order,5
+2390,matching fund,9
+2391,matching funds,10
+2392,matching index,6
+2393,matching payment,12
+2394,matching payment account,7
+2395,matching requirement,5
+2396,material health,7
+2397,material impairment,19
+2398,material injury,8
+2399,material safety,6
+2400,material safety data,6
+2401,material submitted,7
+2402,material submitted shows,7
+2403,materially affecting,8
+2404,materially alter,6
+2405,materially altering,8
+2406,matters relating,10
+2407,mature chickens,7
+2408,mature female,8
+2409,maximize net,7
+2410,maximize net benefits,7
+2411,maximum allowable,5
+2412,maximum amount,9
+2413,maximum calcium,5
+2414,maximum calcium content,5
+2415,maximum extent,10
+2416,maximum fat,6
+2417,maximum interest,5
+2418,maximum level,5
+2419,maximum number,5
+2420,maximum permissible,6
+2421,maximum size,5
+2422,mccrone objective,6
+2423,measures contained,6
+2424,measures designed,5
+2425,meat derived,10
+2426,meat food,31
+2427,meat food product,12
+2428,meat food products,14
+2429,meat inspection,9
+2430,meat inspection regulations,5
+2431,meat products,7
+2432,meat recovery,7
+2433,meat recovery systems,6
+2434,mechanical deboning,25
+2435,mechanical equipment,5
+2436,mechanical means,5
+2437,mechanical separation,26
+2438,mechanical stage,9
+2439,mechanical ventilation,9
+2440,mechanically deboned,25
+2441,mechanically deboned poultry,18
+2442,mechanically deboned product,5
+2443,mechanically separated,32
+2444,mechanically separated chicken,6
+2445,mechanically separated poultry,16
+2446,medical conditions,11
+2447,medical education,6
+2448,medical examination,7
+2449,medical examinations,8
+2450,medical records,6
+2451,medical surveillance,24
+2452,medical surveillance program,8
+2453,medicare program,8
+2454,meeting agency,10
+2455,meeting pursuant,11
+2456,member firms,8
+2457,mental health,5
+2458,method describes,6
+2459,metric tons,6
+2460,mg iron,10
+2461,microbial contamination,15
+2462,microscopy requires,6
+2463,microvisual estimation,6
+2464,mil plastic,7
+2465,million pounds,8
+2466,mine safety,9
+2467,mineral particles,6
+2468,mineral particles formed,6
+2469,minerals belong,6
+2470,minerals consist,6
+2471,minerals important,5
+2472,minimize degradation,5
+2473,minimize potential,5
+2474,minimum air,5
+2475,minimum amount,5
+2476,minimum gri,5
+2477,minimum number,5
+2478,minimum protein,9
+2479,minimum protein quality,5
+2480,minimum requirements,6
+2481,mislead consumers,6
+2482,mitigation measures,8
+2483,ml scintillation,7
+2484,model accreditation,12
+2485,model accreditation plan,11
+2486,model rule,7
+2487,model rules,5
+2488,moderate aspect,6
+2489,molecular weight,5
+2490,money market,10
+2491,money market fund,6
+2492,monitoring data,8
+2493,monitoring devices,7
+2494,monitoring required,9
+2495,monitoring requirements,11
+2496,monitoring results,15
+2497,month period,6
+2498,months prior,6
+2499,motor vehicle,18
+2500,motor vehicle emissions,5
+2501,motor vehicles,5
+2502,move contaminated,5
+2503,move contaminated air,5
+2504,mucous membrane,5
+2505,multiple class,6
+2506,muscle tissue,8
+2507,nancy hanks,8
+2508,nasd believes,7
+2509,nasd board,6
+2510,nasd members,5
+2511,national academy,9
+2512,national ambient,5
+2513,national ambient air,5
+2514,national association,14
+2515,national cancer,8
+2516,national cancer institute,6
+2517,national center,6
+2518,national council,9
+2519,national defense,6
+2520,national emission,10
+2521,national emission standards,10
+2522,national endowment,10
+2523,national energy,5
+2524,national environmental,47
+2525,national environmental policy,42
+2526,national evaluation,5
+2527,national evaluation standards,5
+2528,national flood,9
+2529,national flood insurance,9
+2530,national forest,12
+2531,national forests,6
+2532,national foundation,10
+2533,national government,5
+2534,national health,9
+2535,national health interview,5
+2536,national historic,5
+2537,national institute,41
+2538,national institutes,8
+2539,national laboratory,9
+2540,national marine,25
+2541,national marine fisheries,25
+2542,national market,8
+2543,national oceanic,16
+2544,national park,12
+2545,national park service,6
+2546,national policy,5
+2547,national research,6
+2548,national sample,5
+2549,national science,5
+2550,national science foundation,5
+2551,national securities,5
+2552,national security,11
+2553,national standards,9
+2554,national technical,13
+2555,national technical information,13
+2556,nationally recognized,5
+2557,native american,6
+2558,natural gas,37
+2559,natural gas act,9
+2560,natural resources,13
+2561,natural ventilation,6
+2562,naturally occurring,10
+2563,naturally occurring fibrous,6
+2564,ndma petition,6
+2565,negative air,7
+2566,negative exposure,29
+2567,negative exposure assessment,24
+2568,negative initial,7
+2569,negative initial exposure,7
+2570,negative pressure,70
+2571,negative pressure enclosure,18
+2572,negative pressure enclosures,17
+2573,negative pressure glove,6
+2574,nepa reviews,5
+2575,net asset,14
+2576,net assets,6
+2577,net benefits,8
+2578,net outstanding,6
+2579,net outstanding campaign,5
+2580,nevada test,7
+2581,nevada test site,6
+2582,newport news,5
+2583,niosh method,5
+2584,nitrogen oxides,5
+2585,nmfs believes,6
+2586,nmfs issued,9
+2587,nominal compositions,6
+2588,nonair quality,5
+2589,nonattainment area,7
+2590,nonattainment areas,11
+2591,nonbanking activities,6
+2592,nonbanking activity,7
+2593,nonindustrial work,8
+2594,nonprofit agencies,7
+2595,nonprofit agencies employing,6
+2596,nonsmoking workers,5
+2597,normal business,20
+2598,normal business hours,18
+2599,normal working,5
+2600,north american,6
+2601,north capitol,32
+2602,north carolina,20
+2603,northern mariana,8
+2604,notice announces,19
+2605,notice federal,9
+2606,notice federal register,9
+2607,notice published,10
+2608,notices department,9
+2609,notification requirements,12
+2610,npt testing,5
+2611,nrc staff,7
+2612,nuclear materials,7
+2613,nuclear power,11
+2614,nuclear reactor,10
+2615,nuclear regulatory,23
+2616,nuclear regulatory commission,16
+2617,nuclear weapons,8
+2618,number found,11
+2619,number listed,5
+2620,nutrition claims,5
+2621,nutrition facts,5
+2622,nutrition labeling,26
+2623,nutrition labeling regulations,8
+2624,nutritional substances,6
+2625,oak ridge,13
+2626,oak ridge national,10
+2627,objections submitted,7
+2628,objective data,10
+2629,obtain copies,9
+2630,obtain information,6
+2631,obtaining information,5
+2632,occupational disease,5
+2633,occupational exposure,48
+2634,occupational exposures,8
+2635,occupational health,18
+2636,occupational safety,46
+2637,occupationally exposed,8
+2638,occupationally related,5
+2639,occurring fibrous,6
+2640,offering price,8
+2641,office buildings,8
+2642,office environments,5
+2643,office location,9
+2644,office space,8
+2645,official service,5
+2646,omb circular,7
+2647,omb control,8
+2648,omb control number,5
+2649,omb desk,9
+2650,omb desk officer,9
+2651,omb number,9
+2652,omb review,12
+2653,omb reviewer,5
+2654,omb reviewer listed,5
+2655,omnibus budget,14
+2656,omnibus budget reconciliation,14
+2657,open market,6
+2658,open systems,5
+2659,operating license,8
+2660,operating permit,9
+2661,operating requirements,7
+2662,operating results,5
+2663,operating system,5
+2664,operation involving,8
+2665,operations covered,8
+2666,operations division,8
+2667,operations involving,5
+2668,operator training,12
+2669,operator training program,6
+2670,opp docket,6
+2671,optical microscopy,6
+2672,optical properties,6
+2673,oral comments,10
+2674,oral dosage,6
+2675,oral dosage form,5
+2676,oral presentation,8
+2677,oral presentations,8
+2678,oral statements,7
+2679,order approve,7
+2680,order dated,6
+2681,order defines,12
+2682,order defines significant,6
+2683,order granting,24
+2684,order granting blanket,5
+2685,order issued,14
+2686,order protection,5
+2687,order red,6
+2688,order requested,8
+2689,order stated,5
+2690,ordering paragraph,6
+2691,organic compounds,10
+2692,organic hap,5
+2693,organic solvent,5
+2694,organic solvents,6
+2695,organizations statement,18
+2696,osd federal,12
+2697,osd federal register,12
+2698,osh act,5
+2699,osha agrees,18
+2700,osha anticipates,10
+2701,osha asbestos,11
+2702,osha asbestos standards,5
+2703,osha assumed,13
+2704,osha assumes,5
+2705,osha believes,87
+2706,osha calculated,5
+2707,osha compliance,6
+2708,osha concludes,17
+2709,osha considered,7
+2710,osha considers,6
+2711,osha determined,6
+2712,osha developed,5
+2713,osha estimated,17
+2714,osha estimates,13
+2715,osha expects,5
+2716,osha finds,9
+2717,osha issued,6
+2718,osha method,9
+2719,osha noted,9
+2720,osha notes,23
+2721,osha preliminarily,5
+2722,osha projects,7
+2723,osha proposed,12
+2724,osha recognizes,10
+2725,osha reference,5
+2726,osha requests,8
+2727,osha requires,10
+2728,osha standards,6
+2729,osha stated,5
+2730,oshas estimate,6
+2731,oshas estimated,5
+2732,oshas estimates,10
+2733,oshas proposal,5
+2734,oshas proposed,6
+2735,oshas revised,7
+2736,oshas risk,8
+2737,outdoor air,10
+2738,outreach activities,8
+2739,outstanding campaign,5
+2740,outstanding campaign obligations,5
+2741,ozark gas,5
+2742,ozone nonattainment,14
+2743,ozone nonattainment areas,7
+2744,ozone transport,6
+2745,pacific fishery,5
+2746,pacific fishery management,5
+2747,pacific ocean,6
+2748,packaging requirements,10
+2749,panel chairman,6
+2750,panel meeting,7
+2751,panel meeting pursuant,7
+2752,panels discussions,6
+2753,paperwork reduction,81
+2754,paperwork reduction act,71
+2755,parallel sides,6
+2756,parent company,5
+2757,park service,6
+2758,part ii,9
+2759,part iii,10
+2760,part iv,8
+2761,part iv department,5
+2762,parte contacts,7
+2763,participating insurance,6
+2764,participating insurance companies,5
+2765,particle size,14
+2766,particles formed,6
+2767,particulate air,6
+2768,particulate matter,8
+2769,party commenting,7
+2770,passive smoking,7
+2771,patent application,8
+2772,payment account,7
+2773,payments due,5
+2774,payments made,9
+2775,pediatric iron,18
+2776,pediatric iron poisoning,12
+2777,pediatric iron poisonings,8
+2778,pediatric poisoning,7
+2779,pediatric poisonings,8
+2780,peer review,6
+2781,pennsylvania avenue,10
+2782,peoples republic,5
+2783,percent bone,16
+2784,percent bone solids,12
+2785,percent confidence,7
+2786,percent interest,5
+2787,perform class,9
+2788,perform dispersion,9
+2789,perform duties,5
+2790,perform work,8
+2791,performance criteria,5
+2792,performance data,9
+2793,performance management,5
+2794,performance requirements,6
+2795,performance standards,7
+2796,performing asbestos,6
+2797,performing class,22
+2798,performing work,9
+2799,period beginning,18
+2800,period begins,7
+2801,period ending,6
+2802,periodic monitoring,6
+2803,periods beginning,7
+2804,permissible exposure,51
+2805,permissible exposure level,5
+2806,permissible exposure limit,26
+2807,permissible exposure limits,10
+2808,permissible nonbanking,6
+2809,permissible nonbanking activities,6
+2810,permit application,6
+2811,permit issued,5
+2812,permit program,5
+2813,permits issued,6
+2814,permitting authority,8
+2815,person adversely,7
+2816,person adversely affected,7
+2817,person authorized,7
+2818,person desiring,23
+2819,person listed,5
+2820,person means,6
+2821,person supervision,6
+2822,person wishing,8
+2823,personal information,7
+2824,personal protective,23
+2825,personal protective equipment,16
+2826,personal samples,11
+2827,personal sampling,5
+2828,personnel actions,5
+2829,personnel management,5
+2830,persons authorized,6
+2831,persons desiring,5
+2832,persons interested,11
+2833,persons making,12
+2834,persons making written,11
+2835,persons wishing,23
+2836,petition fees,6
+2837,petition submitted,7
+2838,petitioner states,5
+2839,petitioners alleged,5
+2840,petitioners argue,8
+2841,petitioners claim,5
+2842,petitioners contend,7
+2843,petitioners maintain,5
+2844,petitions submitted,5
+2845,phase condenser,6
+2846,phase contrast,29
+2847,phase contrast microscope,12
+2848,phase contrast microscopy,12
+2849,phase ii,5
+2850,phase ring,6
+2851,phone number,6
+2852,physical examination,5
+2853,physician determines,5
+2854,physicians written,6
+2855,pipe line,6
+2856,pipeline company,12
+2857,pipeline corporation,6
+2858,plan payments,6
+2859,plant fibers,6
+2860,plant health,9
+2861,plant health inspection,9
+2862,plastic bags,5
+2863,plastic sheeting,11
+2864,pleural plaques,6
+2865,pm billing,22
+2866,pm billing code,22
+2867,po box,7
+2868,point sources,7
+2869,poison control,13
+2870,poison control center,6
+2871,poison control centers,7
+2872,poisoning deaths,7
+2873,polarization direction,9
+2874,polarization directions,8
+2875,polarized light,20
+2876,polarized light microscopy,6
+2877,polarizing element,6
+2878,policies issued,6
+2879,policy act,41
+2880,policy issues,13
+2881,policy issues arising,13
+2882,policy statement,7
+2883,political prisoner,6
+2884,political prisoners,6
+2885,pollution control,9
+2886,pollution prevention,19
+2887,poor iaq,5
+2888,poor indoor,17
+2889,poor indoor air,17
+2890,population risk,6
+2891,porpoise bycatch,5
+2892,port authority,5
+2893,positive association,7
+2894,positive confirmation,6
+2895,positive identification,11
+2896,positive pressure,10
+2897,post office,6
+2898,postal service,5
+2899,potential adverse,7
+2900,potential benefits,5
+2901,potential concern,9
+2902,potential costs,9
+2903,potential effects,12
+2904,potential environmental,17
+2905,potential environmental effects,8
+2906,potential environmental impacts,5
+2907,potential exposure,8
+2908,potential fluoride,5
+2909,potential fluoride contribution,5
+2910,potential health,9
+2911,potential impact,9
+2912,potential impacts,10
+2913,potential risks,5
+2914,potential sources,6
+2915,potentially affected,10
+2916,potentially exposed,12
+2917,potentially hazardous,6
+2918,poultry carcasses,17
+2919,poultry industry,6
+2920,poultry meat,7
+2921,poultry product,35
+2922,poultry product ingredients,7
+2923,poultry product produced,16
+2924,poultry products,47
+2925,poultry products inspection,19
+2926,poultry products produced,32
+2927,power act,5
+2928,power company,8
+2929,power plant,6
+2930,power supply,6
+2931,practice controls,13
+2932,practice implementation,8
+2933,practice implementation plan,6
+2934,practice standards,18
+2935,practice work,6
+2936,practice work group,6
+2937,practices required,6
+2938,precise chemical,6
+2939,precise chemical formulation,6
+2940,preferred alternative,9
+2941,pregnant women,7
+2942,preliminarily determine,5
+2943,preliminarily determined,5
+2944,preliminary determination,21
+2945,preliminary regulatory,6
+2946,preliminary regulatory impact,5
+2947,prescribe regulations,5
+2948,prescription drug,6
+2949,present oral,7
+2950,president clinton,6
+2951,presidential election,7
+2952,presidential election campaign,6
+2953,presidential primary,9
+2954,presidential primary matching,6
+2955,pressure demand,6
+2956,pressure differential,6
+2957,pressure enclosure,19
+2958,pressure enclosure requirement,5
+2959,pressure enclosures,17
+2960,pressure glove,6
+2961,presumed asbestos,6
+2962,prevailing rates,6
+2963,previous experience,7
+2964,previously announced,9
+2965,previously approved,7
+2966,previously considered,6
+2967,previously installed,12
+2968,previously installed asbestos,6
+2969,previously published,8
+2970,primary care,7
+2971,primary election,8
+2972,primary manufacturing,6
+2973,primary matching,6
+2974,primary matching payment,6
+2975,primary means,5
+2976,principal amount,10
+2977,principal display,8
+2978,principal display panel,8
+2979,principal office,12
+2980,principal underwriter,7
+2981,principles set,14
+2982,principles underlying,6
+2983,printing office,7
+2984,prior approval,7
+2985,prior notice,5
+2986,priority area,13
+2987,priority areas,6
+2988,private land,5
+2989,private nonprofit,5
+2990,private sector,12
+2991,pro rata,7
+2992,probable human,5
+2993,problem buildings,5
+2994,procedural provisions,7
+2995,procedural requirements,5
+2996,procedure act,11
+2997,procedures contained,7
+2998,procedures set,11
+2999,process similar,5
+3000,processed meat,6
+3001,processing standard,8
+3002,processing standards,9
+3003,processing standards publication,7
+3004,procurement list,8
+3005,procurement list commodities,5
+3006,produce benefits,7
+3007,produce information,7
+3008,product derived,7
+3009,product ingredients,7
+3010,product labels,8
+3011,product made,13
+3012,product produced,20
+3013,product quality,5
+3014,product resulting,12
+3015,product safety,7
+3016,product safety commission,5
+3017,products inspection,20
+3018,products inspection regulations,14
+3019,products intended,6
+3020,products made,7
+3021,products marketed,6
+3022,products mentioned,6
+3023,products packaged,6
+3024,products produced,42
+3025,professional responsibility,5
+3026,proficiency analytical,10
+3027,proficiency analytical testing,10
+3028,program agency,8
+3029,program announcement,7
+3030,program authorized,6
+3031,program includes,5
+3032,program narrative,5
+3033,program requirements,8
+3034,program resources,7
+3035,programs docket,9
+3036,prohibited transaction,5
+3037,prohibited transaction exemption,5
+3038,project costs,5
+3039,project designer,10
+3040,project officer,5
+3041,project period,8
+3042,project periods,5
+3043,project summary,5
+3044,projects funded,5
+3045,promissory note,7
+3046,prompt corrective,8
+3047,prompt corrective measures,5
+3048,promulgate regulations,7
+3049,promulgated regulations,5
+3050,proper work,5
+3051,proper work practices,5
+3052,proposed action,39
+3053,proposed activities,7
+3054,proposed activity,5
+3055,proposed additions,6
+3056,proposed alternative,6
+3057,proposed amendment,17
+3058,proposed amendments,14
+3059,proposed change,9
+3060,proposed definition,10
+3061,proposed effective,7
+3062,proposed effective date,6
+3063,proposed emission,8
+3064,proposed emission limits,5
+3065,proposed exemption,10
+3066,proposed exemption published,5
+3067,proposed federal,7
+3068,proposed federal information,5
+3069,proposed information,7
+3070,proposed information collection,5
+3071,proposed modifications,5
+3072,proposed notice,6
+3073,proposed pel,10
+3074,proposed project,22
+3075,proposed projects,11
+3076,proposed provisions,7
+3077,proposed regulation,20
+3078,proposed regulations,26
+3079,proposed regulatory,10
+3080,proposed regulatory text,6
+3081,proposed requirement,5
+3082,proposed requirements,6
+3083,proposed revision,9
+3084,proposed revisions,11
+3085,proposed rule,191
+3086,proposed rule change,25
+3087,proposed rule federal,8
+3088,proposed rulemaking,53
+3089,proposed rules,34
+3090,proposed rules department,6
+3091,proposed standard,22
+3092,proposed standard requires,5
+3093,proposed standards,33
+3094,proposed work,8
+3095,proposing regulations,5
+3096,protect employees,16
+3097,protect investors,5
+3098,protect workers,9
+3099,protection act,8
+3100,protection afforded,6
+3101,protection agency,51
+3102,protection agencys,5
+3103,protection factor,5
+3104,protection factors,9
+3105,protection plants,5
+3106,protection provided,8
+3107,protective clothing,29
+3108,protective equipment,19
+3109,protective measures,9
+3110,protective provisions,5
+3111,protein content,5
+3112,protein quality,14
+3113,protestants parties,20
+3114,provide additional,19
+3115,provide adequate,22
+3116,provide adequate protection,7
+3117,provide assistance,5
+3118,provide data,5
+3119,provide guidance,13
+3120,provide information,31
+3121,provide interested,5
+3122,provide notice,5
+3123,provide services,10
+3124,provide sufficient,17
+3125,provide technical,5
+3126,provide training,5
+3127,provide written,6
+3128,provided pursuant,11
+3129,provisions addressing,5
+3130,provisions apply,7
+3131,provisions governing,14
+3132,provisions governing waiver,8
+3133,provisions proposed,5
+3134,provisions relating,10
+3135,provisions set,6
+3136,ptr optics,6
+3137,public comment,59
+3138,public comment period,10
+3139,public comments,40
+3140,public comments received,9
+3141,public debt,13
+3142,public disclosure,7
+3143,public docket,5
+3144,public document,9
+3145,public document room,6
+3146,public financing,6
+3147,public funding,6
+3148,public funds,8
+3149,public health,79
+3150,public health service,25
+3151,public health system,5
+3152,public hearing,31
+3153,public hearings,7
+3154,public housing,5
+3155,public information,26
+3156,public information collection,11
+3157,public input,10
+3158,public inspection,70
+3159,public interest,36
+3160,public land,8
+3161,public lands,8
+3162,public law,65
+3163,public meeting,16
+3164,public meetings,12
+3165,public notice,13
+3166,public offering,17
+3167,public offering price,7
+3168,public participation,18
+3169,public policy,6
+3170,public pursuant,8
+3171,public reading,6
+3172,public record,9
+3173,public reference,35
+3174,public reporting,7
+3175,public reporting burden,6
+3176,public response,8
+3177,public review,26
+3178,public safety,7
+3179,public scoping,12
+3180,public scoping meetings,5
+3181,public service,12
+3182,publication date,6
+3183,publicly funded,7
+3184,published pursuant,10
+3185,puget sound,5
+3186,puget sound naval,5
+3187,pulmonary effects,5
+3188,pulmonary function,8
+3189,purchase price,12
+3190,purposes fairly,7
+3191,purposes fairly intended,7
+3192,qualified campaign,25
+3193,qualified campaign expense,6
+3194,qualified campaign expenses,18
+3195,qualified french,7
+3196,qualified french security,7
+3197,qualified person,11
+3198,qualitative fit,10
+3199,quality assurance,13
+3200,quality compliance,7
+3201,quality control,37
+3202,quality control program,17
+3203,quality health,5
+3204,quality problems,14
+3205,quality regulations,8
+3206,quality standard,8
+3207,quality standards,10
+3208,quantitative fit,8
+3209,quantitative risk,8
+3210,quantitative risk assessment,5
+3211,quota status,7
+3212,quota status reports,7
+3213,rabies vaccine,5
+3214,rabies vaccines,5
+3215,radioactive waste,8
+3216,radioactive wastes,6
+3217,raising tolerance,7
+3218,raising tolerance levels,7
+3219,rapid growth,6
+3220,ratio greater,6
+3221,raw agricultural,6
+3222,raw agricultural commodities,5
+3223,raw materials,7
+3224,raw poultry,6
+3225,real estate,18
+3226,real property,11
+3227,reasonable alternatives,5
+3228,reasonable estimate,5
+3229,reasonable possibility,11
+3230,reasonable time,7
+3231,reasons discussed,5
+3232,reasons set,20
+3233,rebuttal briefs,6
+3234,receive comments,10
+3235,receive information,5
+3236,received comments,8
+3237,receiving comments,11
+3238,receiving public,7
+3239,recent years,8
+3240,recipients thereof,11
+3241,recognition system,5
+3242,recognition system termination,5
+3243,recommendations made,5
+3244,reconciliation act,14
+3245,record keeping,5
+3246,record shows,7
+3247,recorded announcement,5
+3248,recordkeeping requirements,23
+3249,records inspection,6
+3250,records management,8
+3251,records required,14
+3252,recovery act,6
+3253,recovery plan,6
+3254,recovery systems,10
+3255,red bluff,7
+3256,red bluff diversion,6
+3257,red meat,5
+3258,redesignating paragraphs,9
+3259,reduce emissions,5
+3260,reduce employee,12
+3261,reduce employee exposure,8
+3262,reduce exposure,5
+3263,reduce exposures,7
+3264,reduce risk,6
+3265,reduce significant,9
+3266,reduced risk,5
+3267,reducing employee,7
+3268,reducing employee exposure,5
+3269,reduction act,71
+3270,reference method,8
+3271,reference period,6
+3272,reflect current,6
+3273,reform act,11
+3274,reform efforts,9
+3275,refugee social,7
+3276,refugee social services,5
+3277,region ii,5
+3278,regional administrator,7
+3279,regional administrators,7
+3280,regional director,11
+3281,regional office,14
+3282,register liaison,32
+3283,register notice,18
+3284,register notices,5
+3285,registered investment,6
+3286,registered management,5
+3287,registered management investment,5
+3288,registration division,5
+3289,regularly scheduled,6
+3290,regulated area,43
+3291,regulated areas,27
+3292,regulation deemed,7
+3293,regulation deemed objectionable,7
+3294,regulation development,6
+3295,regulation requires,5
+3296,regulations apply,5
+3297,regulations codified,5
+3298,regulations department,8
+3299,regulations establishing,9
+3300,regulations governing,28
+3301,regulations implementing,9
+3302,regulations issued,12
+3303,regulations issued pursuant,8
+3304,regulations permit,7
+3305,regulations promulgated,6
+3306,regulations provide,8
+3307,regulations require,14
+3308,regulations set,9
+3309,regulatory action,51
+3310,regulatory actions,8
+3311,regulatory alternatives,18
+3312,regulatory analysis,12
+3313,regulatory approach,9
+3314,regulatory approaches,7
+3315,regulatory authorities,6
+3316,regulatory authority,6
+3317,regulatory burden,6
+3318,regulatory commission,31
+3319,regulatory commission docket,6
+3320,regulatory decisions,6
+3321,regulatory definition,5
+3322,regulatory evaluation,15
+3323,regulatory flexibility,90
+3324,regulatory flexibility act,56
+3325,regulatory flexibility analysis,30
+3326,regulatory framework,7
+3327,regulatory impact,27
+3328,regulatory impact analysis,17
+3329,regulatory language,7
+3330,regulatory negotiation,6
+3331,regulatory policies,16
+3332,regulatory program,6
+3333,regulatory provisions,9
+3334,regulatory relief,6
+3335,regulatory requirements,16
+3336,regulatory review,5
+3337,regulatory text,26
+3338,rehabilitation act,6
+3339,related documents,6
+3340,related health,5
+3341,relative humidity,6
+3342,relative risk,6
+3343,relay service,6
+3344,relevant act,6
+3345,relevant act sections,5
+3346,relevant data,5
+3347,relevant information,12
+3348,relevant material,8
+3349,relevant parties,5
+3350,relevant securities,7
+3351,remain constant,5
+3352,remain open,5
+3353,remaining portions,5
+3354,remand order,9
+3355,remedial action,10
+3356,removal activity,8
+3357,removal operations,11
+3358,removal projects,5
+3359,removal work,5
+3360,remove asbestos,9
+3361,remove impediments,8
+3362,removing paragraph,8
+3363,renewable energy,9
+3364,renewable energy systems,5
+3365,rental rate,5
+3366,repair activities,6
+3367,repayment determinations,5
+3368,reply comments,9
+3369,report entitled,5
+3370,report required,5
+3371,report summarizing,6
+3372,reporting burden,13
+3373,reporting format,5
+3374,reporting period,7
+3375,reporting periods,8
+3376,reporting periods beginning,6
+3377,reporting requirement,10
+3378,reporting requirements,46
+3379,reports management,7
+3380,reports posted,7
+3381,reports required,5
+3382,represent interests,5
+3383,representations supporting,5
+3384,representative exposure,5
+3385,representative sample,6
+3386,represented parties,13
+3387,represented party,13
+3388,represented person,12
+3389,represented persons,10
+3390,representing interests,5
+3391,request notification,7
+3392,request pursuant,5
+3393,requested clarification,6
+3394,requested comments,11
+3395,requested redemption,5
+3396,requesting comment,5
+3397,requesting comments,13
+3398,requestors contentions,7
+3399,requests comment,13
+3400,requests comments,23
+3401,requests filed,6
+3402,requests information,5
+3403,require affected,5
+3404,require employers,17
+3405,require medical,5
+3406,required information,6
+3407,required respirator,5
+3408,required training,7
+3409,requirements analysis,6
+3410,requirements apply,5
+3411,requirements contained,20
+3412,requirements established,7
+3413,requirements governing,5
+3414,requirements imposed,5
+3415,requirements pertaining,6
+3416,requirements relating,5
+3417,requirements set,18
+3418,requirements submitted,6
+3419,requires agencies,8
+3420,research activities,7
+3421,research council,8
+3422,research institute,10
+3423,research permit,8
+3424,research program,5
+3425,research project,7
+3426,research projects,5
+3427,research triangle,10
+3428,reserve bank,21
+3429,reserve banks,6
+3430,reserve system,10
+3431,residential buildings,10
+3432,resilient floor,6
+3433,resilient flooring,8
+3434,resource area,5
+3435,resource conservation,8
+3436,resource management,12
+3437,resource management plan,5
+3438,resources management,9
+3439,respirator fit,5
+3440,respirator operated,5
+3441,respiratory disease,7
+3442,respiratory protection,34
+3443,respiratory symptoms,10
+3444,respiratory tract,5
+3445,responsible official,6
+3446,restricted area,5
+3447,restricted person,7
+3448,restricted persons,6
+3449,resulting product,5
+3450,retail trade,10
+3451,retroactive effect,6
+3452,return air,7
+3453,revenue code,12
+3454,revenue service,15
+3455,review agency,6
+3456,review process,13
+3457,reviewer listed,5
+3458,revised asbestos,17
+3459,revised asbestos standard,8
+3460,revised construction,9
+3461,revised paragraph,5
+3462,revised pel,8
+3463,revised sheet,10
+3464,revised standard,13
+3465,revised standards,5
+3466,revised tariff,8
+3467,revised tariff sheets,6
+3468,revised volume,14
+3469,revising paragraph,24
+3470,revising paragraphs,15
+3471,rhode island,5
+3472,ridge national,10
+3473,ridge national laboratory,5
+3474,risk analysis,5
+3475,risk assessment,28
+3476,risk due,5
+3477,risk estimates,15
+3478,risk levels,5
+3479,risk management,5
+3480,risk posed,6
+3481,risk reduction,7
+3482,risks posed,5
+3483,roofing material,7
+3484,roofing removal,5
+3485,room air,5
+3486,room located,6
+3487,rotating mechanical,5
+3488,rotating phase,6
+3489,rotating phase condenser,6
+3490,round robin,9
+3491,routine amendments,8
+3492,routine maintenance,18
+3493,routine matter,8
+3494,rsquo rsquo,13
+3495,rule applies,6
+3496,rule change,27
+3497,rule change received,9
+3498,rule establishes,8
+3499,rule federal,15
+3500,rule federal register,15
+3501,rule governing,6
+3502,rule includes,8
+3503,rule published,9
+3504,rule requires,11
+3505,rulemaking procedures,5
+3506,rulemaking proceeding,10
+3507,rulemaking provisions,7
+3508,rulemaking pursuant,5
+3509,rulemaking record,11
+3510,rules department,6
+3511,rules docket,14
+3512,rules governing,10
+3513,rules promulgated,5
+3514,rules relating,6
+3515,rules set,6
+3516,run size,6
+3517,rural areas,5
+3518,sacramento river,15
+3519,safe driving,5
+3520,safe operation,7
+3521,safety act,8
+3522,safety aspects,9
+3523,safety commission,5
+3524,safety concerns,7
+3525,safety data,7
+3526,safety data sheet,5
+3527,safety effects,5
+3528,safety hazards,7
+3529,safety issues,7
+3530,safety precautions,8
+3531,safety report,9
+3532,safety standards,8
+3533,sales charge,9
+3534,sales made,6
+3535,sales price,7
+3536,salt lake,6
+3537,sample collection,5
+3538,sample preparation,10
+3539,samples collected,7
+3540,sampling data,10
+3541,sampling procedure,7
+3542,sampling pump,7
+3543,sampling site,6
+3544,sampling sites,5
+3545,san francisco,9
+3546,sanctions resulting,5
+3547,satisfactory fit,5
+3548,scanning electron,6
+3549,science board,5
+3550,science foundation,5
+3551,scientific advisory,5
+3552,scientific community,5
+3553,scientific evidence,10
+3554,scientific information,6
+3555,scientific knowledge,5
+3556,scientific literature,5
+3557,scientific research,9
+3558,scientific research permit,8
+3559,scientific studies,5
+3560,scintillation vial,6
+3561,scoping comments,7
+3562,scoping meeting,10
+3563,scoping meetings,10
+3564,scoping process,10
+3565,sealed impermeable,5
+3566,sealing encapsulant,6
+3567,searching existing,7
+3568,searching existing data,7
+3569,sec orders,5
+3570,sec pursuant,5
+3571,secondary market,5
+3572,secret service,6
+3573,secretary determines,12
+3574,secretary means,5
+3575,secretary reserves,5
+3576,secs public,6
+3577,secs public reference,6
+3578,secs secretary,6
+3579,section applies,7
+3580,securities act,9
+3581,securities exchange,33
+3582,securities exchange act,33
+3583,securities purchased,5
+3584,security act,19
+3585,security information,8
+3586,security number,6
+3587,security program,5
+3588,seeking comment,6
+3589,seeking comments,7
+3590,seeks comment,6
+3591,select regulatory,7
+3592,select regulatory approaches,7
+3593,selection process,9
+3594,selling group,5
+3595,send comments,16
+3596,senior official,6
+3597,senior vice,8
+3598,sensitive security,6
+3599,sensitive security information,6
+3600,separate account,9
+3601,separate accounts,5
+3602,separate rulemaking,5
+3603,separated chicken,6
+3604,separated poultry,16
+3605,separation machinery,11
+3606,service act,10
+3607,service area,9
+3608,service contract,6
+3609,service delivery,8
+3610,service fee,5
+3611,service funds,6
+3612,service list,8
+3613,service plan,5
+3614,service programs,7
+3615,service providers,6
+3616,services act,9
+3617,services administration,15
+3618,services family,5
+3619,services food,9
+3620,services furnished,8
+3621,services listed,5
+3622,services made,5
+3623,services provided,20
+3624,serving applicants,5
+3625,settlement agreement,6
+3626,severe economic,8
+3627,severe economic impact,8
+3628,severe headaches,5
+3629,shareholder service,5
+3630,shareholder services,6
+3631,shares held,5
+3632,shares representing,5
+3633,shares representing interests,5
+3634,shares subject,6
+3635,sheet installation,5
+3636,ship repair,13
+3637,shipbuilding facilities,5
+3638,shipyard employment,26
+3639,shipyard employment standards,13
+3640,shipyard industry,6
+3641,short duration,16
+3642,short duration operations,5
+3643,short period,8
+3644,short term,7
+3645,sick building,10
+3646,sick building syndrome,7
+3647,sidestream smoke,7
+3648,sign language,7
+3649,signed original,5
+3650,significant adverse,6
+3651,significant amounts,7
+3652,significant aspects,9
+3653,significant bias,6
+3654,significant differences,5
+3655,significant economic,54
+3656,significant economic impact,50
+3657,significant effect,12
+3658,significant environmental,8
+3659,significant exposures,6
+3660,significant health,5
+3661,significant impact,51
+3662,significant increase,13
+3663,significant issues,5
+3664,significant levels,5
+3665,significant number,6
+3666,significant portion,6
+3667,significant problem,6
+3668,significant regulatory,40
+3669,significant regulatory action,38
+3670,significant risk,31
+3671,significant rule,13
+3672,significantly affect,8
+3673,significantly affecting,7
+3674,significantly higher,7
+3675,significantly increased,5
+3676,significantly reduce,6
+3677,signs required,5
+3678,similar nutritional,6
+3679,similar nutritional substances,6
+3680,similar products,8
+3681,single point,6
+3682,sink gillnet,7
+3683,sip revision,10
+3684,sixty days,7
+3685,size requirements,5
+3686,skeletal muscle,18
+3687,sleep disorder,5
+3688,slight differences,5
+3689,small amount,20
+3690,small amounts,18
+3691,small business,30
+3692,small business administration,10
+3693,small business stationary,5
+3694,small businesses,35
+3695,small entities,45
+3696,small establishments,10
+3697,small firms,9
+3698,small number,13
+3699,small organizations,6
+3700,small particles,9
+3701,small percentage,12
+3702,smoke exposure,9
+3703,smoking area,5
+3704,smoking areas,12
+3705,smoking cessation,6
+3706,social security,26
+3707,social security act,11
+3708,social security number,6
+3709,social service,10
+3710,social service funds,6
+3711,social services,14
+3712,sodium salt,5
+3713,soil ingestion,6
+3714,solicit comments,15
+3715,soliciting comments,10
+3716,soliciting public,6
+3717,solicits comments,6
+3718,solid oral,6
+3719,solid oral dosage,6
+3720,solid waste,14
+3721,solids content,32
+3722,solvent spray,5
+3723,sound absorbing,6
+3724,sound naval,5
+3725,source categories,10
+3726,source category,17
+3727,sources including,5
+3728,sources subject,8
+3729,south carolina,8
+3730,southwest region,6
+3731,special accommodations,8
+3732,special accommodations due,8
+3733,special emphasis,6
+3734,special investments,10
+3735,special packaging,6
+3736,special provisions,5
+3737,special purpose,7
+3738,specially trained,7
+3739,species act,15
+3740,species present,6
+3741,specific class,6
+3742,specific compliance,5
+3743,specific conditions,5
+3744,specific contaminant,7
+3745,specific information,16
+3746,specific issues,10
+3747,specific measures,5
+3748,specific medical,5
+3749,specific medical conditions,5
+3750,specific problems,7
+3751,specific provisions,10
+3752,specific requirements,16
+3753,specific terms,7
+3754,specific type,5
+3755,specific work,9
+3756,specific work practices,8
+3757,specifically address,7
+3758,specifically designed,6
+3759,specifically invited,6
+3760,specifically requests,8
+3761,specifically requests comments,6
+3762,spent fuel,7
+3763,spent nuclear,5
+3764,spray booth,14
+3765,spray guns,8
+3766,square feet,20
+3767,stafford loan,15
+3768,stafford loan program,6
+3769,stafford loans,5
+3770,stage micrometer,7
+3771,stainless steel,14
+3772,stamped postcard,5
+3773,standard asbestos,12
+3774,standard deviation,10
+3775,standard deviations,5
+3776,standard instrument,6
+3777,standard instrument approach,6
+3778,standard paragraph,8
+3779,standard paragraphs,8
+3780,standard requires,24
+3781,standards advisory,7
+3782,standards advisory committee,5
+3783,standards established,7
+3784,standards publication,8
+3785,standards require,5
+3786,standing committee,5
+3787,starting material,5
+3788,starting materials,13
+3789,state assessment,6
+3790,state assessment system,5
+3791,state bar,8
+3792,state department,6
+3793,state disciplinary,5
+3794,state implementation,10
+3795,state implementation plan,9
+3796,state law,6
+3797,state laws,8
+3798,state plan,5
+3799,state program,5
+3800,state public,6
+3801,state regulations,6
+3802,state regulatory,7
+3803,state single,6
+3804,state single point,5
+3805,state submittal,5
+3806,state water,6
+3807,statements made,5
+3808,states attorney,5
+3809,states attorneys,8
+3810,states attorneys manual,6
+3811,states code,6
+3812,states court,11
+3813,states department,16
+3814,states environmental,5
+3815,states environmental protection,5
+3816,states government,7
+3817,states price,9
+3818,states treasury,9
+3819,stationary source,10
+3820,stationary sources,6
+3821,statistically significant,6
+3822,status reports,9
+3823,status reports posted,7
+3824,statutory authority,12
+3825,statutory basis,16
+3826,statutory import,5
+3827,statutory import programs,5
+3828,statutory provision,5
+3829,statutory provisions,5
+3830,statutory requirements,7
+3831,steel pipe,5
+3832,steel production,5
+3833,stock exchange,6
+3834,stop dispersion,6
+3835,storage area,6
+3836,storage capacity,6
+3837,storage containers,5
+3838,storage tanks,5
+3839,storage yard,5
+3840,street clothing,5
+3841,stringent requirements,5
+3842,strip chart,5
+3843,strippable spray,6
+3844,strippable spray booth,6
+3845,strongly encourages,9
+3846,strongly encourages applicants,5
+3847,student enrolled,5
+3848,student loan,10
+3849,student loan program,5
+3850,studies conducted,9
+3851,studies show,8
+3852,studies showing,6
+3853,studies submitted,5
+3854,study showed,6
+3855,subject matter,18
+3856,subject merchandise,18
+3857,submit comments,21
+3858,submit information,5
+3859,submit written,32
+3860,submit written comments,15
+3861,submitted comments,5
+3862,submitted data,6
+3863,submitted pesticide,5
+3864,submitted pursuant,6
+3865,submitted shows,7
+3866,submitting written,7
+3867,submitting written comments,6
+3868,subscriber ineligible,5
+3869,substantial direct,6
+3870,substantial direct effects,5
+3871,substantial evidence,5
+3872,substantial issue,9
+3873,substantial number,70
+3874,substantially intact,5
+3875,substantially reduce,9
+3876,substantially similar,6
+3877,substantive discussions,5
+3878,successfully completed,9
+3879,successor employer,5
+3880,sufficient amount,5
+3881,sufficient evidence,7
+3882,sufficient federalism,9
+3883,sufficient federalism implications,9
+3884,sufficient finish,5
+3885,sufficient information,9
+3886,sufficient time,12
+3887,summary epa,5
+3888,summary nmfs,9
+3889,summary notice,16
+3890,summary pursuant,10
+3891,summary report,5
+3892,sunscreen drug,8
+3893,sunscreen drug product,7
+3894,sunscreen drug products,7
+3895,sunset date,6
+3896,sunshine act,9
+3897,supplement act,7
+3898,supplementary information,272
+3899,supplementary information authority,8
+3900,supplementary information background,21
+3901,supplementary information comments,6
+3902,supplementary information fda,5
+3903,supplementary information history,5
+3904,supplementary information section,10
+3905,supplied air,12
+3906,supplied air respirator,6
+3907,support services,5
+3908,supporting data,8
+3909,supporting documentation,10
+3910,supporting documents,7
+3911,supporting evidence,6
+3912,supportive services,5
+3913,supra note,5
+3914,supreme court,10
+3915,surface area,13
+3916,surface coating,5
+3917,surface protection,12
+3918,surface protection plants,5
+3919,surfacing acm,30
+3920,surfacing material,23
+3921,surfacing materials,8
+3922,surveillance program,8
+3923,suspend liquidation,6
+3924,sweet outer,6
+3925,system components,5
+3926,system filed,9
+3927,system insulation,29
+3928,system management,8
+3929,system operation,6
+3930,system reporting,5
+3931,system termination,5
+3932,system termination act,5
+3933,takes place,6
+3934,taking action,10
+3935,tank safety,5
+3936,tank waste,5
+3937,tank wastes,5
+3938,target population,5
+3939,tariff act,13
+3940,tariff january,10
+3941,tariff schedule,19
+3942,tariff sheets,12
+3943,task force,10
+3944,tdd number,5
+3945,technical assistance,18
+3946,technical expertise,5
+3947,technical information,20
+3948,technical information service,7
+3949,technical regulations,8
+3950,technical specifications,5
+3951,techniques including,6
+3952,technology transfer,10
+3953,telecommunications device,7
+3954,telephone number,51
+3955,telephone numbers,9
+3956,temperature control,10
+3957,ten copies,6
+3958,ten days,6
+3959,ten percent,5
+3960,ten times,5
+3961,ten years,5
+3962,tensile strength,10
+3963,tentative conclusion,6
+3964,tentative position,20
+3965,tentative positions,5
+3966,tentatively concluded,7
+3967,tentatively concludes,15
+3968,term applied,7
+3969,termination act,5
+3970,test conductor,5
+3971,test method,11
+3972,test methods,15
+3973,test results,13
+3974,test site,7
+3975,test subject,9
+3976,testing procedure,5
+3977,testing procedures,6
+3978,testing program,8
+3979,testing requirements,7
+3980,textile agreements,8
+3981,textile agreements january,5
+3982,textile products,7
+3983,thermal system,30
+3984,thermal system insulation,29
+3985,thirty days,11
+3986,threaten material,7
+3987,threaten material injury,7
+3988,time allowed,6
+3989,time period,13
+3990,time periods,5
+3991,time required,6
+3992,time weighted,6
+3993,time weighted average,5
+3994,timely manner,8
+3995,title ii,9
+3996,title iv,6
+3997,title vi,7
+3998,tobacco products,5
+3999,tobacco smoke,33
+4000,tobacco smoke exposure,5
+4001,tolerance levels,7
+4002,tolerance petition,6
+4003,tolerance petition fees,6
+4004,tolerance requirements,7
+4005,toll free,7
+4006,tort liability,6
+4007,total amino,5
+4008,total amino acids,5
+4009,total amount,32
+4010,total annual,17
+4011,total burden,5
+4012,total cost,22
+4013,total costs,9
+4014,total dust,6
+4015,total estimated,6
+4016,total iron,5
+4017,total number,23
+4018,total project,10
+4019,toxic effects,5
+4020,toxic materials,5
+4021,toxic substances,7
+4022,trade associations,9
+4023,trade commission,12
+4024,trading ahead,7
+4025,trading volume,7
+4026,traditional deboning,7
+4027,traditionally defined,6
+4028,traffic procedures,7
+4029,training program,21
+4030,training programs,7
+4031,training provisions,5
+4032,training required,9
+4033,training requirements,13
+4034,transaction exemption,5
+4035,transfer requirements,5
+4036,transitional living,6
+4037,transitional living program,5
+4038,transmission corporation,5
+4039,transmission electron,11
+4040,transmission line,5
+4041,transport airplane,7
+4042,transportation conformity,6
+4043,transportation federal,9
+4044,transportation federal aviation,8
+4045,transportation service,6
+4046,transportation services,5
+4047,treasury department,7
+4048,treasury form,6
+4049,tribal governments,16
+4050,tribal organizations,5
+4051,trust fund,5
+4052,tuesday january,7
+4053,twrs eis,7
+4054,uncontested claims,7
+4055,undue concentration,7
+4056,union carbide,6
+4057,unit investment,6
+4058,unit species,5
+4059,united states,229
+4060,united states attorney,5
+4061,united states attorneys,8
+4062,united states code,6
+4063,united states court,11
+4064,united states department,15
+4065,united states environmental,5
+4066,united states government,7
+4067,united states price,9
+4068,united states treasury,9
+4069,unlimited number,5
+4070,unsound banking,8
+4071,unsubsidized stafford,18
+4072,unsubsidized stafford loan,13
+4073,unwarranted invasion,7
+4074,upper limit,5
+4075,upper respiratory,11
+4076,upper respiratory symptoms,7
+4077,upper sacramento,9
+4078,upper sacramento river,7
+4079,urban development,16
+4080,urban development act,5
+4081,urban development office,8
+4082,uva damage,5
+4083,uva protection,10
+4084,uva protection provided,5
+4085,uva radiation,9
+4086,uva spectrum,6
+4087,uva testing,5
+4088,uva wavelengths,5
+4089,vacuum cleaners,5
+4090,vacuum system,7
+4091,valid existing,6
+4092,variable life,6
+4093,variable life insurance,6
+4094,vary depending,5
+4095,vast majority,9
+4096,vehicle emissions,5
+4097,ventilation air,7
+4098,ventilation rate,8
+4099,ventilation system,16
+4100,ventilation systems,23
+4101,vessel owners,6
+4102,veterans affairs,10
+4103,veterans benefits,6
+4104,vice president,5
+4105,vinyl asbestos,5
+4106,vinyl asbestos tile,5
+4107,violence prevention,7
+4108,visible dust,6
+4109,visibly deteriorated,5
+4110,vision waiver,8
+4111,visual inspection,8
+4112,voc content,17
+4113,voc emissions,7
+4114,voc limits,6
+4115,vohap content,9
+4116,vohap emissions,5
+4117,volatile hap,8
+4118,volatile organic,21
+4119,volatile organic compounds,9
+4120,voluntary program,6
+4121,voting rights,7
+4122,voting shares,8
+4123,wage rate,5
+4124,waived drivers,5
+4125,waiver program,7
+4126,wall street,5
+4127,warning labels,5
+4128,warning signs,6
+4129,warning statement,16
+4130,warning statements,16
+4131,warrant preparation,9
+4132,washington state,5
+4133,washoff operations,6
+4134,waste bag,6
+4135,waste disposal,9
+4136,waste generated,5
+4137,waste listing,6
+4138,waste management,24
+4139,waste management activities,7
+4140,waste management system,5
+4141,waste material,11
+4142,waste minimization,7
+4143,waste storage,8
+4144,waste treatment,5
+4145,wastes generated,12
+4146,water act,5
+4147,water pollution,10
+4148,water quality,13
+4149,water resources,11
+4150,water spray,8
+4151,water supply,8
+4152,water temperatures,5
+4153,water treatment,8
+4154,wavy fibers,6
+4155,wear protective,5
+4156,wear protective clothing,5
+4157,wear respirators,7
+4158,weight loss,7
+4159,weighted average,11
+4160,welcomes comments,12
+4161,west jackson,8
+4162,west virginia,8
+4163,wet methods,31
+4164,whichever occurs,9
+4165,white light,10
+4166,wide range,19
+4167,wide variety,15
+4168,widely accepted,5
+4169,width ratio,6
+4170,wildlife service,14
+4171,willamette meridian,5
+4172,wood furniture,28
+4173,wood furniture industry,7
+4174,wood furniture manufacturing,12
+4175,wood products,5
+4176,wood surface,12
+4177,wood surface protection,10
+4178,work area,27
+4179,work areas,18
+4180,work covered,7
+4181,work environment,6
+4182,work environments,8
+4183,work group,14
+4184,work hours,6
+4185,work involving,9
+4186,work operation,9
+4187,work operations,8
+4188,work performed,9
+4189,work plan,9
+4190,work practice,45
+4191,work practice controls,13
+4192,work practice implementation,8
+4193,work practice standards,18
+4194,work practice work,6
+4195,work practices,100
+4196,work site,5
+4197,work sites,7
+4198,worker exposure,13
+4199,worker protection,5
+4200,worker training,7
+4201,workers breathing,5
+4202,workers compensation,10
+4203,workers exposed,25
+4204,workers performing,12
+4205,working conditions,8
+4206,working days,6
+4207,working group,9
+4208,workplace conditions,10
+4209,workplace exposure,10
+4210,written comments,95
+4211,written comments received,6
+4212,written communications,10
+4213,written communications relating,10
+4214,written compliance,11
+4215,written correspondence,5
+4216,written data,6
+4217,written description,11
+4218,written iaq,6
+4219,written iaq compliance,5
+4220,written information,5
+4221,written materials,5
+4222,written notice,13
+4223,written notification,8
+4224,written objections,9
+4225,written opinion,6
+4226,written presentation,11
+4227,written record,7
+4228,written records,5
+4229,written request,27
+4230,written statement,15
+4231,written statements,28
+4232,written submissions,13
+4233,written waiver,5
+4234,year exposure,5
+4235,year period,7
+4236,years ago,5
+4237,yield restrictions,7
+4238,york stock,5
+4239,young children,19
