@@ -1,0 +1,6 @@
+*.pdf
+/trec_eval.9.0/
+/__pycache__/
+*.doc
+*.docx
+*.gz
