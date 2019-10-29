@@ -83,7 +83,6 @@ class IndexLoader:
         self.document_list = document_list 
         self.document_dict = document_dict
 
-
     def generate_document_index(self):
         """
         generate document posting list like
