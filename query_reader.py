@@ -3,7 +3,7 @@ class QueryReader:
     def __init__(self, query_file_path):
         self.query_file_path = query_file_path
 
-    # a query generator by reading the documents line by line
+    # a query generator by reading the documents line by line query like[(query_num, query_topic),]
     def get_query(self):
         query = []
         with open(self.query_file_path) as f:

@@ -6,3 +6,4 @@
 *.docx
 *.gz
 *.zip
+/project1_part/__pycache__/

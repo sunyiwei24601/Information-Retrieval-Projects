@@ -2,10 +2,21 @@ import re
 import csv
 import collections
 class IndexLoader:
-    def __init__(self):
+    def __init__(self, index_path, lexicon_path, document_path):
+        self.index_path = index_path
+        self.lexicon_path = lexicon_path
+        self.document_path = document_path
         pass 
     
-    def load_lexicon(self, lexicon_path):
+    
+    def load_all(self):
+        self.load_document()
+        self.load_index()
+        self.load_lexicon()
+        self.generate_document_index()
+        return self 
+
+    def load_lexicon(self, lexicon_path=None):
         """
         read document frequency list and term list
         document frequency list like
@@ -18,22 +29,25 @@ class IndexLoader:
             "term1" : 1
         }
         """
+        if lexicon_path == None:
+            lexicon_path = self.lexicon_path
         term_list = []
         document_frequency_list = []
         with open(lexicon_path, newline="", encoding="utf-8") as f:
             reader = csv.reader(f, delimiter=",")
             for line in reader:
                 term_list.append(line[1])
-                document_frequency_list.append(line[2])
+                document_frequency_list.append(int(line[2]))
         self.document_frequency_list = document_frequency_list
         self.term_list = term_list
         self.term_dict = {}
+
         n = 0 
         for i in term_list:
             self.term_dict[i] = n
             n += 1
 
-    def load_index(self, index_path):
+    def load_index(self, index_path=None):
         """
         read term posting and generate the term frequency of collection
         term posting list like
@@ -44,6 +58,9 @@ class IndexLoader:
         term frequency in collection like
         [term0_frequency_collection, term1_frequency_collection]
         """
+        if index_path == None:
+            index_path = self.index_path
+
         term_index = []
         with open(index_path, newline="", encoding="utf-8") as f:
             reader = csv.reader(f, delimiter=",")
@@ -60,7 +77,7 @@ class IndexLoader:
             total_frequency = sum(posting.values())
             self.term_frequency_collection.append(total_frequency)
 
-    def load_document(self, document_path):
+    def load_document(self, document_path=None):
         """
         read document list and generate document dict
         document list like
@@ -71,6 +88,8 @@ class IndexLoader:
             "doc_name1":1
         }
         """
+        if document_path == None:
+            document_path = self.document_path
         document_list = []
         document_dict = {}
         with open(document_path, newline="", encoding="utf-8") as f:
@@ -99,7 +118,7 @@ class IndexLoader:
             for doc_id, term_frequency in posting_list.items():
                 document_index[doc_id][n] = term_frequency
             n += 1
-        self.document_index = document_index
+        self.document_posting_list = document_index
         self.document_lenth = []
         len_ = len(document_index.keys())
         for doc_id in range(len_):
