@@ -84,8 +84,7 @@ class VectorSpaceModel(QueryModel):
     def compute_document_normalization(self):
         """
         from document_posting_list read the term and tf in it
-        calculate the tf-idf in it
-        save the document sparse vector as following(sorted)
+        calculate the tf-idf in it and sum up to get the normalization
         """
         document_ids = sorted(self.document_posting_list.keys())
 
@@ -106,6 +105,58 @@ class VectorSpaceModel(QueryModel):
     def calculate_tf_idf(self, tf, idf):
         return (math.log10(tf) + 1.0) * idf
 
+    def run_query(self, cosine_score_path, size=10):
+        self.compute_idf()
+        self.compute_document_normalization()
+        scores = self.get_COSINE_scores(size)
+        self.output_result(scores, cosine_score_path)
+
+
+class BM25(QueryModel):
+    def __init__(self, loader, queries):
+        super(BM25, self).__init__(loader, queries)
+        self.avgdl = sum(self.document_frequency_list) / self.collection_lenth
+        
+    def compute_idf(self):
+        self.idf_list = []
+        N = self.collection_lenth
+        for df in self.document_frequency_list:
+            w = math.log10(((N - df) + 0.5) / (df + 0.5) )
+            self.idf_list.append(w)
+
+    def get_BM25_scores(self, size = 10):
+
+        for query_num, query in self.queries:
+            score = collections.defaultdict(lambda :0)
+            query_posting = self.generate_query_posting_list(query)
+            for term_id, qtf in query_posting.items():
+                term_posting_list = self.term_posting_list[term_id]
+                for doc_id, tf in term_posting_list.items():
+                    d_len = self.document_lenth[doc_id]
+                    w = self.idf_list[term_id]
+                    s = self.calculate_score(tf, w, d_len, qtf)
+                    score[doc_id] += s
+            score_list = sorted(score.items(), key=lambda x: x[1], reverse=True)
+            yield [[query_num, 0, self.document_list[score_list[n][0]], n, score_list[n][1], "BM25"] for n in range(len(score_list[:size]))]
+ 
+
+
+    def calculate_score(self, tf, w, d_len, qtf):
+        avgdl = self.avgdl
+        k1 = 1.2
+        b = 0.75
+        k2 = 1
+        temp = (k1 + 1) * tf
+        temp2 = tf + k1 * (1 - b + b * d_len / avgdl)
+        temp3 = (k2 + 1) * qtf / (k2 + qtf)
+        return w * temp / temp2 * temp3
+
+    def run_query(self, bm25_score_path, size=10):
+        self.compute_idf()
+        scores = self.get_BM25_scores(size)
+        self.output_result(scores, bm25_score_path)
+
+
 if __name__ == "__main__":   
     lexicon_path = "results\single.lexicon"
     index_path = "results\single.index"
@@ -115,9 +166,10 @@ if __name__ == "__main__":
     query_file_path = "queryfile.txt"
     reader = QueryReader(query_file_path)
 
-    VSM = VectorSpaceModel(loader,reader.get_query())
-    VSM.compute_idf()
-    VSM.compute_document_normalization()
-    scores = VSM.get_COSINE_scores(100)
-    cosine_score_path = os.path.join("query_results","COSINE_SCORE.txt")
-    VSM.output_result(scores, cosine_score_path)
+    # VSM = VectorSpaceModel(loader,reader.get_query())
+    # cosine_score_path = os.join("query_results", "COSINE_SCORE.txt")
+    # VSM.run_query(cosine_score_path)
+
+    BM = BM25(loader, reader.get_query())
+    bm25_score_path = os.path.join("query_results", "BM25_SCORE.txt")
+    BM.run_query(bm25_score_path)
