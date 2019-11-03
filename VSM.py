@@ -2,10 +2,11 @@ import math
 from index_loader import *
 import csv
 from query_reader import *
-import sys 
+import sys, os
 import collections
 sys.path.append("project1_part")
 from project1_part.Parser import *
+from evaluate_tools import *
 
 class QueryModel:
     
@@ -48,7 +49,6 @@ class QueryModel:
             for score_list in score_lists:
                 for score in score_list:
                     writer.writerow(score)
-
 
 class VectorSpaceModel(QueryModel):
     def __init__(self, loader, queries):
@@ -111,7 +111,6 @@ class VectorSpaceModel(QueryModel):
         scores = self.get_COSINE_scores(size)
         self.output_result(scores, cosine_score_path)
 
-
 class BM25(QueryModel):
     def __init__(self, loader, queries):
         super(BM25, self).__init__(loader, queries)
@@ -139,8 +138,6 @@ class BM25(QueryModel):
             score_list = sorted(score.items(), key=lambda x: x[1], reverse=True)
             yield [[query_num, 0, self.document_list[score_list[n][0]], n, score_list[n][1], "BM25"] for n in range(len(score_list[:size]))]
  
-
-
     def calculate_score(self, tf, w, d_len, qtf):
         avgdl = self.avgdl
         k1 = 1.2
@@ -156,6 +153,36 @@ class BM25(QueryModel):
         scores = self.get_BM25_scores(size)
         self.output_result(scores, bm25_score_path)
 
+class LanguageModel(QueryModel):
+    def __init__(self, loader, queries, miu):
+        super(LanguageModel, self).__init__(loader, queries)
+        self.miu = sum(self.document_lenth)/ self.collection_lenth * miu
+
+    
+    def get_Dirichlet_scores(self, size=10):
+        for query_num, query in self.queries:
+            score = collections.defaultdict(lambda : 0)
+            query_posting = self.generate_query_posting_list(query)
+            for term_id, qtf in query_posting.items():
+                term_posting_list = self.term_posting_list[term_id]
+                for doc_id, tf in term_posting_list.items():
+                    d_len = self.document_lenth[doc_id]
+                    tfc = self.term_frequency_collection[term_id]
+                    s = self.calculate_Dirichlet(tf, tfc, d_len)
+                    score[doc_id] += s
+            score_list = sorted(score.items(), key=lambda x: x[1], reverse=True)
+            yield [[query_num, 0, self.document_list[score_list[n][0]], n, score_list[n][1], "Dirichlet"] for n in range(len(score_list[:size]))]
+
+    def calculate_Dirichlet(self, tf, tfc, d_len):
+        miu = self.miu
+        C = sum(self.document_lenth)
+        temp1 = tf + miu * tfc / C
+        temp2 = d_len + miu
+        return math.log10(temp1/temp2)
+
+    def run_query(self, dirichlet_score_path, size=10):
+        scores = self.get_Dirichlet_scores(size)
+        self.output_result(scores, dirichlet_score_path)
 
 if __name__ == "__main__":   
     lexicon_path = "results\single.lexicon"
@@ -170,6 +197,17 @@ if __name__ == "__main__":
     # cosine_score_path = os.join("query_results", "COSINE_SCORE.txt")
     # VSM.run_query(cosine_score_path)
 
-    BM = BM25(loader, reader.get_query())
-    bm25_score_path = os.path.join("query_results", "BM25_SCORE.txt")
-    BM.run_query(bm25_score_path)
+    # BM = BM25(loader, reader.get_query())
+    # bm25_score_path = os.path.join("query_results", "BM25_SCORE.txt")
+    # BM.run_query(bm25_score_path, size= 100)
+    for i in range(0, 1000, 10):
+        miu = i/400
+        DirichletModel = LanguageModel(loader, reader.get_query(), miu=miu)
+        dirichlet_score_path = "query_results\DIRICHLET_SCORE.txt"
+        DirichletModel.run_query(dirichlet_score_path, size=100)
+
+        os.system("treceval -q -a qrel.txt {path} > evaluation.txt".format(path=dirichlet_score_path))
+        evaluation = evaluator()
+        evaluation_report_path = "evaluation.txt"
+        evaluation.read_precision(evaluation_report_path)
+        print("miu = {i} MAP is".format(i=i), evaluation.compute_MAP())

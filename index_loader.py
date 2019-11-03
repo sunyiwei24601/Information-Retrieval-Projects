@@ -8,7 +8,6 @@ class IndexLoader:
         self.document_path = document_path
         pass 
     
-    
     def load_all(self):
         self.load_document()
         self.load_index()
@@ -125,15 +124,64 @@ class IndexLoader:
             self.document_lenth.append(sum(document_index[doc_id].values()))
         self.collection_lenth = len_
 
+
+class PositionalIndexLoader(IndexLoader):
+    def __init__(self, positional_index_path, positional_lexicon_path, document_path, phrase_index_path, phrase_lexicon_path):
+        super(PositionalIndexLoader, self).__init__(phrase_index_path, phrase_lexicon_path, document_path)
+        self.positional_lexicon_path = positional_lexicon_path
+        self.positional_index_path = positional_index_path
+
+    def load_positional_index(self):
+        index_path = self.positional_index_path
+        term_posting_list = []
+        with open(index_path, newline="", encoding="utf-8") as f:
+            reader = csv.reader(f, delimiter=",")
+            term_frequency = {}
+            last_term_id = -1
+            for line in reader:
+                term_id = int(line[0])
+                doc_id = int(line[1])
+                positions = line[2:]
+                if term_id != last_term_id:
+                    if term_id != 0:
+                        term_posting_list.append(term_frequency)
+                    term_frequency = {}
+                term_frequency[doc_id] = [int(i) for i in positions]
+                last_term_id = term_id
+            term_posting_list.append(term_frequency)
+
+        self.positional_term_posting_list = term_posting_list
+
+    def load_positional_lexicon(self):
+        lexicon_path = self.positional_lexicon_path
+        term_list = []
+        document_frequency_list = []
+        with open(lexicon_path, newline="", encoding="utf-8") as f:
+            reader = csv.reader(f, delimiter=",")
+            for line in reader:
+                term_list.append(line[1])
+                document_frequency_list.append(int(line[2]))
+        self.positional_document_frequency_list = document_frequency_list
+        self.positinal_term_list = term_list
+        self.positional_term_dict = {}
+
+        n = 0 
+        for i in term_list:
+            self.positional_term_dict[i] = n
+            n += 1 
+        
+
+
 if __name__ == "__main__":
-    loader = IndexLoader()
-    lexicon_path = "results\single.lexicon"
-    loader.load_lexicon(lexicon_path)
-    index_path = "results\single.index"
-    loader.load_index(index_path)
-    # print(loader.term_index[:100])
+    lexicon_path = "results\phrase.lexicon"
+    index_path = "results\phrase.index"
     document_path = "results\document_list.csv"
-    loader.load_document(document_path)
-    # print(loader.document_list[:100], loader.document_dict)
-    loader.generate_document_index()
-    print(loader.document_lenth)
+    
+    positional_index_path = "results\positional.index"
+    positional_lexicon_path = "results\positional.lexicon"
+    
+    loader = PositionalIndexLoader(positional_index_path, positional_lexicon_path, document_path, index_path, lexicon_path)
+    loader.load_all()
+    loader.load_positional_index()
+    loader.load_positional_lexicon()
+    passs
