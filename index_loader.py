@@ -162,7 +162,7 @@ class PositionalIndexLoader(IndexLoader):
                 term_list.append(line[1])
                 document_frequency_list.append(int(line[2]))
         self.positional_document_frequency_list = document_frequency_list
-        self.positinal_term_list = term_list
+        self.positional_term_list = term_list
         self.positional_term_dict = {}
 
         n = 0 
@@ -170,8 +170,6 @@ class PositionalIndexLoader(IndexLoader):
             self.positional_term_dict[i] = n
             n += 1 
         
-
-
 if __name__ == "__main__":
     lexicon_path = "results\phrase.lexicon"
     index_path = "results\phrase.index"
@@ -184,4 +182,4 @@ if __name__ == "__main__":
     loader.load_all()
     loader.load_positional_index()
     loader.load_positional_lexicon()
-    passs
+    pass
