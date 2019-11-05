@@ -158,22 +158,57 @@ class BM25(QueryModel):
         self.output_result(scores, bm25_score_path)
 
 class LanguageModel(QueryModel):
-    def __init__(self, loader, queries, miu):
+    def __init__(self, loader, queries, miu=100, lbd = 0.1):
         super(LanguageModel, self).__init__(loader, queries)
+        
         self.miu = sum(self.document_lenth)/ self.collection_lenth * miu
 
+        self.lbd = lbd
     def get_Dirichlet_scores(self, query_num, query, size=10):
         score = collections.defaultdict(lambda : 0)
         query_posting = self.generate_query_posting_list(query)
+        candidate_doc = []
         for term_id, qtf in query_posting.items():
             term_posting_list = self.term_posting_list[term_id]
-            for doc_id, tf in term_posting_list.items():
+            candidate_doc += list(term_posting_list.keys())
+            
+        for term_id, qtf in query_posting.items():
+            term_posting_list = self.term_posting_list[term_id]
+            for doc_id in candidate_doc:
+                tf = term_posting_list.get(doc_id, 0)
                 d_len = self.document_lenth[doc_id]
                 tfc = self.term_frequency_collection[term_id]
                 s = self.calculate_Dirichlet(tf, tfc, d_len)
                 score[doc_id] += s
         score_list = sorted(score.items(), key=lambda x: x[1], reverse=True)
         return [[query_num, 0, self.document_list[score_list[n][0]], n, score_list[n][1], "Dirichlet"] for n in range(len(score_list[:size]))]
+
+    def get_JM_scores(self, query_num, query, size=10):
+        score = collections.defaultdict(lambda : 0)
+        query_posting = self.generate_query_posting_list(query)
+        candidate_doc = []
+        for term_id, qtf in query_posting.items():
+            term_posting_list = self.term_posting_list[term_id]
+            candidate_doc += list(term_posting_list.keys())
+
+        for term_id, qtf in query_posting.items():
+            term_posting_list = self.term_posting_list[term_id]
+            for doc_id in candidate_doc:
+                tf = term_posting_list.get(doc_id, 0)
+                d_len = self.document_lenth[doc_id]
+                tfc = self.term_frequency_collection[term_id]
+                s = self.calculate_JM(tf, tfc, d_len)
+                score[doc_id] += s * qtf
+        score_list = sorted(score.items(), key=lambda x: x[1], reverse=True)
+        return [[query_num, 0, self.document_list[score_list[n][0]], n, score_list[n][1], "JM"] for n in range(len(score_list[:size]))]
+
+    def calculate_JM(self, tf, tfc, d_len):
+        λ = self.lbd
+        C = sum(self.document_lenth)
+
+        temp1 = (1 - λ) * tf / d_len
+        temp2 =  λ * tfc / C
+        return math.log10(temp1 + temp2)
 
     def calculate_Dirichlet(self, tf, tfc, d_len):
         miu = self.miu
@@ -338,9 +373,9 @@ if __name__ == "__main__":
     # phrase_loader = IndexLoader(phrase_index_path, phrase_lexicon_path, document_path).load_all()
     # phrase_loader.document_lenth = loader.document_lenth
     
-    positional_loader = PositionalIndexLoader(positional_index_path, positional_lexicon_path, document_path).load_all()
-    positional_loader.document_lenth = loader.document_lenth
-    positional_loader.collection_lenth = loader.collection_lenth
+    # positional_loader = PositionalIndexLoader(positional_index_path, positional_lexicon_path, document_path).load_all()
+    # positional_loader.document_lenth = loader.document_lenth
+    # positional_loader.collection_lenth = loader.collection_lenth
     query_file_path = "queryfile.txt"
     reader = QueryReader(query_file_path)
 
@@ -353,8 +388,12 @@ if __name__ == "__main__":
     # BM = PhraseIndexModel(phrase_loader, reader.get_query())
     # bm25_score_path = os.path.join("query_results", "BM25_SCORE.txt")
     # BM.run_query(bm25_score_path, size= 100)
-    
-    PM = PositionalQueryModel(positional_loader, reader.get_query())
-    positional_score_path = os.path.join("query_results", "positional_score.txt")
-    PM.run_query(positional_score_path)
+
+    LM = LanguageModel(loader, reader.get_query())
+    LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
+    LM.run_query(LM_score_path)
+
+    # PM = PositionalQueryModel(positional_loader, reader.get_query())
+    # positional_score_path = os.path.join("query_results", "positional_score.txt")
+    # PM.run_query(positional_score_path)
     pass

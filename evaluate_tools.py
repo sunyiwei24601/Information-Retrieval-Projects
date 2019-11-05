@@ -2,6 +2,7 @@ import re
 import collections 
 import sys
 import os
+from QueryModel import *
 class evaluator:
     def __init__(self):
         pass 
@@ -53,6 +54,23 @@ class evaluator:
 
 if __name__ == "__main__":
     eva = evaluator()
+    lexicon_path = "results\single.lexicon"
+    index_path = "results\single.index"
+    document_path = "results\document_list.csv"
+    loader = IndexLoader(index_path, lexicon_path, document_path).load_all()
+
+
     
-    eva.read_precision("evaluation.txt")
-    print(eva.compute_MAP())
+    for i in range(1, 10):
+        query_file_path = "queryfile.txt"
+        reader = QueryReader(query_file_path)
+        miu = loader.collection_lenth/sum(loader.document_lenth) * i /100000000
+        # lbd = i/1000000000
+
+        LM = LanguageModel(loader, reader.get_query(),miu=miu)
+        LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
+        LM.run_query(LM_score_path, size=100)
+        
+        os.system(".\\treceval -q -a qrel.txt query_results/DIRICHLET_SCORE.txt > evaluation.txt")
+        eva.read_precision("evaluation.txt")
+        print("miu is {}, MAP is {}".format(i, eva.compute_MAP()))
