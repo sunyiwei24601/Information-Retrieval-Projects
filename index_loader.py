@@ -126,10 +126,10 @@ class IndexLoader:
 
 
 class PositionalIndexLoader(IndexLoader):
-    def __init__(self, positional_index_path, positional_lexicon_path, document_path, phrase_index_path, phrase_lexicon_path):
-        super(PositionalIndexLoader, self).__init__(phrase_index_path, phrase_lexicon_path, document_path)
+    def __init__(self, positional_index_path, positional_lexicon_path, document_path):
         self.positional_lexicon_path = positional_lexicon_path
         self.positional_index_path = positional_index_path
+        self.document_path = document_path
 
     def load_positional_index(self):
         index_path = self.positional_index_path
@@ -169,7 +169,13 @@ class PositionalIndexLoader(IndexLoader):
         for i in term_list:
             self.positional_term_dict[i] = n
             n += 1 
-        
+    
+    def load_all(self):
+        self.load_positional_index()
+        self.load_positional_lexicon()
+        self.load_document()
+        return self
+
 if __name__ == "__main__":
     lexicon_path = "results\phrase.lexicon"
     index_path = "results\phrase.index"

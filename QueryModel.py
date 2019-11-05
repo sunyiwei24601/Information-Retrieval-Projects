@@ -188,65 +188,61 @@ class LanguageModel(QueryModel):
             scores.append(self.get_Dirichlet_scores(query_num, query, size))
         self.output_result(scores, dirichlet_score_path)
 
-class PhraseQueryModel(QueryModel):
-    def __init__(self, loader, queries, phrase_loader, single_model):
-        super(PhraseQueryModel, self).__init__(loader, queries)
-        self.phrase_term_posting_list = phrase_loader.term_index
-        self.phrase_term_frequency_collection = phrase_loader.term_frequency_collection
-        self.phrase_term_list = phrase_loader.term_list
-        self.phrase_term_dict = phrase_loader.term_dict
-        self.phrase_document_list = phrase_loader.document_list
-        self.phrase_document_dict = phrase_loader.document_dict
-        self.phrase_document_posting_list = phrase_loader.document_posting_list
-        self.phrase_document_lenth = phrase_loader.document_lenth
-        self.phrase_collection_lenth = phrase_loader.collection_lenth
-        self.phrase_document_frequency_list = phrase_loader.document_frequency_list
+class PhraseIndexModel(BM25):
+    def __init__(self, loader, queries):
+        super(PhraseIndexModel, self).__init__(loader, queries)
 
-        self.positional_term_dict = phrase_loader.positional_term_dict
-        self.positional_term_list = phrase_loader.positional_term_list
-        self.positional_term_posting_list = phrase_loader.positional_term_posting_list
-        self.positional_document_frequency_list = phrase_loader.positional_document_frequency_list
+    def generate_query_posting_list(self, query):
+        query = query.strip("\t")
+        posting_list = collections.defaultdict(lambda: 0)
+        terms = self.parser.get_phrase_term_tokens(query)
         
-        self.single_model = single_model
-    
-    def run_query(self, phrase_score_path, size=10):
-        for query_num, query in self.queries:
-            self.get_phrase_score(query_num, query, size)
-    
-    def compute_phrase_idf(self):
-        self.phrase_idf_list = []
-        N = self.collection_lenth
-        for df in self.phrase_document_list:
-            w = math.log10(((N - df) + 0.5) / (df + 0.5) )
-            self.phrase_idf_list.append(w)
+        for i in terms:
+            for j in i:
+                if self.term_dict.get(j):
+                    term_id = self.term_dict[j]
+                    posting_list[term_id] += 1
+        
+        return posting_list
 
-    def get_phrase_score(self, query_num, query, size=10):
+class PositionalQueryModel(QueryModel):
+    def __init__(self, positional_loader, queries):
+        self.positional_term_dict = positional_loader.positional_term_dict
+        self.positional_term_list = positional_loader.positional_term_list
+        self.positional_term_posting_list = positional_loader.positional_term_posting_list
+        self.positional_document_lenth = positional_loader.document_lenth
+        self.positional_collection_lenth = positional_loader.collection_lenth
+        self.document_list = positional_loader.document_list
+        self.collection_lenth = positional_loader.collection_lenth
+        self.document_lenth = positional_loader.document_lenth
+        self.avgdl = sum(self.document_lenth) / len(self.document_lenth)
+
+        self.queries = queries
+        self.parser = term_parser(skip_stop_words=False)
+    
+    def run_query(self, positional_score_path, size=10):
+        scores = []
+        for query_num, query in self.queries:
+            scores.append(self.get_positional_score(query_num, query, size))
+        self.output_result(scores, positional_score_path)
+        return scores
+
+    def get_positional_score(self, query_num, query, size=10):
         score = collections.defaultdict(lambda: 0)
         posting_list = self.generate_query_posting_list(query)
         for phrase, qtf in posting_list.items():
-            if self.phrase_term_dict.get(phrase):
-                phrase_term_id = self.phrase_term_dict[phrase]
-                phrase_posting_list = self.phrase_term_posting_list[phrase_term_id]
-                for doc_id, tf in phrase_posting_list.items():
-                    d_len = self.document_lenth[doc_id]
-                    w = self.phrase_idf_list[phrase_term_id]
-                    s = self.calculate_score(tf, w, d_len, qtf)
-                    score[doc_id] += s 
-            else:
-                phrase_posting_list = self.get_positional_posting_list(phrase.split(" "))
-                df = len(phrase_posting_list)
-                N = self.collection_lenth
-                for doc_id, tf in phrase_posting_list.items():
-                    d_len = self.document_lenth[doc_id]
-                    w = math.log10(((N - df) + 0.5) / (df + 0.5))
-                    s = self.calculate(tf,w, d_len. qtf)
-                    score[doc_id] += s
+            phrase_posting_list = self.get_positional_posting_list(phrase.split(" "))
+            df = len(phrase_posting_list)
+            N = self.collection_lenth
+            for doc_id, tf in phrase_posting_list.items():
+                tf = len(tf)
+                d_len = self.document_lenth[doc_id]
+                w = math.log10(((N - df) + 0.5) / (df + 0.5))
+                s = self.calculate_score(tf, w, d_len, qtf)
+                score[doc_id] += s
         score_list = sorted(score.items(), key=lambda x:x[1], reverse=True)
-        return [[query_num, 0, self.document_list[score_list[n][0]], n, score_list[n][1], "phrase_index"] for n in range(len(score_list[:size]))]
+        return [[query_num, 0, self.document_list[score_list[n][0]], n, score_list[n][1], "positional_index"] for n in range(len(score_list[:size]))]
 
-    def calculate_idf(self, posting_list):
-        pass
-    
     def calculate_score(self, tf, w, d_len, qtf):
         avgdl = self.avgdl
         k1 = 1.2
@@ -259,14 +255,18 @@ class PhraseQueryModel(QueryModel):
 
     def generate_query_posting_list(self, query):
         posting_list = collections.defaultdict(lambda: 0)
-        terms = re.split(" |-|/|,", query)
-        terms = [term.lower() for term in terms if len(term) >= 1]
+        q = query.strip("\t").lower()
+        q = q.replace("(", " ")
+        q = q.replace(")", " ")
+        terms = re.split(",| |/|[|]", q)
+        terms = [i for i in terms if len(i) > 0]
         len_ = len(terms)
-        
+        posting_list = collections.defaultdict(lambda: 0)
         for i in range(len_ - 1):
-            phrase = terms[i] + " " + terms[i + 1]
-            posting_list[phrase] += 1
-        
+            term1 = terms[i]
+            term2 = terms[i + 1]
+            posting_list[term1 + " " + term2] += 1
+   
         return posting_list
 
     def get_positional_posting_list(self, phrase, k=5):
@@ -333,25 +333,28 @@ if __name__ == "__main__":
     positional_index_path = "results\positional.index"
     positional_lexicon_path = "results\positional.lexicon"
     
-    phraseloader = PositionalIndexLoader(positional_index_path, positional_lexicon_path, document_path, phrase_index_path, phrase_lexicon_path)
-    phraseloader.load_all()
-    phraseloader.load_positional_index()
-    phraseloader.load_positional_lexicon()
+
+
+    # phrase_loader = IndexLoader(phrase_index_path, phrase_lexicon_path, document_path).load_all()
+    # phrase_loader.document_lenth = loader.document_lenth
     
+    positional_loader = PositionalIndexLoader(positional_index_path, positional_lexicon_path, document_path).load_all()
+    positional_loader.document_lenth = loader.document_lenth
+    positional_loader.collection_lenth = loader.collection_lenth
     query_file_path = "queryfile.txt"
     reader = QueryReader(query_file_path)
 
-    VSM = VectorSpaceModel(loader,reader.get_query())
-    cosine_score_path = os.path.join("query_results", "COSINE_SCORE.txt")
+    # VSM = VectorSpaceModel(loader,reader.get_query())
+    # cosine_score_path = os.path.join("query_results", "COSINE_SCORE.txt")
     # VSM.run_query(cosine_score_path)
 
 
 
-    # BM = BM25(loader, reader.get_query())
+    # BM = PhraseIndexModel(phrase_loader, reader.get_query())
     # bm25_score_path = os.path.join("query_results", "BM25_SCORE.txt")
     # BM.run_query(bm25_score_path, size= 100)
     
-
-    PositionalIndexModel = PhraseQueryModel(loader, reader.get_query(), phraseloader, VSM)
-    s = PositionalIndexModel.get_positional_posting_list(["domestic", "violence"])
+    PM = PositionalQueryModel(positional_loader, reader.get_query())
+    positional_score_path = os.path.join("query_results", "positional_score.txt")
+    PM.run_query(positional_score_path)
     pass

@@ -163,9 +163,7 @@ class term_parser:
                 yield docno, self.get_phrase_term_tokens(document)
 
 if __name__ == "__main__":
-    parser = term_parser()
-    r = reader("BigSample")
-    documents = r.read_doc()
+    parser = term_parser(skip_stop_words=False)
     pass
     
     

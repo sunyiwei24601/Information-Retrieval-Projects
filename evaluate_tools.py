@@ -1,7 +1,7 @@
 import re
 import collections 
 import sys
-
+import os
 class evaluator:
     def __init__(self):
         pass 
@@ -47,5 +47,12 @@ class evaluator:
             return False
         
     def compute_MAP(self):
+
         APs = [i["AP"] for i in self.results.values()]
         return sum(APs) / len(APs)
+
+if __name__ == "__main__":
+    eva = evaluator()
+    
+    eva.read_precision("evaluation.txt")
+    print(eva.compute_MAP())
