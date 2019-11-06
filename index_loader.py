@@ -48,7 +48,7 @@ class IndexLoader:
 
     def load_index(self, index_path=None):
         """
-        read term posting and generate the term frequency of collection
+        read term posting and generate the term frequysency of collection
         term posting list like
         [
             {term0_doc0: term0_doc0_frequency,

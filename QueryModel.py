@@ -11,7 +11,7 @@ from evaluate_tools import *
 
 class QueryModel:
     
-    def __init__(self, loader, queries):
+    def __init__(self, loader, queries, stem=None):
         self.term_posting_list = loader.term_index
         self.term_frequency_collection = loader.term_frequency_collection
         self.term_list = loader.term_list
@@ -24,7 +24,7 @@ class QueryModel:
         self.document_frequency_list = loader.document_frequency_list
         self.queries = queries
 
-        self.parser = term_parser()
+        self.parser = term_parser(stemmer=stem)
      
     def compute_idf(self):
         self.idf_list = []
@@ -52,24 +52,25 @@ class QueryModel:
                     writer.writerow(score)
 
 class VectorSpaceModel(QueryModel):
-    def __init__(self, loader, queries):
-        super(VectorSpaceModel,self).__init__(loader, queries)
+    def __init__(self, loader, queries, stem=None):
+        super(VectorSpaceModel,self).__init__(loader, queries, stem)
 
     def get_COSINE_scores(self, query_num, query, size = 10):
-    
-        for query_num, query in self.queries:
-            score = collections.defaultdict(lambda : 0)
-            query_posting = self.generate_query_posting_list(query)
-            query_tf_idf_vector, query_normalization = self.from_query_posting_into_weight_vector(query_posting)
-            for term_id, weight in query_tf_idf_vector.items():
-                term_posting_list = self.term_posting_list[term_id]
-                for doc_id, tf in term_posting_list.items():
-                    score[doc_id] += self.calculate_tf_idf(tf, self.idf_list[term_id]) * weight 
-            for doc_id in score:
-                score[doc_id] /= math.sqrt(query_normalization * self.document_normalization[doc_id])
-            score_list = sorted(score.items(), key=lambda x: x[1], reverse=True)
-            return [[query_num, 0, self.document_list[score_list[n][0]], n, score_list[n][1], "COSINE"] for n in range(len(score_list[:size]))]
-    
+        
+ 
+        score = collections.defaultdict(lambda : 0)
+        query_posting = self.generate_query_posting_list(query)
+        query_tf_idf_vector, query_normalization = self.from_query_posting_into_weight_vector(query_posting)
+        for term_id, weight in query_tf_idf_vector.items():
+            term_posting_list = self.term_posting_list[term_id]
+            for doc_id, tf in term_posting_list.items():
+                score[doc_id] += self.calculate_tf_idf(tf, self.idf_list[term_id]) * weight 
+        for doc_id in score:
+            score[doc_id] /= math.sqrt(query_normalization * self.document_normalization[doc_id])
+        score_list = sorted(score.items(), key=lambda x: x[1], reverse=True)
+        s  = [[query_num, 0, self.document_list[score_list[n][0]], n, score_list[n][1], "COSINE"] for n in range(len(score_list[:size]))]
+        return s
+
     def from_query_posting_into_weight_vector(self, query_posting):
         normalization = 0
         query_vector = {}
@@ -115,8 +116,8 @@ class VectorSpaceModel(QueryModel):
         self.output_result(scores, cosine_score_path)
 
 class BM25(QueryModel):
-    def __init__(self, loader, queries):
-        super(BM25, self).__init__(loader, queries)
+    def __init__(self, loader, queries, stem=None):
+        super(BM25, self).__init__(loader, queries, stem)
         self.avgdl = sum(self.document_frequency_list) / self.collection_lenth
         
     def compute_idf(self):
@@ -158,10 +159,10 @@ class BM25(QueryModel):
         self.output_result(scores, bm25_score_path)
 
 class LanguageModel(QueryModel):
-    def __init__(self, loader, queries, miu=100, lbd = 0.1):
-        super(LanguageModel, self).__init__(loader, queries)
+    def __init__(self, loader, queries,  miu=100, lbd = 0.1, stem=None):
+        super(LanguageModel, self).__init__(loader, queries, stem)
         
-        self.miu = sum(self.document_lenth)/ self.collection_lenth * miu
+        self.miu = miu
 
         self.lbd = lbd
     def get_Dirichlet_scores(self, query_num, query, size=10):
@@ -224,8 +225,8 @@ class LanguageModel(QueryModel):
         self.output_result(scores, dirichlet_score_path)
 
 class PhraseIndexModel(BM25):
-    def __init__(self, loader, queries):
-        super(PhraseIndexModel, self).__init__(loader, queries)
+    def __init__(self, loader, queries, stem=None):
+        super(PhraseIndexModel, self).__init__(loader, queries, stem)
 
     def generate_query_posting_list(self, query):
         query = query.strip("\t")

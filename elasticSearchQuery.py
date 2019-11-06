@@ -70,20 +70,16 @@ class ElasticSeach:
 
 
 if __name__ == "__main__":
-    loader = IndexLoader()
     lexicon_path = "results\single.lexicon"
-    loader.load_lexicon(lexicon_path)
     index_path = "results\single.index"
-    loader.load_index(index_path)
     # print(loader.term_index[:100])
     document_path = "results\document_list.csv"
-    loader.load_document(document_path)
     # print(loader.document_list[:100], loader.document_dict)
-    loader.generate_document_index()
+    loader = IndexLoader(index_path, lexicon_path, document_path).load_all()
 
     query_reader = QueryReader("queryfile.txt")
     queries = query_reader.get_query()
-
-    searcher = ElasticSeach()
-    searcher.get_queries(queries)
+    print(list(queries))
+    # searcher = ElasticSeach()
+    # searcher.get_queries(queries)
     

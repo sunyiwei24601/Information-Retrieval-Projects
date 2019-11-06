@@ -2,7 +2,9 @@ import re
 import collections 
 import sys
 import os
+import time
 from QueryModel import *
+from nltk.stem.porter import PorterStemmer
 class evaluator:
     def __init__(self):
         pass 
@@ -52,25 +54,72 @@ class evaluator:
         APs = [i["AP"] for i in self.results.values()]
         return sum(APs) / len(APs)
 
-if __name__ == "__main__":
-    eva = evaluator()
-    lexicon_path = "results\single.lexicon"
-    index_path = "results\single.index"
-    document_path = "results\document_list.csv"
-    loader = IndexLoader(index_path, lexicon_path, document_path).load_all()
+class Test:
 
+    def __init__(self, query_file_path=None, lexicon_path=None, index_path=None, document_path=None, size=100, stem=None, qrel_path="qrel.txt"):
+        self.loader = IndexLoader(index_path, lexicon_path, document_path).load_all()
+        self.size = size 
+        self.stem = stem 
+        self.qrel_path = qrel_path
+        self.query_file_path = query_file_path
+    def run_LM(self, loader, queries, miu=1, LM_score_path=None):
+        LM = LanguageModel(loader, queries, miu=miu, stem=self.stem)
+        if LM_score_path == None:
+            LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
+        LM.run_query(LM_score_path, size=self.size)
+        
+        os.system(".{}treceval {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, LM_score_path))
+    
+    def run_VSM(self, loader, queries, COSINE_score_path=None):
+        if COSINE_score_path == None:
+            COSINE_score_path = os.path.join("query_results", "COSINE_SCORE.txt")
+        VSM = VectorSpaceModel(loader, queries, stem=self.stem)
+        VSM.run_query(COSINE_score_path, size=self.size)
+        os.system(".{}treceval {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, COSINE_score_path))
+
+    def run_BM25(self, loader, queries, BM25_score_path=None):
+        if BM25_score_path == None:
+            BM25_score_path = os.path.join("query_results", "BM25_SCORE.txt")
+        BM = BM25(loader, queries, stem=self.stem)
+        BM.run_query(BM25_score_path, size=self.size)
+        os.system(".{}treceval {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, BM25_score_path))
+
+    def run_Model(self, model_type, miu=1, times=1, output_path=None):
+        running_time = []
+        for i in range(times):
+            start = time.time()
+            query_file_path = "queryfile.txt"
+            reader = QueryReader(query_file_path)
+            queries = reader.get_query()
+            if model_type == "LM":
+                self.run_LM(self.loader, queries, miu=0.000001)
+            if model_type == "BM25":
+                self.run_BM25(self.loader, queries)
+            if model_type == "COSINE":
+                self.run_VSM(self.loader, queries)
+            end = time.time()
+            print("Running time is ", end - start)
+            running_time.append(end - start)
+        print("average time is ", sum(running_time) / len(running_time))
+
+
+
+
+
+
+        
 
     
-    for i in range(1, 10):
-        query_file_path = "queryfile.txt"
-        reader = QueryReader(query_file_path)
-        miu = loader.collection_lenth/sum(loader.document_lenth) * i /100000000
-        # lbd = i/1000000000
 
-        LM = LanguageModel(loader, reader.get_query(),miu=miu)
-        LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
-        LM.run_query(LM_score_path, size=100)
-        
-        os.system(".\\treceval -q -a qrel.txt query_results/DIRICHLET_SCORE.txt > evaluation.txt")
-        eva.read_precision("evaluation.txt")
-        print("miu is {}, MAP is {}".format(i, eva.compute_MAP()))
+if __name__ == "__main__":
+    eva = evaluator()
+    lexicon_path = os.path.join("results","single.lexicon")
+    index_path = os.path.join("results", "single.index")
+    document_path = os.path.join("results", "document_list.csv")
+    query_file_path = "queryfile.txt"
+
+    # loader = IndexLoader(index_path, lexicon_path, document_path).load_all()
+
+    test = Test(query_file_path, lexicon_path, index_path, document_path, stem=None)
+    test.run_Model("LM", times=10)
+
