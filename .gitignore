@@ -7,3 +7,6 @@
 *.gz
 *.zip
 /project1_part/__pycache__/
+/position_term_index/
+/single_term_index/
+/project1_part/BigSample/

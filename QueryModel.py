@@ -7,7 +7,7 @@ import sys, os
 import collections
 sys.path.append("project1_part")
 from project1_part.Parser import *
-from evaluate_tools import *
+from query import *
 
 class QueryModel:
     
@@ -157,9 +157,10 @@ class BM25(QueryModel):
 
             scores.append(self.get_BM25_scores(query_num, query, size))
         self.output_result(scores, bm25_score_path)
+        return scores
 
 class LanguageModel(QueryModel):
-    def __init__(self, loader, queries,  miu=100, lbd = 0.1, stem=None):
+    def __init__(self, loader, queries,  miu=0.00001, lbd = 0.1, stem=None):
         super(LanguageModel, self).__init__(loader, queries, stem)
         
         self.miu = miu
@@ -256,14 +257,14 @@ class PositionalQueryModel(QueryModel):
         self.queries = queries
         self.parser = term_parser(skip_stop_words=False)
     
-    def run_query(self, positional_score_path, size=10):
+    def run_query(self, positional_score_path, size=30):
         scores = []
         for query_num, query in self.queries:
             scores.append(self.get_positional_score(query_num, query, size))
         self.output_result(scores, positional_score_path)
         return scores
 
-    def get_positional_score(self, query_num, query, size=10):
+    def get_positional_score(self, query_num, query, size=30):
         score = collections.defaultdict(lambda: 0)
         posting_list = self.generate_query_posting_list(query)
         for phrase, qtf in posting_list.items():
@@ -305,7 +306,7 @@ class PositionalQueryModel(QueryModel):
    
         return posting_list
 
-    def get_positional_posting_list(self, phrase, k=5):
+    def get_positional_posting_list(self, phrase, k=100):
         
         term1, term2 = phrase
         if self.positional_term_dict.get(term1) and self.positional_term_dict.get(term2):
@@ -356,9 +357,42 @@ class PositionalQueryModel(QueryModel):
 
                     
 
+def combine_scores(phrase_score, positional_score, stem_score, alpha, mu =0, size=50):
+    merge_score_list = []
+    alpha = 1/1000 * alpha
+    for i in range(len(phrase_score)):
+        merge_score = collections.defaultdict(lambda: 0)
+        for score in phrase_score[i]:
+            doc_id = score[2]
+            rank = score[3]
+            score1 = score[4]
+            merge_score[doc_id] += mu * score1
+        for score in positional_score[i]:
+            doc_id = score[2]
+            rank = score[3]
+            score2 = score[4]
+            merge_score[doc_id] += math.sin(alpha) * score2
+        for score in stem_score[i]:
+            query_num = score[0]
+            doc_id = score[2]
+            rank = score[3]
+            score3 = score[4]
+            merge_score[doc_id] += math.cos(alpha) * score3
+        new_score_list = [[doc_id, s] for doc_id, s in merge_score.items()]
+        new_score_list = sorted(new_score_list, key= lambda x: x[1], reverse=True)[:size]
+        new_score_list = [[query_num, 0, new_score_list[i][0], i, new_score_list[i][1], "Positional"]for i in range(len(new_score_list))]
+        merge_score_list.append(new_score_list)
+    return merge_score_list
+
+
+
+    
+
+
+
 if __name__ == "__main__":   
-    lexicon_path = "results\single.lexicon"
-    index_path = "results\single.index"
+    lexicon_path = "results\stem.lexicon"
+    index_path = "results\stem.index"
     document_path = "results\document_list.csv"
     loader = IndexLoader(index_path, lexicon_path, document_path).load_all()
 
@@ -370,13 +404,13 @@ if __name__ == "__main__":
     positional_lexicon_path = "results\positional.lexicon"
     
 
-
-    # phrase_loader = IndexLoader(phrase_index_path, phrase_lexicon_path, document_path).load_all()
-    # phrase_loader.document_lenth = loader.document_lenth
+    start = time.time()
+    phrase_loader = IndexLoader(phrase_index_path, phrase_lexicon_path, document_path).load_all()
+    phrase_loader.document_lenth = loader.document_lenth
     
-    # positional_loader = PositionalIndexLoader(positional_index_path, positional_lexicon_path, document_path).load_all()
-    # positional_loader.document_lenth = loader.document_lenth
-    # positional_loader.collection_lenth = loader.collection_lenth
+    positional_loader = PositionalIndexLoader(positional_index_path, positional_lexicon_path, document_path).load_all()
+    positional_loader.document_lenth = loader.document_lenth
+    positional_loader.collection_lenth = loader.collection_lenth
     query_file_path = "queryfile.txt"
     reader = QueryReader(query_file_path)
 
@@ -386,15 +420,31 @@ if __name__ == "__main__":
 
 
 
-    # BM = PhraseIndexModel(phrase_loader, reader.get_query())
-    # bm25_score_path = os.path.join("query_results", "BM25_SCORE.txt")
-    # BM.run_query(bm25_score_path, size= 100)
+    Phrase = PhraseIndexModel(phrase_loader, reader.get_query())
+    bm25_score_path = os.path.join("query_results", "Phrase_SCORE.txt")
+    phrase_scores = Phrase.run_query(bm25_score_path, size= 100)
 
-    LM = LanguageModel(loader, reader.get_query())
-    LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
-    LM.run_query(LM_score_path)
+    # LM = LanguageModel(loader, reader.get_query())
+    # LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
+    # LM.run_query(LM_score_path)
 
-    # PM = PositionalQueryModel(positional_loader, reader.get_query())
-    # positional_score_path = os.path.join("query_results", "positional_score.txt")
-    # PM.run_query(positional_score_path)
+    reader = QueryReader(query_file_path)
+    PM = PositionalQueryModel(positional_loader, reader.get_query())
+    positional_score_path = os.path.join("query_results", "positional_score.txt")
+    positional_scores = PM.run_query(positional_score_path, size=10)
+
+    reader = QueryReader(query_file_path)
+    BM = BM25(loader, reader.get_query(), stem=PorterStemmer())
+    bm25_score_path = os.path.join("query_results", "BM25_score.txt")
+    bm25_scores = BM.run_query(bm25_score_path, size=100)
+
+    eva = evaluator()
+    for i in range(10, 1000, 10):
+        merge_scores = combine_scores(phrase_scores, positional_scores, bm25_scores, i, 0, size=100)
+        PM.output_result(merge_scores, "query_results\\merge_score.txt")
+        os.system(".\\treceval qrel.txt query_results\\merge_score.txt > evaluation.txt")
+        with open("evaluation.txt") as f:
+            print(i, eval(f.readlines()[19]))
+        # end = time.time()
+        # print(end-start)
     pass
