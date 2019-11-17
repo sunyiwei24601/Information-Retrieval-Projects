@@ -34,7 +34,7 @@ class QueryModel:
             self.idf_list.append(idf)
 
     def generate_query_posting_list(self, query):
-        tokens = self.parser.get_single_term_tokens(query)
+        tokens = self.parser.get_single_term_tokens(query.strip("\t"))
         query_posting_list = collections.defaultdict(lambda : 0)
         for token_list in tokens:
             for token in token_list:
@@ -160,20 +160,23 @@ class BM25(QueryModel):
         return scores
 
 class LanguageModel(QueryModel):
-    def __init__(self, loader, queries,  miu=0.00001, lbd = 0.1, stem=None):
+    def __init__(self, loader, queries,  miu=400 , lbd = 0.1, stem=None):
         super(LanguageModel, self).__init__(loader, queries, stem)
         
         self.miu = miu
 
         self.lbd = lbd
-    def get_Dirichlet_scores(self, query_num, query, size=10):
+
+    def get_Dirichlet_scores(self, query_num, query, size=100):
+        print(query)
         score = collections.defaultdict(lambda : 0)
         query_posting = self.generate_query_posting_list(query)
         candidate_doc = []
         for term_id, qtf in query_posting.items():
             term_posting_list = self.term_posting_list[term_id]
             candidate_doc += list(term_posting_list.keys())
-            
+        candidate_doc = set(candidate_doc)
+
         for term_id, qtf in query_posting.items():
             term_posting_list = self.term_posting_list[term_id]
             for doc_id in candidate_doc:
@@ -181,7 +184,7 @@ class LanguageModel(QueryModel):
                 d_len = self.document_lenth[doc_id]
                 tfc = self.term_frequency_collection[term_id]
                 s = self.calculate_Dirichlet(tf, tfc, d_len)
-                score[doc_id] += s
+                score[doc_id] += s * qtf
         score_list = sorted(score.items(), key=lambda x: x[1], reverse=True)
         return [[query_num, 0, self.document_list[score_list[n][0]], n, score_list[n][1], "Dirichlet"] for n in range(len(score_list[:size]))]
 
@@ -217,9 +220,9 @@ class LanguageModel(QueryModel):
         C = sum(self.document_lenth)
         temp1 = tf + miu * tfc / C
         temp2 = d_len + miu
-        return math.log10(temp1/temp2)
+        return math.log(temp1/temp2)
 
-    def run_query(self, dirichlet_score_path, size=10):
+    def run_query(self, dirichlet_score_path, size=100):
         scores = []
         for query_num, query in self.queries:
             scores.append(self.get_Dirichlet_scores(query_num, query, size))
@@ -391,8 +394,8 @@ def combine_scores(phrase_score, positional_score, stem_score, alpha, mu =0, siz
 
 
 if __name__ == "__main__":   
-    lexicon_path = "results\stem.lexicon"
-    index_path = "results\stem.index"
+    lexicon_path = "results\single.lexicon"
+    index_path = "results\single.index"
     document_path = "results\document_list.csv"
     loader = IndexLoader(index_path, lexicon_path, document_path).load_all()
 
@@ -420,31 +423,31 @@ if __name__ == "__main__":
 
 
 
-    Phrase = PhraseIndexModel(phrase_loader, reader.get_query())
-    bm25_score_path = os.path.join("query_results", "Phrase_SCORE.txt")
-    phrase_scores = Phrase.run_query(bm25_score_path, size= 100)
+    # Phrase = PhraseIndexModel(phrase_loader, reader.get_query())
+    # bm25_score_path = os.path.join("query_results", "Phrase_SCORE.txt")
+    # phrase_scores = Phrase.run_query(bm25_score_path, size= 100)
 
-    # LM = LanguageModel(loader, reader.get_query())
-    # LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
-    # LM.run_query(LM_score_path)
+    LM = LanguageModel(loader, reader.get_query())
+    LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
+    LM.run_query(LM_score_path)
 
-    reader = QueryReader(query_file_path)
-    PM = PositionalQueryModel(positional_loader, reader.get_query())
-    positional_score_path = os.path.join("query_results", "positional_score.txt")
-    positional_scores = PM.run_query(positional_score_path, size=10)
+    # reader = QueryReader(query_file_path)
+    # PM = PositionalQueryModel(positional_loader, reader.get_query())
+    # positional_score_path = os.path.join("query_results", "positional_score.txt")
+    # positional_scores = PM.run_query(positional_score_path, size=10)
 
-    reader = QueryReader(query_file_path)
-    BM = BM25(loader, reader.get_query(), stem=PorterStemmer())
-    bm25_score_path = os.path.join("query_results", "BM25_score.txt")
-    bm25_scores = BM.run_query(bm25_score_path, size=100)
+    # reader = QueryReader(query_file_path)
+    # BM = BM25(loader, reader.get_query(), stem=PorterStemmer())
+    # # bm25_score_path = os.path.join("query_results", "BM25_score.txt")
+    # # bm25_scores = BM.run_query(bm25_score_path, size=100)
 
-    eva = evaluator()
-    for i in range(10, 1000, 10):
-        merge_scores = combine_scores(phrase_scores, positional_scores, bm25_scores, i, 0, size=100)
-        PM.output_result(merge_scores, "query_results\\merge_score.txt")
-        os.system(".\\treceval qrel.txt query_results\\merge_score.txt > evaluation.txt")
-        with open("evaluation.txt") as f:
-            print(i, eval(f.readlines()[19]))
-        # end = time.time()
-        # print(end-start)
-    pass
+    # eva = evaluator()
+    # for i in range(10, 100, 10):
+    #     merge_scores = combine_scores(phrase_scores, positional_scores, bm25_scores, i, 0, size=100)
+    #     PM.output_result(merge_scores, "query_results\\merge_score.txt")
+    #     os.system(".\\treceval qrel.txt query_results\\merge_score.txt > evaluation.txt")
+    #     with open("evaluation.txt") as f:
+    #         print(i, eval(f.readlines()[19]))
+    #     # end = time.time()
+    #     # print(end-start)
+    # pass
