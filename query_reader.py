@@ -21,6 +21,40 @@ class QueryReader:
                     query = []
                 line = f.readline()
 
+    def get_query_with_narrative(self):
+        query = []
+        with open(self.query_file_path) as f:
+            line = f.readline()
+            while(line):
+                num = self.identify_number(line)
+                if num:
+                    query = []
+                    query.append(num)
+                    line = f.readline()
+                    continue
+
+                topic = self.identify_topic(line)
+                if topic:
+                    query.append(topic)
+                    line = f.readline()
+                    continue
+
+                if self.identify_narrative(line):
+                    line = f.readline()
+                    narrative = ""
+                    while(line != "\n" and line):
+                        narrative += line
+                        line = f.readline()
+                    query.append(narrative)
+                    yield query
+                    
+                
+
+
+                line = f.readline()
+                print(line)
+
+
     def identify_number(self, line):
         s = re.match("<num> Number: ([0-9]+)", line)
         if s:
@@ -37,11 +71,15 @@ class QueryReader:
         else: 
             return False
 
-    def identify_description(self, line):
-        pass
+    def identify_narrative(self, line):
+        s = re.match("<narr> Narrative.+", line)
+        if s:
+            return True
+        else:
+            return False
 
 if __name__ == "__main__":
     query_file_path = "queryfile.txt"
     reader = QueryReader(query_file_path)
-    for i in reader.get_query():
+    for i in reader.get_query_with_narrative():
         print(i)
