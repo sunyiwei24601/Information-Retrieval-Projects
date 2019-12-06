@@ -37,6 +37,9 @@ class QueryReader:
         else: 
             return False
 
+    def identify_description(self, line):
+        pass
+
 if __name__ == "__main__":
     query_file_path = "queryfile.txt"
     reader = QueryReader(query_file_path)
