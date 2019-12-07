@@ -42,7 +42,7 @@ class QueryReader:
                 if self.identify_narrative(line):
                     line = f.readline()
                     narrative = ""
-                    while(line != "\n" and line):
+                    while(line != "</top>\n" and line):
                         narrative += line
                         line = f.readline()
                     query.append(narrative)
@@ -52,7 +52,6 @@ class QueryReader:
 
 
                 line = f.readline()
-                print(line)
 
     def identify_number(self, line):
         s = re.match("<num> Number: ([0-9]+)", line)

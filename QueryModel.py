@@ -178,7 +178,6 @@ class LanguageModel(QueryModel):
         self.lbd = lbd
 
     def get_Dirichlet_scores(self, query_num, query, size=100):
-        print(query)
         score = collections.defaultdict(lambda : 0)
         query_posting = self.generate_query_posting_list(query)
         candidate_doc = []

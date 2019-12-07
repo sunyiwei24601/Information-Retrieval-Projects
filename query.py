@@ -5,6 +5,7 @@ import os
 import time
 from QueryModel import *
 from nltk.stem.porter import PorterStemmer
+from QueryReduction.ReduceQuery import *
 class evaluator:
     def __init__(self):
         pass 
@@ -67,24 +68,27 @@ class Test:
         LM = LanguageModel(loader, queries, miu=miu, stem=self.stem)
         if LM_score_path == None:
             LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
-        return LM.run_query(LM_score_path, size=self.size)
+        scores = LM.run_query(LM_score_path, size=self.size)
         
         # os.system(".{}treceval {} {}".format(os.path.sep, self.qrel_path, LM_score_path))
-        # os.system(".{}treceval -q -a {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, LM_score_path))
+        os.system(".{}treceval.exe {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, LM_score_path))
+        return scores
 
     def run_VSM(self, loader, queries, COSINE_score_path=None):
         if COSINE_score_path == None:
             COSINE_score_path = os.path.join("query_results", "COSINE_SCORE.txt")
         VSM = VectorSpaceModel(loader, queries, stem=self.stem)
-        return VSM.run_query(COSINE_score_path, size=self.size)
-        # os.system(".{}treceval {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, COSINE_score_path))
+        scores =  VSM.run_query(COSINE_score_path, size=self.size)
+        os.system(".{}treceval.exe {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, COSINE_score_path))
+        return scores
 
     def run_BM25(self, loader, queries, BM25_score_path=None):
         if BM25_score_path == None:
             BM25_score_path = os.path.join("query_results", "BM25_SCORE.txt")
         BM = BM25(loader, queries, stem=self.stem)
-        return BM.run_query(BM25_score_path, size=self.size)
-        # os.system(".{}treceval {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, BM25_score_path))
+        scores =  BM.run_query(BM25_score_path, size=self.size)
+        os.system(".{}treceval.exe {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, BM25_score_path))
+        return scores 
 
     def run_Model(self, model_type, miu=1, times=1, output_path=None):
         running_time = []
@@ -93,6 +97,27 @@ class Test:
             query_file_path = "queryfile.txt"
             reader = QueryReader(query_file_path)
             queries = reader.get_query()
+
+
+            if model_type == "lm":
+                scores = self.run_LM(self.loader, queries, miu=400, LM_score_path=output_path)
+            if model_type == "bm25":
+                scores = self.run_BM25(self.loader, queries, BM25_score_path=output_path)
+            if model_type == "cosine":
+                scores = self.run_VSM(self.loader, queries, COSINE_score_path=output_path)
+            end = time.time()
+            print("Running time is ", end - start)
+            # eva.read_precision("evaluation.txt")
+            # print("human calculated MAP is " , eva.compute_MAP())
+            running_time.append(end - start)
+        print("average time is ", sum(running_time) / len(running_time))
+        return scores
+
+    def run_Model_query_processed(self, model_type, miu=1, times=1, output_path=None):
+        running_time = []
+        for i in range(times):
+            start = time.time()
+            queries = self.queries
             if model_type == "lm":
                 scores = self.run_LM(self.loader, queries, miu=0.0000001, LM_score_path=output_path)
             if model_type == "bm25":
@@ -107,7 +132,14 @@ class Test:
         print("average time is ", sum(running_time) / len(running_time))
         return scores
 
-
+    def reduce_query(self, threshold, reduce_type):
+        query_file_path = self.query_file_path
+        reader = QueryReader(query_file_path)
+        old_queries = list(reader.get_query())
+        queries = reader.get_query_with_narrative()
+        reducer = QueryReducer(self.loader, queries)
+        self.queries = reducer.get_reduced_query(threshold, reduce_type)
+        pass
 
 
 
@@ -117,15 +149,19 @@ class Test:
 
 if __name__ == "__main__":
     parameters = sys.argv
-    index_directory_path = parameters[1]
-    query_file_path = parameters[2]
-    retrieval_model = parameters[3]
-    index_type = parameters[4]
+    # index_directory_path = parameters[1]
+    # query_file_path = parameters[2]
+    # retrieval_model = parameters[3]
+    # index_type = parameters[4]
+    # results_file = parameters[5]
 
-    results_file = parameters[5]
-    eva = evaluator()
-    # eva.read_precision("evaluation.txt")
-    # print(eva.compute_MAP())
+
+    index_directory_path = "results"
+    query_file_path = "queryfile.txt"
+    retrieval_model = "cosine"
+    index_type = "single"
+    results_file = "query_results\\cosine_single_reduce_qf_idf.txt"
+    
 
     if index_type == "stem":
         lexicon_path = os.path.join(index_directory_path,"stem.lexicon")
@@ -138,8 +174,11 @@ if __name__ == "__main__":
 
     query_file_path = query_file_path
     # loader = IndexLoader(index_path, lexicon_path, document_path).load_all()
-    test = Test(query_file_path, lexicon_path, index_path, document_path, stem=PorterStemmer(), size=100)
-    test.run_Model(retrieval_model, times=1, output_path=results_file)
+    test = Test(query_file_path, lexicon_path, index_path, document_path, size=100)
+    test.reduce_query(1, "qtf*idf")
+    # test.run_Model(retrieval_model, times=1, output_path=results_file)
+
+    test.run_Model_query_processed(retrieval_model, times=1, output_path=results_file)
 
     
 
