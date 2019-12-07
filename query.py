@@ -62,11 +62,12 @@ class Test:
         self.stem = stem 
         self.qrel_path = qrel_path
         self.query_file_path = query_file_path
+
     def run_LM(self, loader, queries, miu=1, LM_score_path=None):
         LM = LanguageModel(loader, queries, miu=miu, stem=self.stem)
         if LM_score_path == None:
             LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
-        LM.run_query(LM_score_path, size=self.size)
+        return LM.run_query(LM_score_path, size=self.size)
         
         # os.system(".{}treceval {} {}".format(os.path.sep, self.qrel_path, LM_score_path))
         # os.system(".{}treceval -q -a {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, LM_score_path))
@@ -75,14 +76,14 @@ class Test:
         if COSINE_score_path == None:
             COSINE_score_path = os.path.join("query_results", "COSINE_SCORE.txt")
         VSM = VectorSpaceModel(loader, queries, stem=self.stem)
-        VSM.run_query(COSINE_score_path, size=self.size)
+        return VSM.run_query(COSINE_score_path, size=self.size)
         # os.system(".{}treceval {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, COSINE_score_path))
 
     def run_BM25(self, loader, queries, BM25_score_path=None):
         if BM25_score_path == None:
             BM25_score_path = os.path.join("query_results", "BM25_SCORE.txt")
         BM = BM25(loader, queries, stem=self.stem)
-        BM.run_query(BM25_score_path, size=self.size)
+        return BM.run_query(BM25_score_path, size=self.size)
         # os.system(".{}treceval {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, BM25_score_path))
 
     def run_Model(self, model_type, miu=1, times=1, output_path=None):
@@ -93,18 +94,18 @@ class Test:
             reader = QueryReader(query_file_path)
             queries = reader.get_query()
             if model_type == "lm":
-                self.run_LM(self.loader, queries, miu=0.0000001, LM_score_path=output_path)
+                scores = self.run_LM(self.loader, queries, miu=0.0000001, LM_score_path=output_path)
             if model_type == "bm25":
-                self.run_BM25(self.loader, queries, BM25_score_path=output_path)
+                scores = self.run_BM25(self.loader, queries, BM25_score_path=output_path)
             if model_type == "cosine":
-                self.run_VSM(self.loader, queries, COSINE_score_path=output_path)
+                scores = self.run_VSM(self.loader, queries, COSINE_score_path=output_path)
             end = time.time()
             print("Running time is ", end - start)
             # eva.read_precision("evaluation.txt")
             # print("human calculated MAP is " , eva.compute_MAP())
             running_time.append(end - start)
         print("average time is ", sum(running_time) / len(running_time))
-
+        return scores
 
 
 

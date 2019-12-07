@@ -91,18 +91,27 @@ class VectorSpaceModel(QueryModel):
         document_ids = sorted(self.document_posting_list.keys())
 
         self.document_normalization = []
+        self.document_vector_list = []
 
         for document_id in document_ids:
             sum_normalization = 0
+            document_vector = {}
             posting_list = self.document_posting_list[document_id]
             term_ids = sorted(posting_list.keys())
             idf = self.idf_list[document_id]
             for term_id in term_ids:
                 tf = posting_list[term_id]
                 w = self.calculate_tf_idf(tf, idf)
+                document_vector[term_id] = w
                 sum_normalization += w**2
 
             self.document_normalization.append(sum_normalization)
+            
+            for term_id in document_vector:
+                document_vector[term_id] /= sum_normalization
+            
+            self.document_vector_list.append(document_vector)
+                
 
     def calculate_tf_idf(self, tf, idf):
         return (math.log10(tf) + 1.0) * idf
@@ -114,6 +123,7 @@ class VectorSpaceModel(QueryModel):
         for query_num, query in self.queries:
             scores.append(self.get_COSINE_scores(query_num, query, size))
         self.output_result(scores, cosine_score_path)
+        return scores
 
 class BM25(QueryModel):
     def __init__(self, loader, queries, stem=None):
@@ -227,6 +237,7 @@ class LanguageModel(QueryModel):
         for query_num, query in self.queries:
             scores.append(self.get_Dirichlet_scores(query_num, query, size))
         self.output_result(scores, dirichlet_score_path)
+        return scores
 
 class PhraseIndexModel(BM25):
     def __init__(self, loader, queries, stem=None):
@@ -244,6 +255,8 @@ class PhraseIndexModel(BM25):
                     posting_list[term_id] += 1
         
         return posting_list
+
+
 
 class PositionalQueryModel(QueryModel):
     def __init__(self, positional_loader, queries):
@@ -417,19 +430,19 @@ if __name__ == "__main__":
     query_file_path = "queryfile.txt"
     reader = QueryReader(query_file_path)
 
-    # VSM = VectorSpaceModel(loader,reader.get_query())
-    # cosine_score_path = os.path.join("query_results", "COSINE_SCORE.txt")
-    # VSM.run_query(cosine_score_path)
-
+    VSM = VectorSpaceModel(loader,reader.get_query())
+    cosine_score_path = os.path.join("query_results", "COSINE_SCORE.txt")
+    VSM.run_query(cosine_score_path)
+    pass 
 
 
     # Phrase = PhraseIndexModel(phrase_loader, reader.get_query())
     # bm25_score_path = os.path.join("query_results", "Phrase_SCORE.txt")
     # phrase_scores = Phrase.run_query(bm25_score_path, size= 100)
 
-    LM = LanguageModel(loader, reader.get_query())
-    LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
-    LM.run_query(LM_score_path)
+    # LM = LanguageModel(loader, reader.get_query())
+    # LM_score_path = os.path.join("query_results", "DIRICHLET_SCORE.txt")
+    # LM.run_query(LM_score_path)
 
     # reader = QueryReader(query_file_path)
     # PM = PositionalQueryModel(positional_loader, reader.get_query())

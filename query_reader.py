@@ -54,7 +54,6 @@ class QueryReader:
                 line = f.readline()
                 print(line)
 
-
     def identify_number(self, line):
         s = re.match("<num> Number: ([0-9]+)", line)
         if s:
