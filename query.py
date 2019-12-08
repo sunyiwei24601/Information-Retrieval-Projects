@@ -157,7 +157,7 @@ if __name__ == "__main__":
     retrieval_model = parameters[3]
     index_type = parameters[4]
     filter = parameters[5]
-    threshold = parameters[6]
+    threshold = eval(parameters[6])
     results_file = os.path.join("query_results", "_".join([retrieval_model, index_type, filter]))
 
 
