@@ -142,5 +142,4 @@ if __name__ == "__main__":
     s = expander.get_Rocchio_Vector_Results(document_nums=nums, beta=10)
     # os.system(".{}treceval.exe {} {}".format(os.path.sep, qrel_path, os.path.join("query_results", "cosine_qe.txt") ))
     end = time.time()
-    print("running time is: ", end - start)
     pass 
