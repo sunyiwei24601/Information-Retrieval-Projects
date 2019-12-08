@@ -1,0 +1,306 @@
+python3 query.py results queryfile.txt bm25 single qtf 0.10
+Running time is  0.04175209999084473
+average time is  0.04175209999084473
+total_running_time: 0.6408028602600098
+python3 query.py results queryfile.txt bm25 single qtf 0.25
+Running time is  0.06639575958251953
+average time is  0.06639575958251953
+total_running_time: 0.6696112155914307
+python3 query.py results queryfile.txt bm25 single qtf 0.50
+Running time is  0.10025167465209961
+average time is  0.10025167465209961
+total_running_time: 0.7107515335083008
+python3 query.py results queryfile.txt bm25 single qtf 0.75
+Running time is  0.12463045120239258
+average time is  0.12463045120239258
+total_running_time: 0.7426590919494629
+python3 query.py results queryfile.txt bm25 single qtf 1.00
+Running time is  0.1520395278930664
+average time is  0.1520395278930664
+total_running_time: 0.7768638134002686
+python3 query.py results queryfile.txt bm25 single idf 0.10
+Running time is  0.0226900577545166
+average time is  0.0226900577545166
+total_running_time: 0.634509801864624
+python3 query.py results queryfile.txt bm25 single idf 0.25
+Running time is  0.03151726722717285
+average time is  0.03151726722717285
+total_running_time: 0.6473495960235596
+python3 query.py results queryfile.txt bm25 single idf 0.50
+Running time is  0.05290389060974121
+average time is  0.05290389060974121
+total_running_time: 0.6617443561553955
+python3 query.py results queryfile.txt bm25 single idf 0.75
+Running time is  0.08076357841491699
+average time is  0.08076357841491699
+total_running_time: 0.6880927085876465
+python3 query.py results queryfile.txt bm25 single idf 1.00
+Running time is  0.14551091194152832
+average time is  0.14551091194152832
+total_running_time: 0.7572400569915771
+python3 query.py results queryfile.txt bm25 single qtf*idf 0.10
+Running time is  0.02936720848083496
+average time is  0.02936720848083496
+total_running_time: 0.6354210376739502
+python3 query.py results queryfile.txt bm25 single qtf*idf 0.25
+Running time is  0.04473543167114258
+average time is  0.04473543167114258
+total_running_time: 0.6521444320678711
+python3 query.py results queryfile.txt bm25 single qtf*idf 0.50
+python3 query.py results queryfile.txt bm25 single qtf*idf 0.75
+python3 query.py results queryfile.txt bm25 single qtf*idf 1.00
+python3 query.py results queryfile.txt cosine single qtf 0.10
+Running time is  0.3031034469604492
+average time is  0.3031034469604492
+total_running_time: 0.9122364521026611
+python3 query.py results queryfile.txt cosine single qtf 0.25
+Running time is  0.3256959915161133
+average time is  0.3256959915161133
+total_running_time: 0.9371936321258545
+python3 query.py results queryfile.txt cosine single qtf 0.50
+Running time is  0.35028600692749023
+average time is  0.35028600692749023
+total_running_time: 0.9604659080505371
+python3 query.py results queryfile.txt cosine single qtf 0.75
+Running time is  0.372905969619751
+average time is  0.372905969619751
+total_running_time: 0.9840495586395264
+python3 query.py results queryfile.txt cosine single qtf 1.00
+Running time is  0.3923494815826416
+average time is  0.3923494815826416
+total_running_time: 1.004880666732788
+python3 query.py results queryfile.txt cosine single idf 0.10
+Running time is  0.2828075885772705
+average time is  0.2828075885772705
+total_running_time: 0.886260986328125
+python3 query.py results queryfile.txt cosine single idf 0.25
+Running time is  0.292813777923584
+average time is  0.292813777923584
+total_running_time: 0.9056286811828613
+python3 query.py results queryfile.txt cosine single idf 0.50
+Running time is  0.3174715042114258
+average time is  0.3174715042114258
+total_running_time: 0.9324743747711182
+python3 query.py results queryfile.txt cosine single idf 0.75
+Running time is  0.34034276008605957
+average time is  0.34034276008605957
+total_running_time: 0.9548187255859375
+python3 query.py results queryfile.txt cosine single idf 1.00
+Running time is  0.3895132541656494
+average time is  0.3895132541656494
+total_running_time: 1.0008304119110107
+python3 query.py results queryfile.txt cosine single qtf*idf 0.10
+Running time is  0.2903249263763428
+average time is  0.2903249263763428
+total_running_time: 0.897057056427002
+python3 query.py results queryfile.txt cosine single qtf*idf 0.25
+Running time is  0.30469703674316406
+average time is  0.30469703674316406
+total_running_time: 0.9095981121063232
+python3 query.py results queryfile.txt cosine single qtf*idf 0.50
+python3 query.py results queryfile.txt cosine single qtf*idf 0.75
+python3 query.py results queryfile.txt cosine single qtf*idf 1.00
+python3 query.py results queryfile.txt lm single qtf 0.10
+Running time is  0.30144548416137695
+average time is  0.30144548416137695
+total_running_time: 0.9088644981384277
+python3 query.py results queryfile.txt lm single qtf 0.25
+Running time is  1.509800672531128
+average time is  1.509800672531128
+total_running_time: 2.123805522918701
+python3 query.py results queryfile.txt lm single qtf 0.50
+Running time is  4.479686737060547
+average time is  4.479686737060547
+total_running_time: 5.0853049755096436
+python3 query.py results queryfile.txt lm single qtf 0.75
+Running time is  7.898467302322388
+average time is  7.898467302322388
+total_running_time: 8.509080648422241
+python3 query.py results queryfile.txt lm single qtf 1.00
+Running time is  11.540137767791748
+average time is  11.540137767791748
+total_running_time: 12.155929565429688
+python3 query.py results queryfile.txt lm single idf 0.10
+Running time is  0.009644508361816406
+average time is  0.009644508361816406
+total_running_time: 0.6202771663665771
+python3 query.py results queryfile.txt lm single idf 0.25
+Running time is  0.10363197326660156
+average time is  0.10363197326660156
+total_running_time: 0.7124209403991699
+python3 query.py results queryfile.txt lm single idf 0.50
+Running time is  1.239837408065796
+average time is  1.239837408065796
+total_running_time: 1.846994161605835
+python3 query.py results queryfile.txt lm single idf 0.75
+Running time is  4.6312901973724365
+average time is  4.6312901973724365
+total_running_time: 5.236295700073242
+python3 query.py results queryfile.txt lm single idf 1.00
+Running time is  11.528374671936035
+average time is  11.528374671936035
+total_running_time: 12.144271850585938
+python3 query.py results queryfile.txt lm single qtf*idf 0.10
+Running time is  0.06633138656616211
+average time is  0.06633138656616211
+total_running_time: 0.6702940464019775
+python3 query.py results queryfile.txt lm single qtf*idf 0.25
+Running time is  0.4705667495727539
+average time is  0.4705667495727539
+total_running_time: 1.076812744140625
+python3 query.py results queryfile.txt lm single qtf*idf 0.50
+python3 query.py results queryfile.txt lm single qtf*idf 0.75
+python3 query.py results queryfile.txt lm single qtf*idf 1.00
+python3 query.py results queryfile.txt bm25 single qtf 0.10
+Running time is  0.041388750076293945
+average time is  0.041388750076293945
+total_running_time: 0.641193151473999
+python3 query.py results queryfile.txt bm25 single qtf 0.25
+Running time is  0.06923866271972656
+average time is  0.06923866271972656
+total_running_time: 0.678825855255127
+python3 query.py results queryfile.txt bm25 single qtf 0.50
+Running time is  0.0996253490447998
+average time is  0.0996253490447998
+total_running_time: 0.7090468406677246
+python3 query.py results queryfile.txt bm25 single qtf 0.75
+Running time is  0.12595009803771973
+average time is  0.12595009803771973
+total_running_time: 0.7504937648773193
+python3 query.py results queryfile.txt bm25 single qtf 1.00
+Running time is  0.15105628967285156
+average time is  0.15105628967285156
+total_running_time: 0.7670044898986816
+python3 query.py results queryfile.txt bm25 single idf 0.10
+Running time is  0.023060321807861328
+average time is  0.023060321807861328
+total_running_time: 0.638587474822998
+python3 query.py results queryfile.txt bm25 single idf 0.25
+Running time is  0.03172492980957031
+average time is  0.03172492980957031
+total_running_time: 0.6501295566558838
+python3 query.py results queryfile.txt bm25 single idf 0.50
+Running time is  0.052535057067871094
+average time is  0.052535057067871094
+total_running_time: 0.6761119365692139
+python3 query.py results queryfile.txt bm25 single idf 0.75
+Running time is  0.07957863807678223
+average time is  0.07957863807678223
+total_running_time: 0.6885294914245605
+python3 query.py results queryfile.txt bm25 single idf 1.00
+Running time is  0.1437075138092041
+average time is  0.1437075138092041
+total_running_time: 0.7567980289459229
+python3 query.py results queryfile.txt bm25 single qtf*idf 0.10
+Running time is  0.02827596664428711
+average time is  0.02827596664428711
+total_running_time: 0.6345398426055908
+python3 query.py results queryfile.txt bm25 single qtf*idf 0.25
+Running time is  0.045059919357299805
+average time is  0.045059919357299805
+total_running_time: 0.6534950733184814
+python3 query.py results queryfile.txt bm25 single qtf*idf 0.50
+python3 query.py results queryfile.txt bm25 single qtf*idf 0.75
+python3 query.py results queryfile.txt bm25 single qtf*idf 1.00
+python3 query.py results queryfile.txt cosine single qtf 0.10
+Running time is  0.30077433586120605
+average time is  0.30077433586120605
+total_running_time: 0.9061517715454102
+python3 query.py results queryfile.txt cosine single qtf 0.25
+Running time is  0.32793593406677246
+average time is  0.32793593406677246
+total_running_time: 0.9392919540405273
+python3 query.py results queryfile.txt cosine single qtf 0.50
+Running time is  0.3548555374145508
+average time is  0.3548555374145508
+total_running_time: 0.961921215057373
+python3 query.py results queryfile.txt cosine single qtf 0.75
+Running time is  0.3754312992095947
+average time is  0.3754312992095947
+total_running_time: 0.9887282848358154
+python3 query.py results queryfile.txt cosine single qtf 1.00
+Running time is  0.3927798271179199
+average time is  0.3927798271179199
+total_running_time: 1.0037295818328857
+python3 query.py results queryfile.txt cosine single idf 0.10
+Running time is  0.2841935157775879
+average time is  0.2841935157775879
+total_running_time: 0.8942875862121582
+python3 query.py results queryfile.txt cosine single idf 0.25
+Running time is  0.3114800453186035
+average time is  0.3114800453186035
+total_running_time: 0.9220519065856934
+python3 query.py results queryfile.txt cosine single idf 0.50
+Running time is  0.322742223739624
+average time is  0.322742223739624
+total_running_time: 0.9443352222442627
+python3 query.py results queryfile.txt cosine single idf 0.75
+Running time is  0.3370072841644287
+average time is  0.3370072841644287
+total_running_time: 0.9413166046142578
+python3 query.py results queryfile.txt cosine single idf 1.00
+Running time is  0.3863086700439453
+average time is  0.3863086700439453
+total_running_time: 0.9957637786865234
+python3 query.py results queryfile.txt cosine single qtf*idf 0.10
+Running time is  0.29387521743774414
+average time is  0.29387521743774414
+total_running_time: 0.9063742160797119
+python3 query.py results queryfile.txt cosine single qtf*idf 0.25
+Running time is  0.3069334030151367
+average time is  0.3069334030151367
+total_running_time: 0.9231750965118408
+python3 query.py results queryfile.txt cosine single qtf*idf 0.50
+python3 query.py results queryfile.txt cosine single qtf*idf 0.75
+python3 query.py results queryfile.txt cosine single qtf*idf 1.00
+python3 query.py results queryfile.txt lm single qtf 0.10
+Running time is  0.3046901226043701
+average time is  0.3046901226043701
+total_running_time: 0.9260635375976562
+python3 query.py results queryfile.txt lm single qtf 0.25
+Running time is  1.5245943069458008
+average time is  1.5245943069458008
+total_running_time: 2.129725694656372
+python3 query.py results queryfile.txt lm single qtf 0.50
+Running time is  4.4871392250061035
+average time is  4.4871392250061035
+total_running_time: 5.093517065048218
+python3 query.py results queryfile.txt lm single qtf 0.75
+Running time is  7.728105306625366
+average time is  7.728105306625366
+total_running_time: 8.334359884262085
+python3 query.py results queryfile.txt lm single qtf 1.00
+Running time is  11.583427429199219
+average time is  11.583427429199219
+total_running_time: 12.196758270263672
+python3 query.py results queryfile.txt lm single idf 0.10
+Running time is  0.010089874267578125
+average time is  0.010089874267578125
+total_running_time: 0.6167087554931641
+python3 query.py results queryfile.txt lm single idf 0.25
+Running time is  0.10342693328857422
+average time is  0.10342693328857422
+total_running_time: 0.7137200832366943
+python3 query.py results queryfile.txt lm single idf 0.50
+Running time is  1.247939109802246
+average time is  1.247939109802246
+total_running_time: 1.8580529689788818
+python3 query.py results queryfile.txt lm single idf 0.75
+Running time is  4.63150429725647
+average time is  4.63150429725647
+total_running_time: 5.23696231842041
+python3 query.py results queryfile.txt lm single idf 1.00
+Running time is  11.865567207336426
+average time is  11.865567207336426
+total_running_time: 12.469637870788574
+python3 query.py results queryfile.txt lm single qtf*idf 0.10
+Running time is  0.06671786308288574
+average time is  0.06671786308288574
+total_running_time: 0.6746127605438232
+python3 query.py results queryfile.txt lm single qtf*idf 0.25
+Running time is  0.4703390598297119
+average time is  0.4703390598297119
+total_running_time: 1.0787560939788818
+python3 query.py results queryfile.txt lm single qtf*idf 0.50
+python3 query.py results queryfile.txt lm single qtf*idf 0.75
+python3 query.py results queryfile.txt lm single qtf*idf 1.00
