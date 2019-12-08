@@ -158,7 +158,7 @@ if __name__ == "__main__":
     index_type = parameters[4]
     filter = parameters[5]
     threshold = eval(parameters[6])
-    results_file = os.path.join("query_results", "_".join([retrieval_model, index_type, filter]))
+    results_file = os.path.join("query_results", "_".join([retrieval_model, index_type, filter, str(threshold)]))
 
 
     # index_directory_path = "results"
