@@ -129,7 +129,7 @@ class ExpandVSM(VectorSpaceModel):
 
 if __name__ == "__main__":
     start = time.time()
-    nums = sys.argv[1]
+    nums = int(sys.argv[1])
     qrel_path = "qrel.txt"
     lexicon_path = os.path.join("results","single.lexicon")
     index_path = os.path.join("results", "single.index")
