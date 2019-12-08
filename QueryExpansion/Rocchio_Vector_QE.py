@@ -11,10 +11,7 @@ class Expander:
         self.model = ExpandVSM(loader, self.queries)
         self.model.compute_idf()
         self.model.compute_document_normalization()
-        
-
-        
-        
+          
     def get_original_documents(self, index_directory_path=None, query_file_path=None):
         index_directory_path = "results"
         query_file_path = "queryfile.txt"
@@ -23,7 +20,6 @@ class Expander:
         document_path = os.path.join(index_directory_path, "document_list.csv")
         test = Test(query_file_path, lexicon_path, index_path, document_path, size=None)
         self.scores = test.run_Model("cosine")
-
 
     def get_n_documents(self, query_num, n, top=True):
         scores = []
@@ -39,20 +35,21 @@ class Expander:
         document_id_list = [self.document_dict[i] for i in document_name_list]
         return document_id_list
          
-    def Rocchio_Vector_Generate(self, query_num, query, alpha=1, beta=10, gama=1):
+    def Rocchio_Vector_Generate(self, query_num, query, alpha=1, beta=10, gama=1, document_nums=10):
 
         query_posting = self.model.generate_query_posting_list(query)
         origin_query_vector, norm = self.model.from_query_posting_into_weight_vector(query_posting)
-        rel_documents = self.get_n_documents(query_num, 10)
-        non_rel_documents = self.get_n_documents(query_num, 5, top=False)
+        rel_documents = self.get_n_documents(query_num, document_nums)
+        # non_rel_documents = self.get_n_documents(query_num, 5, top=False)
         rel_vector = self.combine_document_vector(rel_documents)
-        non_rel_vector = self.combine_document_vector(non_rel_documents)
+        # non_rel_vector = self.combine_document_vector(non_rel_documents)
 
         all_terms = list(origin_query_vector.keys()) + list(rel_vector.keys())
         new_query_vector = {}
         for term_id in all_terms:
             new_query_vector[term_id] = alpha * origin_query_vector.get(term_id, 0)
-            new_query_vector[term_id] += beta * rel_vector.get(term_id, 0)
+            if origin_query_vector.get(term_id) == None:
+                new_query_vector[term_id] += beta * rel_vector.get(term_id, 0)
             # new_query_vector[term_id] -= gama * non_rel_vector.get(term_id, 0)
         
         if len(new_query_vector) > 0:
@@ -64,9 +61,6 @@ class Expander:
             
         return query_vector
         
- 
-
-
     def combine_document_vector(self, rel_documents):
         combine_vector = collections.defaultdict(lambda:0)
         len_ = len(rel_documents)
@@ -77,8 +71,7 @@ class Expander:
         
         return combine_vector
             
-    
-    def get_Rocchio_Vector_Results(self):
+    def get_Rocchio_Vector_Results(self, document_nums,alpha=1, beta=100, gama=1):
         self.get_original_documents()
         vsm = self.model 
         vsm.compute_idf()
@@ -93,15 +86,12 @@ class Expander:
         self.document_vector_list = vsm.document_vector_list
         new_queries = {}
         for query_num, query in self.queries.items():
-            new_queries[query_num] = self.Rocchio_Vector_Generate(query_num, query)
+            new_queries[query_num] = self.Rocchio_Vector_Generate(query_num, query, beta=beta, document_nums=document_nums)
         vsm.queries = new_queries
         cosine_score_path = os.path.join("query_results", "cosine_qe.txt")
         return vsm.run_query(cosine_score_path, 100)
 
-
          
-        
-
 class ExpandVSM(VectorSpaceModel):
     def __init__(self, loader, queries, stem=None):
         super().__init__(loader, queries, stem=stem)
@@ -137,15 +127,20 @@ class ExpandVSM(VectorSpaceModel):
         return scores
 
 
-
 if __name__ == "__main__":
-    lexicon_path = "results\single.lexicon"
-    index_path = "results\single.index"
-    document_path = "results\document_list.csv"
+    start = time.time()
+    nums = sys.argv[1]
+    qrel_path = "qrel.txt"
+    lexicon_path = os.path.join("results","single.lexicon")
+    index_path = os.path.join("results", "single.index")
+    document_path = os.path.join("results", "document_list.csv")
     loader = IndexLoader(index_path, lexicon_path, document_path).load_all()
 
     query_file_path = "queryfile.txt"
     reader = QueryReader(query_file_path)
     expander = Expander(reader.get_query(), loader)
-    s = expander.get_Rocchio_Vector_Results()
+    s = expander.get_Rocchio_Vector_Results(document_nums=nums, beta=10)
+    # os.system(".{}treceval.exe {} {}".format(os.path.sep, qrel_path, os.path.join("query_results", "cosine_qe.txt") ))
+    end = time.time()
+    print("running time is: ", end - start)
     pass 

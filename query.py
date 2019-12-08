@@ -71,7 +71,7 @@ class Test:
         scores = LM.run_query(LM_score_path, size=self.size)
         
         # os.system(".{}treceval {} {}".format(os.path.sep, self.qrel_path, LM_score_path))
-        os.system(".{}treceval.exe {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, LM_score_path))
+        # os.system(".{}treceval.exe {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, LM_score_path))
         return scores
 
     def run_VSM(self, loader, queries, COSINE_score_path=None):
@@ -79,7 +79,7 @@ class Test:
             COSINE_score_path = os.path.join("query_results", "COSINE_SCORE.txt")
         VSM = VectorSpaceModel(loader, queries, stem=self.stem)
         scores =  VSM.run_query(COSINE_score_path, size=self.size)
-        os.system(".{}treceval.exe {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, COSINE_score_path))
+        # os.system(".{}treceval.exe {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, COSINE_score_path))
         return scores
 
     def run_BM25(self, loader, queries, BM25_score_path=None):
@@ -87,16 +87,18 @@ class Test:
             BM25_score_path = os.path.join("query_results", "BM25_SCORE.txt")
         BM = BM25(loader, queries, stem=self.stem)
         scores =  BM.run_query(BM25_score_path, size=self.size)
-        os.system(".{}treceval.exe {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, BM25_score_path))
+        # os.system(".{}treceval.exe {} {} > evaluation.txt".format(os.path.sep, self.qrel_path, BM25_score_path))
         return scores 
 
-    def run_Model(self, model_type, miu=1, times=1, output_path=None):
+    def run_Model(self, model_type, miu=1, times=1, output_path=None, queries=None):
         running_time = []
         for i in range(times):
             start = time.time()
-            query_file_path = "queryfile.txt"
-            reader = QueryReader(query_file_path)
-            queries = reader.get_query()
+            if queries == None:
+                query_file_path = "queryfile.txt"
+                reader = QueryReader(query_file_path)
+                queries = reader.get_query()
+            
 
 
             if model_type == "lm":
@@ -137,9 +139,9 @@ class Test:
         reader = QueryReader(query_file_path)
         old_queries = list(reader.get_query())
         queries = reader.get_query_with_narrative()
-        reducer = QueryReducer(self.loader, queries)
-        self.queries = reducer.get_reduced_query(threshold, reduce_type)
-        pass
+        reducer = QueryReducer(self.loader, queries, stem=self.stem)
+        self.queries = list(reducer.get_reduced_query(threshold, reduce_type))
+        return self.queries
 
 
 
@@ -148,19 +150,22 @@ class Test:
     
 
 if __name__ == "__main__":
+    start = time.time()
     parameters = sys.argv
-    # index_directory_path = parameters[1]
-    # query_file_path = parameters[2]
-    # retrieval_model = parameters[3]
-    # index_type = parameters[4]
-    # results_file = parameters[5]
+    index_directory_path = parameters[1]
+    query_file_path = parameters[2]
+    retrieval_model = parameters[3]
+    index_type = parameters[4]
+    filter = parameters[5]
+    threshold = parameters[6]
+    results_file = os.path.join("query_results", "_".join([retrieval_model, index_type, filter]))
 
 
-    index_directory_path = "results"
-    query_file_path = "queryfile.txt"
-    retrieval_model = "cosine"
-    index_type = "single"
-    results_file = "query_results\\cosine_single_reduce_qf_idf.txt"
+    # index_directory_path = "results"
+    # query_file_path = "queryfile.txt"
+    # retrieval_model = "cosine"
+    # index_type = "single"
+    # results_file = "query_results" + os.path.sep + "cosine_single_reduce_qf_idf.txt"
     
 
     if index_type == "stem":
@@ -175,10 +180,12 @@ if __name__ == "__main__":
     query_file_path = query_file_path
     # loader = IndexLoader(index_path, lexicon_path, document_path).load_all()
     test = Test(query_file_path, lexicon_path, index_path, document_path, size=100)
-    test.reduce_query(1, "qtf*idf")
+    test.reduce_query(threshold, filter)
     # test.run_Model(retrieval_model, times=1, output_path=results_file)
 
     test.run_Model_query_processed(retrieval_model, times=1, output_path=results_file)
+    end = time.time()
+    print("total_running_time: {}".format(end - start))
 
     
 
